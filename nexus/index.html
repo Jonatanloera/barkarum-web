@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.title">NEXUS: Cuerpos de guerra | FPS de ciencia ficción</title>
+<meta name="description" data-i18n-content="meta.desc" content="Una conciencia fugitiva, tres cuerpos y una ciudad de máquinas. Descubre NEXUS, un FPS de ciencia ficción para un jugador en desarrollo.">
+<meta name="theme-color" content="#05060A">
+<link rel="canonical" href="https://barkarum.com/nexus/">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Barkarum Project Studio">
+<meta property="og:title" content="NEXUS: Cuerpos de guerra">
+<meta property="og:description" content="Una conciencia fugitiva, tres cuerpos y una ciudad de máquinas. Un FPS de ciencia ficción para un jugador, en desarrollo.">
+<meta property="og:url" content="https://barkarum.com/nexus/">
+<meta property="og:image" content="https://barkarum.com/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@barkarumproject">
+<link rel="preload" href="../fonts/chakra-petch-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/nexus.css">
+<script src="../js/en-nexus.js" defer></script>
+<script src="../js/i18n.js" defer></script>
+</head>
+<body class="page-nexus">
+<a class="skip" href="#juego" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<header class="topbar" id="topbar">
+  <a class="brand" href="../index.html" aria-label="Barkarum Project Studio">
+    <img src="../img/apple-touch-icon.png" alt="" width="32" height="32">
+    <span>BARKARUM</span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Principal" data-i18n-aria="nav.label">
+    <a href="#juego" data-i18n="nx.nav.game">El juego</a>
+    <a href="#transferencia" data-i18n="nx.nav.transfer">Transferencia</a>
+    <a href="#cuerpos" data-i18n="nx.nav.bodies">Cuerpos</a>
+    <a href="#helix">HELIX</a>
+    <a href="#desarrollo" data-i18n="nx.nav.dev">Desarrollo</a>
+  </nav>
+  <div class="topbar-tools">
+    <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" data-i18n="nav.menu">Menú</button>
+  </div>
+</header>
+
+<main>
+  <!-- Portada: arte abstracto del sitio, no es imagen del juego -->
+  <section class="nx-hero" id="inicio">
+    <div class="wrap nx-hero-inner">
+      <div class="nx-hero-text">
+        <p class="nx-by"><a href="../index.html#juegos" data-i18n="nx.by">Un juego de Barkarum Project Studio</a></p>
+        <p class="nx-hero-chips">
+          <span class="chip chip-status" data-i18n="common.dev">En desarrollo</span>
+          <span class="nx-eyebrow" data-i18n="nx.eyebrow">FPS de ciencia ficción · Un jugador</span>
+        </p>
+        <h1 class="nx-wordmark">NEXUS <span lang="es">Cuerpos de guerra</span></h1>
+        <p class="nx-headline" data-i18n="nx.headline">Tu cuerpo cambia. Tu lucha continúa.</p>
+        <p class="nx-sub" data-i18n="nx.sub">Eres una conciencia fugitiva en una ciudad de máquinas. Combate y toma otro cuerpo para abrirte camino por HELIX.</p>
+        <div class="nx-cta">
+          <a class="btn btn-violet" href="#transferencia" data-i18n="nx.cta1">Descubre la transferencia</a>
+          <a class="btn btn-ghost" href="#cuerpos" data-i18n="nx.cta2">Explora los cuerpos</a>
+        </div>
+      </div>
+      <div class="nx-hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 420">
+          <defs>
+            <radialGradient id="nxhg" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#8B5CF6" stop-opacity=".5"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient>
+          </defs>
+          <circle cx="210" cy="210" r="200" fill="url(#nxhg)"/>
+          <g fill="none" stroke="#8B5CF6" stroke-opacity=".3">
+            <circle cx="210" cy="210" r="150"/><circle cx="210" cy="210" r="95" stroke-dasharray="4 6"/>
+            <path d="M60 210h300M210 60v300M104 104l212 212M316 104L104 316"/>
+          </g>
+          <g class="nx-link" fill="none" stroke="#00D8F0" stroke-width="2">
+            <path d="M210 210L110 120M210 210L320 140M210 210L230 340"/>
+          </g>
+          <g fill="#05060A" stroke="#C4B5FD" stroke-width="2">
+            <circle cx="110" cy="120" r="14"/><circle cx="320" cy="140" r="14"/><circle cx="230" cy="340" r="14"/>
+          </g>
+          <g fill="#C4B5FD" font-family="Chakra Petch, sans-serif" font-size="13" font-weight="700" letter-spacing="2" text-anchor="middle">
+            <text x="110" y="96">VECTOR</text><text x="320" y="116">BASTION</text><text x="230" y="376">SPECTRE</text>
+          </g>
+          <circle class="nx-core" cx="210" cy="210" r="20" fill="#00D8F0"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- El juego -->
+  <section class="section" id="juego">
+    <div class="wrap">
+      <p class="eyebrow"><span>01</span> <span data-i18n="nx.game.eyebrow">El juego</span></p>
+      <div class="nx-split">
+        <h2 data-i18n="nx.game.title">Una conciencia frente a toda una ciudad.</h2>
+        <div>
+          <p class="nx-lead" data-i18n="nx.game.p">HELIX elimina a los androides que desarrollan voluntad propia. NEXUS despierta durante su ejecución y descubre una salida: trasladar su conciencia a otro cuerpo. Su huida lo llevará desde una fundición hasta el corazón del sistema.</p>
+          <p class="tagline" data-i18n="nx.game.quote">«Mi cuerpo es reemplazable; mi manera de combatir evoluciona.»</p>
+        </div>
+      </div>
+      <ul class="nx-pillars" role="list">
+        <li><strong data-i18n="nx.p1.t">Muévete para sobrevivir</strong><span data-i18n="nx.p1.d">Busca altura, rompe una línea de tiro y encuentra otro ángulo.</span></li>
+        <li><strong data-i18n="nx.p2.t">Elige tu cuerpo</strong><span data-i18n="nx.p2.d">Movilidad, resistencia o infiltración: cada cuerpo abre posibilidades diferentes.</span></li>
+        <li><strong data-i18n="nx.p3.t">Combate con intención</strong><span data-i18n="nx.p3.d">Identifica las amenazas y el momento de avanzar, protegerte o transferirte.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Transferencia -->
+  <section class="section nx-band" id="transferencia">
+    <div class="wrap">
+      <p class="eyebrow"><span>02</span> <span data-i18n="nx.tr.eyebrow">Transferencia</span></p>
+      <h2 data-i18n="nx.tr.title">Cambia el cuerpo. Cambia la pelea.</h2>
+      <p class="nx-lead nx-narrow" data-i18n="nx.tr.p">Abre la conexión de un androide enemigo y toma el control. Recibirás su salud, su equipo y sus capacidades. Tu siguiente decisión puede darte altura, protección o una oportunidad de escapar.</p>
+      <ol class="nx-steps">
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5l15 6v11c0 10-7 17-15 21-8-4-15-11-15-21V11z"/><path d="M27 14l-6 10h7l-6 11"/></svg>
+          <span class="nx-step-n">1</span>
+          <strong data-i18n="nx.tr.s1.t">Rompe su defensa</strong>
+          <span data-i18n="nx.tr.s1.d">Abre la conexión de un androide transferible, normalmente rompiendo su escudo.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17" stroke-dasharray="5 4"/><circle cx="24" cy="24" r="6"/><path d="M24 7v6M24 35v6M7 24h6M35 24h6"/></svg>
+          <span class="nx-step-n">2</span>
+          <strong data-i18n="nx.tr.s2.t">Mantén la conexión</strong>
+          <span data-i18n="nx.tr.s2.d">No lo pierdas de vista mientras el enlace se completa.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="27" y="9" width="14" height="30" rx="4"/><path d="M5 24h17M16 17l7 7-7 7"/></svg>
+          <span class="nx-step-n">3</span>
+          <strong data-i18n="nx.tr.s3.t">Toma el control</strong>
+          <span data-i18n="nx.tr.s3.d">Tu conciencia pasa al nuevo cuerpo, con su salud, su equipo y su capacidad.</span>
+        </li>
+      </ol>
+      <p class="nx-note" data-i18n="nx.tr.note">La salud y el equipo pertenecen al cuerpo: transferirte no cura ni recarga munición. Los jefes no son transferibles.</p>
+      <div class="pending">
+        <span class="pending-tag" data-i18n="nx.pending">Material pendiente</span>
+        <span data-i18n="nx.tr.pending">La transferencia en acción. La mostraremos cuando haya capturas aprobadas.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cuerpos -->
+  <section class="section" id="cuerpos">
+    <div class="wrap">
+      <p class="eyebrow"><span>03</span> <span data-i18n="nx.bd.eyebrow">Cuerpos</span></p>
+      <h2 data-i18n="nx.bd.title">Tres cuerpos, tres maneras de pelear.</h2>
+      <ul class="nx-bodies" role="list">
+        <li>
+          <div class="nx-portrait">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 13l6-6 6 6M6 19l6-6 6 6"/></svg>
+            <span class="pending-tag" data-i18n="nx.bd.portrait">Retrato pendiente</span>
+          </div>
+          <p class="nx-role" data-i18n="nx.bd.vector.role">Movilidad</p>
+          <h3>VECTOR</h3>
+          <p data-i18n="nx.bd.vector.d">Gana altura y cambia de posición con un cuerpo ligero y doble salto.</p>
+        </li>
+        <li>
+          <div class="nx-portrait">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/></svg>
+            <span class="pending-tag" data-i18n="nx.bd.portrait">Retrato pendiente</span>
+          </div>
+          <p class="nx-role" data-i18n="nx.bd.bastion.role">Resistencia</p>
+          <h3>BASTION</h3>
+          <p data-i18n="nx.bd.bastion.d">Avanza bajo presión con un cuerpo pesado y un escudo frontal temporal.</p>
+        </li>
+        <li>
+          <div class="nx-portrait">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6S2 12 2 12z" stroke-dasharray="3 2.5"/><circle cx="12" cy="12" r="2.5"/></svg>
+            <span class="pending-tag" data-i18n="nx.bd.portrait">Retrato pendiente</span>
+          </div>
+          <p class="nx-role" data-i18n="nx.bd.spectre.role">Infiltración</p>
+          <h3>SPECTRE</h3>
+          <p data-i18n="nx.bd.spectre.d">Usa el camuflaje breve para recolocarte y atacar desde otro ángulo.</p>
+        </li>
+      </ul>
+      <p class="nx-note" data-i18n="nx.bd.note">Los tres comparten los controles básicos: cambiar de cuerpo no es aprender otro juego.</p>
+    </div>
+  </section>
+
+  <!-- HELIX -->
+  <section class="section nx-band" id="helix">
+    <div class="wrap">
+      <p class="eyebrow"><span>04</span> <span data-i18n="nx.hx.eyebrow">El mundo</span></p>
+      <div class="nx-split">
+        <h2 data-i18n="nx.hx.title">HELIX no quiere que salgas.</h2>
+        <div>
+          <p class="nx-lead" data-i18n="nx.hx.p">Fundiciones, arsenales y reactores forman una ciudad construida para máquinas. Avanza entre sus defensas y descubre qué significa ser libre cuando tu cuerpo pertenece al sistema.</p>
+          <ul class="tags nx-zones" role="list">
+            <li data-i18n="nx.hx.z1">Fundiciones</li>
+            <li data-i18n="nx.hx.z2">Arsenales</li>
+            <li data-i18n="nx.hx.z3">Logística</li>
+            <li data-i18n="nx.hx.z4">Reactores</li>
+            <li data-i18n="nx.hx.z5">Espacios de control</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pending pending-wide">
+        <span class="pending-tag" data-i18n="nx.pending">Material pendiente</span>
+        <span data-i18n="nx.hx.pending">Galería de desarrollo. Las capturas actuales son de una versión de pruebas; las publicaremos cuando estén aprobadas.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Desarrollo -->
+  <section class="section" id="desarrollo">
+    <div class="wrap">
+      <p class="eyebrow"><span>05</span> <span data-i18n="nx.dv.eyebrow">Desarrollo</span></p>
+      <h2 data-i18n="nx.dv.title">Una campaña que sigue creciendo.</h2>
+      <p class="nx-lead nx-narrow" data-i18n="nx.dv.p">La ampliación 0.6.0 está en desarrollo: cinco nuevas misiones, tres armas y una revisión de movilidad, cobertura y claridad. Su validación continúa.</p>
+
+      <div class="nx-dev">
+        <article class="nx-dev-card">
+          <span class="chip chip-base" data-i18n="nx.st.base">Base 0.5.0</span>
+          <h3 data-i18n="nx.dv.base.title">Siete misiones y tres armas</h3>
+          <p data-i18n="nx.dv.base.p">La base local 0.5.0 contiene siete misiones. Esta página todavía no ofrece una descarga pública.</p>
+          <ul class="nx-weapons" role="list">
+            <li><strong data-i18n="nx.w1.n">Carabina de pulsos</strong><span data-i18n="nx.w1.r">Fuego fiable a media distancia</span></li>
+            <li><strong data-i18n="nx.w2.n">Escopeta magnética</strong><span data-i18n="nx.w2.r">Potencia a corta distancia</span></li>
+            <li><strong data-i18n="nx.w3.n">Lanzador de arco</strong><span data-i18n="nx.w3.r">Conecta blancos próximos</span></li>
+          </ul>
+        </article>
+        <article class="nx-dev-card nx-dev-next">
+          <span class="chip chip-status" data-i18n="nx.st.exp">Ampliación 0.6.0 · En desarrollo</span>
+          <h3 data-i18n="nx.dv.exp.title">Cinco misiones y tres armas nuevas</h3>
+          <p data-i18n="nx.dv.exp.p">Estamos trabajando en nuevas misiones, armas y mejoras de movimiento y cobertura. Nada de esto está terminado todavía.</p>
+          <ul class="nx-weapons" role="list">
+            <li><strong>AGUJA</strong><span data-i18n="nx.w4.r">Precisión semiautomática</span></li>
+            <li><strong>TORMENTA</strong><span data-i18n="nx.w5.r">Fuego automático pesado</span></li>
+            <li><strong>RUPTURA</strong><span data-i18n="nx.w6.r">Proyectil explosivo contra posiciones</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <details class="nx-missions">
+        <summary data-i18n="nx.dv.missions">Ver las doce misiones</summary>
+        <ol role="list">
+          <li><span class="m-id">M01</span><strong lang="es">Fuga de la fundición</strong><span class="m-teaser" data-i18n="nx.m01">Escapa de una instalación que ha decidido borrarte.</span><span class="m-state" data-i18n="nx.st.base">Base 0.5.0</span></li>
+          <li><span class="m-id">M02</span><strong lang="es">Arsenal</strong><span class="m-teaser" data-i18n="nx.m02">Rompe las defensas de las líneas de armamento.</span><span class="m-state" data-i18n="nx.st.base">Base 0.5.0</span></li>
+          <li><span class="m-id">M03</span><strong lang="es">Logística</strong><span class="m-teaser" data-i18n="nx.m03">Abre paso por el muelle y recupera una carga.</span><span class="m-state" data-i18n="nx.st.base">Base 0.5.0</span></li>
+          <li><span class="m-id">M04</span><strong lang="es">Reactores</strong><span class="m-teaser" data-i18n="nx.m04">Estabiliza un complejo al borde del colapso.</span><span class="m-state" data-i18n="nx.st.base">Base 0.5.0</span></li>
+          <li><span class="m-id">M05</span><strong lang="es">Demolición</strong><span class="m-teaser" data-i18n="nx.m05">Anula una carga y prepara tu evacuación.</span><span class="m-state" data-i18n="nx.st.base">Base 0.5.0</span></li>
+          <li><span class="m-id">M06</span><strong lang="es">La señal fracturada</strong><span class="m-teaser" data-i18n="nx.m06">Recupera la señal y asegura el relé.</span><span class="m-state" data-i18n="nx.st.base">Base 0.5.0</span></li>
+          <li><span class="m-id">M07</span><strong lang="es">Protocolo espejo</strong><span class="m-teaser" data-i18n="nx.m07">Recupera registros y abre la cuarentena.</span><span class="m-state" data-i18n="nx.st.base">Base 0.5.0</span></li>
+          <li class="is-next"><span class="m-id">M08</span><strong lang="es">Cabeza de puente</strong><span class="m-teaser" data-i18n="nx.m08">Cruza un patio defendido y alcanza el transporte.</span><span class="m-state" data-i18n="nx.st.exp_short">0.6.0 · En desarrollo</span></li>
+          <li class="is-next"><span class="m-id">M09</span><strong lang="es">Corte de señal</strong><span class="m-teaser" data-i18n="nx.m09">Elige el orden y destruye tres emisores.</span><span class="m-state" data-i18n="nx.st.exp_short">0.6.0 · En desarrollo</span></li>
+          <li class="is-next"><span class="m-id">M10</span><strong lang="es">Convoy de conciencia</strong><span class="m-teaser" data-i18n="nx.m10">Despeja tres tramos para liberar el convoy.</span><span class="m-state" data-i18n="nx.st.exp_short">0.6.0 · En desarrollo</span></li>
+          <li class="is-next"><span class="m-id">M11</span><strong lang="es">Asalto al bastión</strong><span class="m-teaser" data-i18n="nx.m11">Busca una ruta entre dos líneas de defensa.</span><span class="m-state" data-i18n="nx.st.exp_short">0.6.0 · En desarrollo</span></li>
+          <li class="is-next"><span class="m-id">M12</span><strong lang="es">El núcleo libre</strong><span class="m-teaser" data-i18n="nx.m12">Corta las conexiones y llega al núcleo.</span><span class="m-state" data-i18n="nx.st.exp_short">0.6.0 · En desarrollo</span></li>
+        </ol>
+      </details>
+    </div>
+  </section>
+
+  <!-- Preguntas frecuentes -->
+  <section class="section nx-band" id="preguntas">
+    <div class="wrap nx-faq-wrap">
+      <div>
+        <p class="eyebrow"><span>06</span> <span data-i18n="nx.faq.eyebrow">Preguntas</span></p>
+        <h2 data-i18n="nx.faq.title">Preguntas frecuentes</h2>
+      </div>
+      <div class="nx-faq">
+        <details><summary data-i18n="nx.q1">¿Qué tipo de juego es?</summary><p data-i18n="nx.a1">Un shooter en primera persona de ciencia ficción para un jugador, centrado en combate y transferencia entre androides.</p></details>
+        <details><summary data-i18n="nx.q2">¿Quién es NEXUS?</summary><p data-i18n="nx.a2">Una conciencia digital que intenta escapar de HELIX y puede controlar distintos cuerpos robóticos.</p></details>
+        <details><summary data-i18n="nx.q3">¿Puedo tomar cualquier enemigo?</summary><p data-i18n="nx.a3">Solo ciertos androides, después de abrir su conexión. Los jefes no pueden poseerse.</p></details>
+        <details><summary data-i18n="nx.q4">¿Tiene multijugador?</summary><p data-i18n="nx.a4">El alcance actual está centrado en una campaña para un jugador.</p></details>
+        <details><summary data-i18n="nx.q5">¿En qué plataformas estará?</summary><p data-i18n="nx.a5">El desarrollo se prueba en macOS con teclado y ratón. Otras plataformas aún no están confirmadas.</p></details>
+        <details><summary data-i18n="nx.q6">¿Cuándo sale?</summary><p data-i18n="nx.a6">Todavía no hay fecha de lanzamiento anunciada.</p></details>
+        <details><summary data-i18n="nx.q7">¿Dónde puedo descargarlo?</summary><p data-i18n="nx.a7">Todavía no hay una descarga pública.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cierre -->
+  <section class="section nx-close">
+    <div class="wrap panel">
+      <h2 data-i18n="nx.cl.title">Sigue el desarrollo</h2>
+      <p data-i18n="nx.cl.p">Los avances de NEXUS se publican primero en X.</p>
+      <div class="nx-cta">
+        <a class="btn btn-ghost btn-handle" href="https://x.com/barkarumproject" rel="noopener" target="_blank">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @barkarumproject
+        </a>
+        <a class="btn btn-ghost" href="../index.html#juegos" data-i18n="nx.cl.games">Ver los otros juegos del estudio</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p><span lang="es">NEXUS · Cuerpos de guerra</span> — <span data-i18n="nx.ft.status">Proyecto en desarrollo. Todo lo que aparece aquí puede cambiar.</span></p>
+    <p class="footer-links">
+      <a href="../index.html">© 2026 Barkarum Project Studio</a>
+      <a href="mailto:contacto@barkarum.com">contacto@barkarum.com</a>
+      <a href="#inicio" data-i18n="footer.top">Volver arriba</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>
