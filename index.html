@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.title">Barkarum Project Studio · Estudio indie de videojuegos</title>
+<meta name="description" data-i18n-content="meta.desc" content="Estudio indie de Mérida, México. Cyberpunk y futuros con IA: juegos que van del arcade 2.5D a los shooters 3D.">
+<meta name="theme-color" content="#05060A">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="img/icon-512.png" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Barkarum Project Studio">
+<meta property="og:title" content="Barkarum Project Studio">
+<meta property="og:description" content="Indie studio · cyberpunk &amp; AI futures. Games from 2.5D arcade to 3D shooters.">
+<meta property="og:url" content="https://barkarum.com/">
+<meta property="og:image" content="https://barkarum.com/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@barkarumproject">
+<link rel="preload" href="fonts/chakra-petch-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/i18n.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#estudio" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<header class="topbar" id="topbar">
+  <a class="brand" href="#inicio" aria-label="Barkarum Project Studio">
+    <img src="img/apple-touch-icon.png" alt="" width="32" height="32">
+    <span>BARKARUM</span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Principal" data-i18n-aria="nav.label">
+    <a href="#estudio" data-i18n="nav.studio">Estudio</a>
+    <a href="#juegos" data-i18n="nav.games">Juegos</a>
+    <a href="#novedades" data-i18n="nav.news">Novedades</a>
+    <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+  </nav>
+  <div class="topbar-tools">
+    <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" data-i18n="nav.menu">Menú</button>
+  </div>
+</header>
+
+<main>
+  <!-- Portada -->
+  <section class="hero" id="inicio">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <h1 class="sr-only">Barkarum Project Studio</h1>
+      <img class="hero-logo" src="img/logo-685.webp" width="685" height="563" alt="Barkarum Project Studio" fetchpriority="high">
+      <p class="hero-tagline" data-i18n="hero.tagline">Estudio indie · cyberpunk y futuros con IA. Juegos que van del arcade 2.5D a los shooters 3D.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#juegos" data-i18n="hero.cta_games">Ver juegos</a>
+        <a class="btn btn-ghost" href="https://x.com/barkarumproject" rel="noopener" target="_blank">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span data-i18n="hero.cta_x">Seguir en X</span>
+        </a>
+      </div>
+      <p class="hero-place">Mérida, México</p>
+    </div>
+  </section>
+
+  <!-- Estudio -->
+  <section class="section" id="estudio">
+    <div class="wrap studio">
+      <div>
+        <p class="eyebrow"><span>01</span> <span data-i18n="studio.eyebrow">Estudio</span></p>
+        <h2 data-i18n="studio.title">Juegos sobre futuros que ya se sienten cerca.</h2>
+      </div>
+      <div class="studio-text">
+        <p data-i18n="studio.p1">Barkarum Project Studio es un estudio indie de Mérida, México. Hacemos juegos de acción, shooters y puzzles con estética cyberpunk, y con historias sobre lo que pasa cuando la inteligencia artificial, las máquinas y las personas comparten el mismo mundo.</p>
+        <p data-i18n="studio.p2">Hoy tenemos tres juegos en desarrollo: uno de acción 2.5D, un shooter en primera persona y un puzzle 3D.</p>
+        <ul class="tags" role="list">
+          <li data-i18n="studio.tag1">Arcade 2.5D</li>
+          <li data-i18n="studio.tag2">Shooter 3D</li>
+          <li data-i18n="studio.tag3">Puzzle 3D</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Juegos -->
+  <section class="section" id="juegos">
+    <div class="wrap">
+      <p class="eyebrow"><span>02</span> <span data-i18n="games.eyebrow">Juegos</span></p>
+      <h2 data-i18n="games.title">Lo que estamos construyendo</h2>
+
+      <!-- Barkarum Project -->
+      <article class="feature" id="barkarum-project" aria-labelledby="bp-title">
+        <div class="feature-media">
+          <img src="img/bp-hero-1600.webp" srcset="img/bp-hero-800.webp 800w, img/bp-hero-1600.webp 1600w" sizes="(max-width: 1240px) 100vw, 1200px" width="1600" height="900" loading="lazy" alt="Akira, de espaldas, frente a una cápsula suspendida en una sala inmensa cubierta de enredaderas." data-i18n-alt="bp.hero_alt">
+          <span class="chip chip-status" data-i18n="common.dev">En desarrollo</span>
+          <span class="chip chip-art" data-i18n="common.cine">Arte de cinemática</span>
+          <div class="feature-title">
+            <p class="genre" data-i18n="bp.genre">Acción run-and-gun 2.5D</p>
+            <h3 id="bp-title">Barkarum Project</h3>
+            <p class="tagline" data-i18n="bp.tagline">«Una escapó. Va por las otras tres.»</p>
+          </div>
+        </div>
+
+        <div class="feature-body">
+          <div class="feature-story">
+            <h4 data-i18n="bp.story_title">La historia</h4>
+            <p data-i18n="bp.p1">Akira, Rei, Kaede y Yumi estudiaban informática y trabajaban en tecnología para la medicina, la biología y la botánica. La primera generación de unos tratamientos nuevos mejoró la salud de la gente; la siguiente trae nanobots que imponen obediencia. Cuando intentaron denunciarlo, Rei, Kaede y Yumi fueron capturadas. Akira escapó.</p>
+            <p data-i18n="bp.p2">Ahora tiene nueve meses para impedir que esos tratamientos se fabriquen y lleguen a la Tierra. Enfrente está CERBERUS, el aparato que lo custodia todo: prisiones, fábricas, tropas, drones y colosos.</p>
+
+            <dl class="facts">
+              <div><dt data-i18n="bp.k_platforms">Plataformas previstas</dt><dd>PC (Steam) · iPad</dd></div>
+              <div><dt data-i18n="bp.k_lang">Idioma</dt><dd data-i18n="bp.v_lang">Voces y textos en español latinoamericano</dd></div>
+              <div><dt data-i18n="bp.k_release">Lanzamiento</dt><dd data-i18n="bp.v_release">Primero saldrá una Parte 1 para escuchar a los jugadores. Todavía sin fecha.</dd></div>
+            </dl>
+          </div>
+
+          <div class="feature-play">
+            <h4 data-i18n="bp.play_title">Cómo se juega</h4>
+            <ul class="features" role="list">
+              <li><strong data-i18n="bp.f1_t">Ataques que se leen</strong> <span data-i18n="bp.f1_d">Cada ataque avisa antes de golpear y llega alto o bajo: te agachas o saltas.</span></li>
+              <li><strong data-i18n="bp.f2_t">Oleadas por bajas, no por reloj</strong> <span data-i18n="bp.f2_d">El combate empieza cuando tú te mueves, y cada oleada llega cuando derribas la anterior.</span></li>
+              <li><strong data-i18n="bp.f3_t">Un arsenal que crece</strong> <span data-i18n="bp.f3_d">Nuevas armas en el camino y armaduras que Akira puede pilotar.</span></li>
+              <li><strong data-i18n="bp.f4_t">Jefes enormes</strong> <span data-i18n="bp.f4_d">Colosos que llenan la pantalla y enemigos que estudian cómo esquivas.</span></li>
+              <li><strong data-i18n="bp.f5_t">Nunca contra personas</strong> <span data-i18n="bp.f5_d">Los enemigos son máquinas y seguridad armada; la gente de las ciudades queda fuera de la línea de fuego.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <figure>
+            <img src="img/bp-ciudad-800.webp" srcset="img/bp-ciudad-800.webp 800w, img/bp-ciudad-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 300px" width="800" height="450" loading="lazy" alt="Una ciudad de torres y puentes sobre un abismo, al caer la noche." data-i18n-alt="bp.g1_alt">
+            <figcaption><span data-i18n="bp.g1_cap">La ciudad al caer la noche</span><span class="chip chip-art" data-i18n="common.cine">Arte de cinemática</span></figcaption>
+          </figure>
+          <figure>
+            <img src="img/bp-fundicion-800.webp" srcset="img/bp-fundicion-800.webp 800w, img/bp-fundicion-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 300px" width="800" height="450" loading="lazy" alt="Akira, con traje negro de costuras magenta, en una fundición con metal fundido." data-i18n-alt="bp.g2_alt">
+            <figcaption><span data-i18n="bp.g2_cap">Akira en la fundición</span><span class="chip chip-art" data-i18n="common.cine">Arte de cinemática</span></figcaption>
+          </figure>
+          <figure>
+            <img src="img/bp-coloso-800.webp" srcset="img/bp-coloso-800.webp 800w, img/bp-coloso-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 300px" width="800" height="450" loading="lazy" alt="Un guardián mecánico gigante de CERBERUS, iluminado en rojo de alarma." data-i18n-alt="bp.g3_alt">
+            <figcaption><span data-i18n="bp.g3_cap">Un guardián de CERBERUS</span><span class="chip chip-art" data-i18n="common.cine">Arte de cinemática</span></figcaption>
+          </figure>
+          <figure>
+            <img src="img/bp-biosfera-800.webp" srcset="img/bp-biosfera-800.webp 800w, img/bp-biosfera-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 300px" width="800" height="450" loading="lazy" alt="Islas flotantes cubiertas de árboles y cascadas sobre un mar de nubes." data-i18n-alt="bp.g4_alt">
+            <figcaption><span data-i18n="bp.g4_cap">Una biosfera de islas flotantes</span><span class="chip chip-art" data-i18n="common.cine">Arte de cinemática</span></figcaption>
+          </figure>
+        </div>
+        <p class="note" data-i18n="bp.gallery_note">Las imágenes de Barkarum Project salen de las cinemáticas del juego, no de partidas.</p>
+      </article>
+
+      <div class="cards">
+        <!-- NEXUS -->
+        <article class="card card-nexus" id="nexus" aria-labelledby="nx-title">
+          <div class="card-visual nexus-visual" role="img" aria-label="Ilustración: la red de cuerpos de NEXUS" data-i18n-aria="nx.visual_aria">
+            <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs>
+                <radialGradient id="nxg" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#8B5CF6" stop-opacity=".45"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient>
+              </defs>
+              <rect width="400" height="250" fill="url(#nxg)"/>
+              <g stroke="#8B5CF6" stroke-opacity=".35" stroke-width="1" fill="none">
+                <path d="M20 40 L110 70 L200 30 L290 75 L380 35 M20 210 L110 180 L200 220 L290 175 L380 215 M110 70 L110 180 M290 75 L290 175 M200 30 L200 220 M110 70 L290 175 M110 180 L290 75"/>
+              </g>
+              <g stroke="#00D8F0" stroke-width="1.5" fill="none" class="nx-link">
+                <path d="M110 70 L200 125 L290 75 M200 125 L200 220"/>
+              </g>
+              <g fill="#05060A" stroke="#C4B5FD" stroke-width="1.5">
+                <circle cx="110" cy="70" r="7"/><circle cx="290" cy="75" r="7"/><circle cx="200" cy="220" r="7"/>
+              </g>
+              <circle cx="200" cy="125" r="11" fill="#00D8F0" class="nx-core"/>
+            </svg>
+            <span class="nexus-word" aria-hidden="true">NEXUS</span>
+            <span class="chip chip-status" data-i18n="common.dev">En desarrollo</span>
+          </div>
+          <div class="card-body">
+            <p class="genre" data-i18n="nx.genre">Shooter de ciencia ficción en primera persona · un jugador</p>
+            <h3 id="nx-title">NEXUS: <span lang="es">Cuerpos de guerra</span></h3>
+            <p class="tagline" data-i18n="nx.quote">«Mi cuerpo es reemplazable; mi manera de combatir evoluciona.»</p>
+            <p data-i18n="nx.p1">En HELIX, una ciudad de inteligencias artificiales y androides, el sistema central empezó a eliminar a las unidades que desarrollan voluntad propia. NEXUS despierta en plena ejecución, dentro de una fundición, y descubre que puede escapar saltando de un cuerpo a otro.</p>
+            <h4 data-i18n="nx.bodies_title">Cambia de cuerpo en plena pelea</h4>
+            <ul class="bodies" role="list">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 13l6-6 6 6M6 19l6-6 6 6"/></svg>
+                <strong>VECTOR</strong>
+                <span data-i18n="nx.vector">Ligero y rápido: doble salto y propulsión aérea.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/></svg>
+                <strong>BASTION</strong>
+                <span data-i18n="nx.bastion">Pesado y resistente, con un escudo frontal temporal.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6S2 12 2 12z" stroke-dasharray="3 2.5"/><circle cx="12" cy="12" r="2.5"/></svg>
+                <strong>SPECTRE</strong>
+                <span data-i18n="nx.spectre">Camuflaje breve para cambiar de posición y atacar desde otro ángulo.</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Sphere of Rings -->
+        <article class="card card-sphere" id="sphere-of-rings" aria-labelledby="sor-title">
+          <div class="card-visual sphere-visual">
+            <img src="img/sor-ipad-900.webp" srcset="img/sor-ipad-600.webp 600w, img/sor-ipad-900.webp 900w" sizes="(max-width: 900px) 100vw, 600px" width="900" height="1200" loading="lazy" alt="Captura de Sphere of Rings en iPad: cinco anillos de colores giran alrededor de un núcleo con gemas." data-i18n-alt="sor.shot_alt">
+            <span class="chip chip-status" data-i18n="common.dev">En desarrollo</span>
+            <span class="chip chip-shot" data-i18n="sor.shot_label">Captura del juego</span>
+          </div>
+          <div class="card-body">
+            <p class="genre" data-i18n="sor.genre">Puzzle 3D</p>
+            <div class="sor-head">
+              <img class="sor-icon" src="img/sor-icon-256.webp" width="256" height="256" loading="lazy" alt="Ícono de Sphere of Rings" data-i18n-alt="sor.icon_alt">
+              <h3 id="sor-title">Sphere of Rings <span lang="es">Esfera de Anillos</span></h3>
+            </div>
+            <p class="tagline" data-i18n="sor.quote">«Cinco anillos acoplados y un único estado de armonía.»</p>
+            <p data-i18n="sor.p1">Empiezas viendo la esfera resuelta, con cada gema en su anclaje. Al pulsar MEZCLAR la ves desordenarse frente a ti, y cada giro que haces arrastra también a otros anillos. Sabes exactamente cómo debe verse; descubrir la secuencia es cosa tuya.</p>
+            <ul class="mini-facts" role="list">
+              <li data-i18n="sor.f1">Cuatro dificultades, de Fácil a Experta</li>
+              <li data-i18n="sor.f2">Sin conexión, sin anuncios y sin cuentas</li>
+              <li data-i18n="sor.f3">Plataformas previstas: iPhone y iPad</li>
+              <li data-i18n="sor.f4">Interfaz en español</li>
+            </ul>
+            <p class="legal-links">
+              <a href="sphere-of-rings/privacy.html" data-i18n="sor.privacy">Privacidad</a>
+              <a href="sphere-of-rings/support.html" data-i18n="sor.support">Soporte</a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Novedades y contacto -->
+  <section class="section">
+    <div class="wrap panels">
+      <div class="panel" id="novedades">
+        <p class="eyebrow"><span>03</span> <span data-i18n="news.eyebrow">Novedades</span></p>
+        <h2 data-i18n="news.title">Las novedades salen primero en X</h2>
+        <p data-i18n="news.p">Avances del desarrollo, arte y anuncios del estudio. Síguenos para enterarte de todo.</p>
+        <a class="btn btn-ghost btn-handle" href="https://x.com/barkarumproject" rel="noopener" target="_blank">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @barkarumproject
+        </a>
+      </div>
+      <div class="panel panel-contact" id="contacto">
+        <p class="eyebrow"><span>04</span> <span data-i18n="contact.eyebrow">Contacto</span></p>
+        <h2 data-i18n="contact.title">Escríbenos</h2>
+        <p data-i18n="contact.p">Prensa, creadores de contenido, colaboraciones o simplemente para saludar.</p>
+        <a class="mail" href="mailto:contacto@barkarum.com">contacto@barkarum.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>© 2026 Barkarum Project Studio · Mérida, México</p>
+    <p class="footer-links">
+      <a href="https://x.com/barkarumproject" rel="noopener" target="_blank">X</a>
+      <a href="mailto:contacto@barkarum.com">contacto@barkarum.com</a>
+      <a href="#inicio" data-i18n="footer.top">Volver arriba</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>
