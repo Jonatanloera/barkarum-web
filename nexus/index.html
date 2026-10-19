@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -19,14 +19,20 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@barkarumproject">
-<link rel="preload" href="../fonts/chakra-petch-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/chakra-petch-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/holo.css">
 <link rel="stylesheet" href="../css/nexus.css">
+<script type="module" src="../js/vendor/model-viewer-4.0.0.min.js"></script>
 <script src="../js/en-nexus.js" defer></script>
 <script src="../js/i18n.js" defer></script>
+<script src="../js/holo.js" defer></script>
 </head>
 <body class="page-nexus">
+<canvas id="energy" aria-hidden="true"></canvas>
+<div class="fx-noise" aria-hidden="true"></div>
+<div class="fx-scan" aria-hidden="true"></div>
 <a class="skip" href="#juego" data-i18n="a11y.skip">Saltar al contenido</a>
 
 <header class="topbar" id="topbar">
@@ -38,6 +44,7 @@
     <a href="#juego" data-i18n="nx.nav.game">El juego</a>
     <a href="#transferencia" data-i18n="nx.nav.transfer">Transferencia</a>
     <a href="#cuerpos" data-i18n="nx.nav.bodies">Cuerpos</a>
+    <a href="#armas" data-i18n="nx.nav.weapons">Armas</a>
     <a href="#helix">HELIX</a>
     <a href="#desarrollo" data-i18n="nx.nav.dev">Desarrollo</a>
   </nav>
@@ -51,16 +58,16 @@
 </header>
 
 <main>
-  <!-- Portada: arte conceptual (no es imagen del juego) -->
+  <!-- Portada: arte conceptual en un marco HUD -->
   <section class="nx-hero" id="inicio">
     <div class="wrap nx-hero-inner">
-      <div class="nx-hero-text">
+      <div class="nx-hero-text reveal">
         <p class="nx-by"><a href="../index.html#juegos" data-i18n="nx.by">Un juego de Barkarum Project Studio</a></p>
         <p class="nx-hero-chips">
           <span class="chip chip-status" data-i18n="common.dev">En desarrollo</span>
           <span class="nx-eyebrow" data-i18n="nx.eyebrow">FPS de ciencia ficción · Un jugador</span>
         </p>
-        <h1 class="nx-wordmark">NEXUS <span lang="es">Cuerpos de guerra</span></h1>
+        <h1 class="nx-wordmark"><span class="glitch" data-text="NEXUS">NEXUS</span> <span lang="es">Cuerpos de guerra</span></h1>
         <p class="nx-headline" data-i18n="nx.headline">Tu cuerpo cambia. Tu lucha continúa.</p>
         <p class="nx-sub" data-i18n="nx.sub">Eres una conciencia fugitiva en una ciudad de máquinas. Combate y toma otro cuerpo para abrirte camino por HELIX.</p>
         <div class="nx-cta">
@@ -68,21 +75,25 @@
           <a class="btn btn-ghost" href="#cuerpos" data-i18n="nx.cta2">Explora los cuerpos</a>
         </div>
       </div>
-      <div class="nx-hero-media">
+      <figure class="holo holo-frame nx-hero-art reveal" data-tilt>
         <picture>
           <source media="(max-width: 760px)" srcset="../img/nx-portada-movil-720.webp 720w, ../img/nx-portada-movil-1080.webp 1080w" sizes="100vw" width="1080" height="1350">
-          <img src="../img/nx-portada-1920.webp" srcset="../img/nx-portada-1280.webp 1280w, ../img/nx-portada-1920.webp 1920w" sizes="(max-width: 1000px) 100vw, 680px" width="1920" height="1080" fetchpriority="high" alt="Arte conceptual: una conciencia cian y violeta salta del androide oscuro IRIS al androide blanco VELA sobre una pasarela de la fundición." data-i18n-alt="nx.hero.alt">
+          <img src="../img/nx-portada-1920.webp" srcset="../img/nx-portada-1280.webp 1280w, ../img/nx-portada-1920.webp 1920w" sizes="(max-width: 1000px) 100vw, 700px" width="1920" height="1080" fetchpriority="high" alt="Arte conceptual: una conciencia cian y violeta salta del androide oscuro IRIS al androide blanco VELA sobre una pasarela de la fundición." data-i18n-alt="nx.hero.alt">
         </picture>
+        <div class="scanline"></div>
+        <span class="hud-label tl" data-i18n="nx.hud.place">HELIX · Fundición</span>
+        <span class="hud-label br" data-i18n="nx.hud.link">Enlace activo</span>
         <span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span>
-      </div>
+        <div class="holo-sheen"></div>
+      </figure>
     </div>
   </section>
 
   <!-- El juego -->
   <section class="section" id="juego">
     <div class="wrap">
-      <p class="eyebrow"><span>01</span> <span data-i18n="nx.game.eyebrow">El juego</span></p>
-      <div class="nx-split">
+      <p class="eyebrow reveal"><span>01</span> <span data-i18n="nx.game.eyebrow">El juego</span></p>
+      <div class="nx-split reveal">
         <h2 data-i18n="nx.game.title">Una conciencia frente a toda una ciudad.</h2>
         <div>
           <p class="nx-lead" data-i18n="nx.game.p">HELIX elimina a los androides que desarrollan voluntad propia. NEXUS despierta durante su ejecución y descubre una salida: trasladar su conciencia a otro cuerpo. Su huida lo llevará desde una fundición hasta el corazón del sistema.</p>
@@ -90,95 +101,141 @@
         </div>
       </div>
       <ul class="nx-pillars" role="list">
-        <li><strong data-i18n="nx.p1.t">Muévete para sobrevivir</strong><span data-i18n="nx.p1.d">Busca altura, rompe una línea de tiro y encuentra otro ángulo.</span></li>
-        <li><strong data-i18n="nx.p2.t">Elige tu cuerpo</strong><span data-i18n="nx.p2.d">Movilidad, resistencia o infiltración: cada cuerpo abre posibilidades diferentes.</span></li>
-        <li><strong data-i18n="nx.p3.t">Combate con intención</strong><span data-i18n="nx.p3.d">Identifica las amenazas y el momento de avanzar, protegerte o transferirte.</span></li>
+        <li class="holo holo-pad reveal" data-tilt><strong data-i18n="nx.p1.t">Muévete para sobrevivir</strong><span data-i18n="nx.p1.d">Busca altura, rompe una línea de tiro y encuentra otro ángulo.</span><div class="holo-sheen"></div></li>
+        <li class="holo holo-pad holo-violet reveal" data-tilt><strong data-i18n="nx.p2.t">Elige tu cuerpo</strong><span data-i18n="nx.p2.d">Movilidad, resistencia o infiltración: cada cuerpo abre posibilidades diferentes.</span><div class="holo-sheen"></div></li>
+        <li class="holo holo-pad holo-magenta reveal" data-tilt><strong data-i18n="nx.p3.t">Combate con intención</strong><span data-i18n="nx.p3.d">Identifica las amenazas y el momento de avanzar, protegerte o transferirte.</span><div class="holo-sheen"></div></li>
       </ul>
     </div>
   </section>
 
   <!-- Transferencia -->
-  <section class="section nx-band" id="transferencia">
+  <section class="section" id="transferencia">
     <div class="wrap">
-      <p class="eyebrow"><span>02</span> <span data-i18n="nx.tr.eyebrow">Transferencia</span></p>
-      <h2 data-i18n="nx.tr.title">Cambia el cuerpo. Cambia la pelea.</h2>
-      <p class="nx-lead nx-narrow" data-i18n="nx.tr.p">Abre la conexión de un androide enemigo y toma el control. Recibirás su salud, su equipo y sus capacidades. Tu siguiente decisión puede darte altura, protección o una oportunidad de escapar.</p>
+      <p class="eyebrow reveal"><span>02</span> <span data-i18n="nx.tr.eyebrow">Transferencia</span></p>
+      <h2 class="reveal" data-i18n="nx.tr.title">Cambia el cuerpo. Cambia la pelea.</h2>
+      <p class="nx-lead nx-narrow reveal" data-i18n="nx.tr.p">Abre la conexión de un androide enemigo y toma el control. Recibirás su salud, su equipo y sus capacidades. Tu siguiente decisión puede darte altura, protección o una oportunidad de escapar.</p>
       <ol class="nx-steps">
-        <li>
+        <li class="holo reveal" data-tilt>
           <figure class="nx-step-img">
             <img src="../img/nx-transfer-1-800.webp" srcset="../img/nx-transfer-1-800.webp 800w, ../img/nx-transfer-1-1200.webp 1200w" sizes="(max-width: 1000px) 100vw, 380px" width="800" height="450" loading="lazy" alt="Arte conceptual: IRIS lanza un rayo cian que rompe el escudo de un androide en la fundición." data-i18n-alt="nx.tr.s1.alt">
+            <div class="scanline"></div>
             <span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span>
           </figure>
           <span class="nx-step-n">1</span>
           <strong data-i18n="nx.tr.s1.t">Rompe su defensa</strong>
           <span data-i18n="nx.tr.s1.d">Abre la conexión de un androide transferible, normalmente rompiendo su escudo.</span>
+          <div class="holo-sheen"></div>
         </li>
-        <li>
+        <li class="holo reveal" data-tilt>
           <figure class="nx-step-img">
             <img src="../img/nx-transfer-2-800.webp" srcset="../img/nx-transfer-2-800.webp 800w, ../img/nx-transfer-2-1200.webp 1200w" sizes="(max-width: 1000px) 100vw, 380px" width="800" height="450" loading="lazy" alt="Arte conceptual: un enlace cian une a IRIS con el androide blanco VELA." data-i18n-alt="nx.tr.s2.alt">
+            <div class="scanline"></div>
             <span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span>
           </figure>
           <span class="nx-step-n">2</span>
           <strong data-i18n="nx.tr.s2.t">Mantén la conexión</strong>
           <span data-i18n="nx.tr.s2.d">No lo pierdas de vista mientras el enlace se completa.</span>
+          <div class="holo-sheen"></div>
         </li>
-        <li>
+        <li class="holo reveal" data-tilt>
           <figure class="nx-step-img">
             <img src="../img/nx-transfer-3-800.webp" srcset="../img/nx-transfer-3-800.webp 800w, ../img/nx-transfer-3-1200.webp 1200w" sizes="(max-width: 1000px) 100vw, 380px" width="800" height="450" loading="lazy" alt="Arte conceptual: la conciencia ya controla a VELA, que brilla en violeta, mientras IRIS queda inactiva en el suelo." data-i18n-alt="nx.tr.s3.alt">
+            <div class="scanline"></div>
             <span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span>
           </figure>
           <span class="nx-step-n">3</span>
           <strong data-i18n="nx.tr.s3.t">Toma el control</strong>
           <span data-i18n="nx.tr.s3.d">Tu conciencia pasa al nuevo cuerpo, con su salud, su equipo y su capacidad.</span>
+          <div class="holo-sheen"></div>
         </li>
       </ol>
-      <p class="nx-note" data-i18n="nx.tr.note">La salud y el equipo pertenecen al cuerpo: transferirte no cura ni recarga munición. Los jefes no son transferibles.</p>
+      <p class="nx-note reveal" data-i18n="nx.tr.note">La salud y el equipo pertenecen al cuerpo: transferirte no cura ni recarga munición. Los jefes no son transferibles.</p>
     </div>
   </section>
 
-  <!-- Cuerpos -->
+  <!-- Cuerpos en 3D -->
   <section class="section" id="cuerpos">
     <div class="wrap">
-      <p class="eyebrow"><span>03</span> <span data-i18n="nx.bd.eyebrow">Cuerpos</span></p>
-      <h2 data-i18n="nx.bd.title">Tres cuerpos, tres maneras de pelear.</h2>
-      <ul class="nx-bodies" role="list">
-        <li>
-          <figure class="nx-portrait">
-            <img src="../img/nx-vector-800.webp" srcset="../img/nx-vector-800.webp 800w, ../img/nx-vector-1200.webp 1200w" sizes="(max-width: 760px) 100vw, 380px" width="800" height="600" loading="lazy" alt="Arte conceptual: VECTOR con el diseño IRIS, en pose ágil con los propulsores encendidos." data-i18n-alt="nx.bd.vector.alt">
-            <span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span>
-          </figure>
-          <p class="nx-role" data-i18n="nx.bd.vector.role">Movilidad</p>
-          <h3>VECTOR</h3>
-          <p data-i18n="nx.bd.vector.d">Gana altura y cambia de posición con un cuerpo ligero y doble salto.</p>
-        </li>
-        <li>
-          <figure class="nx-portrait">
-            <img src="../img/nx-bastion-800.webp" srcset="../img/nx-bastion-800.webp 800w, ../img/nx-bastion-1200.webp 1200w" sizes="(max-width: 760px) 100vw, 380px" width="800" height="600" loading="lazy" alt="Arte conceptual: BASTION, androide pesado de armadura naranja, levanta un escudo frontal de energía cian." data-i18n-alt="nx.bd.bastion.alt">
-            <span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span>
-          </figure>
-          <p class="nx-role" data-i18n="nx.bd.bastion.role">Resistencia</p>
-          <h3>BASTION</h3>
-          <p data-i18n="nx.bd.bastion.d">Avanza bajo presión con un cuerpo pesado y un escudo frontal temporal.</p>
-        </li>
-        <li>
-          <figure class="nx-portrait">
-            <img src="../img/nx-spectre-800.webp" srcset="../img/nx-spectre-800.webp 800w, ../img/nx-spectre-1200.webp 1200w" sizes="(max-width: 760px) 100vw, 380px" width="800" height="600" loading="lazy" alt="Arte conceptual: SPECTRE con el diseño VELA, parte de su cuerpo se disuelve en camuflaje." data-i18n-alt="nx.bd.spectre.alt">
-            <span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span>
-          </figure>
-          <p class="nx-role" data-i18n="nx.bd.spectre.role">Infiltración</p>
-          <h3>SPECTRE</h3>
-          <p data-i18n="nx.bd.spectre.d">Usa el camuflaje breve para recolocarte y atacar desde otro ángulo.</p>
-        </li>
-      </ul>
-      <p class="nx-note" data-i18n="nx.bd.note">Los tres comparten los controles básicos: cambiar de cuerpo no es aprender otro juego.</p>
+      <p class="eyebrow reveal"><span>03</span> <span data-i18n="nx.bd.eyebrow">Cuerpos</span></p>
+      <h2 class="reveal" data-i18n="nx.bd.title">Tres cuerpos, tres maneras de pelear.</h2>
+      <p class="nx-lead reveal" data-i18n="nx.bd.lead">Gira cada modelo con el dedo o el mouse.</p>
+      <div class="stage-wrap">
+        <div class="body-tabs reveal" role="tablist" aria-label="Cuerpos" data-i18n-aria="nx.bd.eyebrow">
+          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-vector" aria-controls="panel-vector" aria-selected="true" data-model="../models/nx-vector.glb" data-poster="../img/nx-vector-800.webp" data-orbit="90deg 82deg 105%"><span data-i18n="nx.bd.vector.role">Movilidad</span><strong>VECTOR</strong></button>
+          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-bastion" aria-controls="panel-bastion" aria-selected="false" tabindex="-1" data-model="../models/nx-bastion.glb" data-poster="../img/nx-bastion-800.webp" data-orbit="90deg 82deg 105%"><span data-i18n="nx.bd.bastion.role">Resistencia</span><strong>BASTION</strong></button>
+          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-spectre" aria-controls="panel-spectre" aria-selected="false" tabindex="-1" data-model="../models/nx-spectre.glb" data-poster="../img/nx-spectre-800.webp" data-orbit="90deg 82deg 105%"><span data-i18n="nx.bd.spectre.role">Infiltración</span><strong>SPECTRE</strong></button>
+        </div>
+        <div class="stage reveal">
+          <div class="stage-beam" aria-hidden="true"></div>
+          <div class="stage-base" aria-hidden="true"></div>
+          <model-viewer src="../models/nx-vector.glb" poster="../img/nx-vector-800.webp" alt="VECTOR" camera-controls auto-rotate auto-rotate-delay="0" rotation-per-second="18deg" interaction-prompt="none" shadow-intensity="0" exposure="1.15" environment-image="neutral" camera-orbit="90deg 82deg 105%" loading="lazy" touch-action="pan-y"></model-viewer>
+          <p class="stage-hint" data-i18n="nx.bd.hint">Arrastra para girar</p>
+        </div>
+        <div class="body-panels reveal">
+          <div class="holo body-info" id="panel-vector" role="tabpanel" aria-labelledby="tab-vector" data-tilt>
+            <span class="role" data-i18n="nx.bd.vector.role">Movilidad</span>
+            <h3>VECTOR</h3>
+            <p data-i18n="nx.bd.vector.d">Gana altura y cambia de posición con un cuerpo ligero y doble salto.</p>
+            <span class="chip chip-art" data-i18n="nx.model3d">Modelo 3D del juego</span>
+            <div class="holo-sheen"></div>
+          </div>
+          <div class="holo body-info" id="panel-bastion" role="tabpanel" aria-labelledby="tab-bastion" data-tilt hidden>
+            <span class="role" data-i18n="nx.bd.bastion.role">Resistencia</span>
+            <h3>BASTION</h3>
+            <p data-i18n="nx.bd.bastion.d">Avanza bajo presión con un cuerpo pesado y un escudo frontal temporal.</p>
+            <span class="chip chip-art" data-i18n="nx.model3d">Modelo 3D del juego</span>
+            <div class="holo-sheen"></div>
+          </div>
+          <div class="holo body-info" id="panel-spectre" role="tabpanel" aria-labelledby="tab-spectre" data-tilt hidden>
+            <span class="role" data-i18n="nx.bd.spectre.role">Infiltración</span>
+            <h3>SPECTRE</h3>
+            <p data-i18n="nx.bd.spectre.d">Usa el camuflaje breve para recolocarte y atacar desde otro ángulo.</p>
+            <span class="chip chip-art" data-i18n="nx.model3d">Modelo 3D del juego</span>
+            <div class="holo-sheen"></div>
+          </div>
+        </div>
+      </div>
+      <p class="nx-note reveal" data-i18n="nx.bd.note">Los tres comparten los controles básicos: cambiar de cuerpo no es aprender otro juego.</p>
+    </div>
+  </section>
+
+  <!-- Armas en 3D -->
+  <section class="section" id="armas">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span>04</span> <span data-i18n="nx.wp.eyebrow">Armas</span></p>
+      <h2 class="reveal" data-i18n="nx.wp.title">El arsenal de la base.</h2>
+      <div class="weapons">
+        <article class="holo weapon reveal" data-tilt>
+          <model-viewer src="../models/nx-carabina.glb" alt="Carabina de pulsos" data-i18n-alt="nx.w1.n" auto-rotate auto-rotate-delay="0" rotation-per-second="24deg" camera-controls interaction-prompt="none" exposure="1.2" environment-image="neutral" camera-orbit="30deg 78deg 62%" field-of-view="26deg" loading="lazy" touch-action="pan-y"></model-viewer>
+          <h3 data-i18n="nx.w1.n">Carabina de pulsos</h3>
+          <p data-i18n="nx.w1.r">Fuego fiable a media distancia</p>
+          <span class="tag" data-i18n="nx.w1.who">Arma de VECTOR · Base 0.5.0</span>
+          <div class="holo-sheen"></div>
+        </article>
+        <article class="holo holo-magenta weapon reveal" data-tilt>
+          <model-viewer src="../models/nx-escopeta.glb" alt="Escopeta magnética" data-i18n-alt="nx.w2.n" auto-rotate auto-rotate-delay="0" rotation-per-second="24deg" camera-controls interaction-prompt="none" exposure="1.2" environment-image="neutral" camera-orbit="30deg 78deg 62%" field-of-view="26deg" loading="lazy" touch-action="pan-y"></model-viewer>
+          <h3 data-i18n="nx.w2.n">Escopeta magnética</h3>
+          <p data-i18n="nx.w2.r">Potencia a corta distancia</p>
+          <span class="tag" data-i18n="nx.w2.who">Arma de BASTION · Base 0.5.0</span>
+          <div class="holo-sheen"></div>
+        </article>
+        <article class="holo holo-violet weapon reveal" data-tilt>
+          <model-viewer src="../models/nx-arco.glb" alt="Lanzador de arco" data-i18n-alt="nx.w3.n" auto-rotate auto-rotate-delay="0" rotation-per-second="24deg" camera-controls interaction-prompt="none" exposure="1.2" environment-image="neutral" camera-orbit="30deg 78deg 62%" field-of-view="26deg" loading="lazy" touch-action="pan-y"></model-viewer>
+          <h3 data-i18n="nx.w3.n">Lanzador de arco</h3>
+          <p data-i18n="nx.w3.r">Conecta blancos próximos</p>
+          <span class="tag" data-i18n="nx.w3.who">Arma de SPECTRE · Base 0.5.0</span>
+          <div class="holo-sheen"></div>
+        </article>
+      </div>
+      <p class="nx-note reveal" data-i18n="nx.wp.note">En desarrollo para la ampliación 0.6.0: AGUJA, TORMENTA y RUPTURA.</p>
     </div>
   </section>
 
   <!-- HELIX -->
-  <section class="section nx-band" id="helix">
+  <section class="section nx-helix-intro" id="helix">
     <div class="wrap">
-      <p class="eyebrow"><span>04</span> <span data-i18n="nx.hx.eyebrow">El mundo</span></p>
-      <div class="nx-split">
+      <p class="eyebrow reveal"><span>05</span> <span data-i18n="nx.hx.eyebrow">El mundo</span></p>
+      <div class="nx-split reveal">
         <h2 data-i18n="nx.hx.title">HELIX no quiere que salgas.</h2>
         <div>
           <p class="nx-lead" data-i18n="nx.hx.p">Fundiciones, arsenales y reactores forman una ciudad construida para máquinas. Avanza entre sus defensas y descubre qué significa ser libre cuando tu cuerpo pertenece al sistema.</p>
@@ -191,51 +248,45 @@
           </ul>
         </div>
       </div>
-      <div class="nx-gallery nx-gallery-main">
-        <figure>
-          <img src="../img/nx-helix-fundicion-800.webp" srcset="../img/nx-helix-fundicion-800.webp 800w, ../img/nx-helix-fundicion-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 400px" width="800" height="450" loading="lazy" alt="Arte conceptual: fundición industrial de HELIX, con metal fundido y pasarelas en la penumbra." data-i18n-alt="nx.hx.fundicion.alt">
-          <figcaption><span data-i18n="nx.hx.fundicion">Fundición</span><span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span></figcaption>
-        </figure>
-        <figure>
-          <img src="../img/nx-helix-arsenal-800.webp" srcset="../img/nx-helix-arsenal-800.webp 800w, ../img/nx-helix-arsenal-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 400px" width="800" height="450" loading="lazy" alt="Arte conceptual: arsenal y talleres de mantenimiento de HELIX, con bancos de trabajo iluminados." data-i18n-alt="nx.hx.arsenal.alt">
-          <figcaption><span data-i18n="nx.hx.arsenal">Arsenal</span><span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span></figcaption>
-        </figure>
-        <figure>
-          <img src="../img/nx-helix-reactor-800.webp" srcset="../img/nx-helix-reactor-800.webp 800w, ../img/nx-helix-reactor-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 400px" width="800" height="450" loading="lazy" alt="Arte conceptual: el núcleo de un reactor de HELIX brilla en cian y violeta dentro de su contención." data-i18n-alt="nx.hx.reactor.alt">
-          <figcaption><span data-i18n="nx.hx.reactor">Reactor</span><span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span></figcaption>
-        </figure>
-      </div>
-      <div class="nx-gallery nx-gallery-more">
-        <figure>
-          <img src="../img/nx-helix-1-800.webp" srcset="../img/nx-helix-1-800.webp 800w, ../img/nx-helix-1-1600.webp 1600w" sizes="(max-width: 760px) 50vw, 300px" width="800" height="452" loading="lazy" alt="Muelle de carga de una base de androides: pasillo amplio con contenedores apilados y un portón abierto al exterior." data-i18n-alt="nx.hx.g1.alt">
-          <figcaption><span data-i18n="nx.hx.g1">Muelle de carga</span><span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span></figcaption>
-        </figure>
-        <figure>
-          <img src="../img/nx-helix-2-800.webp" srcset="../img/nx-helix-2-800.webp 800w, ../img/nx-helix-2-1600.webp 1600w" sizes="(max-width: 760px) 50vw, 300px" width="800" height="452" loading="lazy" alt="Hangar de logística con grúa puente, estantes de carga y tanques industriales a los lados." data-i18n-alt="nx.hx.g2.alt">
-          <figcaption><span data-i18n="nx.hx.g2">Hangar de logística</span><span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span></figcaption>
-        </figure>
-        <figure>
-          <img src="../img/nx-helix-3-800.webp" srcset="../img/nx-helix-3-800.webp 800w, ../img/nx-helix-3-1600.webp 1600w" sizes="(max-width: 760px) 50vw, 300px" width="800" height="452" loading="lazy" alt="Pasillo entre dos torres cilíndricas de reactor con luces ámbar y pasarelas metálicas." data-i18n-alt="nx.hx.g3.alt">
-          <figcaption><span data-i18n="nx.hx.g3">Torres del reactor</span><span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span></figcaption>
-        </figure>
-        <figure>
-          <img src="../img/nx-helix-4-800.webp" srcset="../img/nx-helix-4-800.webp 800w, ../img/nx-helix-4-1600.webp 1600w" sizes="(max-width: 760px) 50vw, 300px" width="800" height="452" loading="lazy" alt="Sala de control con una consola en primer plano y una ventana hacia una nave de reactores." data-i18n-alt="nx.hx.g4.alt">
-          <figcaption><span data-i18n="nx.hx.g4">Control de reactores</span><span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span></figcaption>
-        </figure>
-      </div>
-      <p class="nx-note" data-i18n="nx.art.note">Todas las imágenes de esta página son arte conceptual creado para el desarrollo de NEXUS. No son capturas del juego.</p>
     </div>
   </section>
+
+  <!-- Carrete 3D -->
+  <section class="reel" id="galeria" aria-labelledby="gal-title">
+    <div class="reel-sticky">
+      <div class="wrap">
+        <p class="eyebrow"><span>06</span> <span data-i18n="nx.gal.eyebrow">Galería</span></p>
+        <h2 id="gal-title" data-i18n="nx.gal.title">HELIX, desde todos los ángulos.</h2>
+      </div>
+      <div class="reel-scene">
+        <div class="reel-ring">
+          <figure class="reel-card" role="button" tabindex="0" data-full="../img/nx-portada-1920.webp"><div class="holo"><img src="../img/nx-portada-1280.webp" loading="lazy" alt="Arte conceptual: una conciencia cian y violeta salta del androide oscuro IRIS al androide blanco VELA sobre una pasarela de la fundición." data-i18n-alt="nx.hero.alt"></div><figcaption class="sr-only" data-i18n="nx.gal.portada">La transferencia</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-transfer-1-1200.webp"><div class="holo"><img src="../img/nx-transfer-1-800.webp" loading="lazy" alt="Arte conceptual: IRIS lanza un rayo cian que rompe el escudo de un androide en la fundición." data-i18n-alt="nx.tr.s1.alt"></div><figcaption class="sr-only" data-i18n="nx.tr.s1.t">Rompe su defensa</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-transfer-2-1200.webp"><div class="holo"><img src="../img/nx-transfer-2-800.webp" loading="lazy" alt="Arte conceptual: un enlace cian une a IRIS con el androide blanco VELA." data-i18n-alt="nx.tr.s2.alt"></div><figcaption class="sr-only" data-i18n="nx.tr.s2.t">Mantén la conexión</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-transfer-3-1200.webp"><div class="holo"><img src="../img/nx-transfer-3-800.webp" loading="lazy" alt="Arte conceptual: la conciencia ya controla a VELA, que brilla en violeta, mientras IRIS queda inactiva en el suelo." data-i18n-alt="nx.tr.s3.alt"></div><figcaption class="sr-only" data-i18n="nx.tr.s3.t">Toma el control</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-helix-fundicion-1600.webp"><div class="holo"><img src="../img/nx-helix-fundicion-800.webp" loading="lazy" alt="Arte conceptual: fundición industrial de HELIX, con metal fundido y pasarelas en la penumbra." data-i18n-alt="nx.hx.fundicion.alt"></div><figcaption class="sr-only" data-i18n="nx.hx.fundicion">Fundición</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-helix-arsenal-1600.webp"><div class="holo"><img src="../img/nx-helix-arsenal-800.webp" loading="lazy" alt="Arte conceptual: arsenal y talleres de mantenimiento de HELIX, con bancos de trabajo iluminados." data-i18n-alt="nx.hx.arsenal.alt"></div><figcaption class="sr-only" data-i18n="nx.hx.arsenal">Arsenal</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-helix-reactor-1600.webp"><div class="holo"><img src="../img/nx-helix-reactor-800.webp" loading="lazy" alt="Arte conceptual: el núcleo de un reactor de HELIX brilla en cian y violeta dentro de su contención." data-i18n-alt="nx.hx.reactor.alt"></div><figcaption class="sr-only" data-i18n="nx.hx.reactor">Reactor</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-helix-1-1600.webp"><div class="holo"><img src="../img/nx-helix-1-800.webp" loading="lazy" alt="Muelle de carga de una base de androides: pasillo amplio con contenedores apilados y un portón abierto al exterior." data-i18n-alt="nx.hx.g1.alt"></div><figcaption class="sr-only" data-i18n="nx.hx.g1">Muelle de carga</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-helix-2-1600.webp"><div class="holo"><img src="../img/nx-helix-2-800.webp" loading="lazy" alt="Hangar de logística con grúa puente, estantes de carga y tanques industriales a los lados." data-i18n-alt="nx.hx.g2.alt"></div><figcaption class="sr-only" data-i18n="nx.hx.g2">Hangar de logística</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-helix-3-1600.webp"><div class="holo"><img src="../img/nx-helix-3-800.webp" loading="lazy" alt="Pasillo entre dos torres cilíndricas de reactor con luces ámbar y pasarelas metálicas." data-i18n-alt="nx.hx.g3.alt"></div><figcaption class="sr-only" data-i18n="nx.hx.g3">Torres del reactor</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-helix-4-1600.webp"><div class="holo"><img src="../img/nx-helix-4-800.webp" loading="lazy" alt="Sala de control con una consola en primer plano y una ventana hacia una nave de reactores." data-i18n-alt="nx.hx.g4.alt"></div><figcaption class="sr-only" data-i18n="nx.hx.g4">Control de reactores</figcaption></figure>
+        </div>
+      </div>
+      <div class="reel-caption" aria-live="polite"><strong>La transferencia</strong><span data-i18n="nx.concept">Arte conceptual</span></div>
+      <div class="reel-progress" aria-hidden="true"><i></i></div>
+    </div>
+  </section>
+  <div class="wrap"><p class="nx-note" data-i18n="nx.art.note">Todas las imágenes de esta página son arte conceptual creado para el desarrollo de NEXUS. No son capturas del juego.</p></div>
 
   <!-- Desarrollo -->
   <section class="section" id="desarrollo">
     <div class="wrap">
-      <p class="eyebrow"><span>05</span> <span data-i18n="nx.dv.eyebrow">Desarrollo</span></p>
-      <h2 data-i18n="nx.dv.title">Una campaña que sigue creciendo.</h2>
-      <p class="nx-lead nx-narrow" data-i18n="nx.dv.p">La ampliación 0.6.0 está en desarrollo: cinco nuevas misiones, tres armas y una revisión de movilidad, cobertura y claridad. Su validación continúa.</p>
-
+      <p class="eyebrow reveal"><span>07</span> <span data-i18n="nx.dv.eyebrow">Desarrollo</span></p>
+      <h2 class="reveal" data-i18n="nx.dv.title">Una campaña que sigue creciendo.</h2>
+      <p class="nx-lead nx-narrow reveal" data-i18n="nx.dv.p">La ampliación 0.6.0 está en desarrollo: cinco nuevas misiones, tres armas y una revisión de movilidad, cobertura y claridad. Su validación continúa.</p>
       <div class="nx-dev">
-        <article class="nx-dev-card">
+        <article class="holo holo-pad nx-dev-card reveal" data-tilt>
           <span class="chip chip-base" data-i18n="nx.st.base">Base 0.5.0</span>
           <h3 data-i18n="nx.dv.base.title">Siete misiones y tres armas</h3>
           <p data-i18n="nx.dv.base.p">La base local 0.5.0 contiene siete misiones. Esta página todavía no ofrece una descarga pública.</p>
@@ -244,8 +295,9 @@
             <li><strong data-i18n="nx.w2.n">Escopeta magnética</strong><span data-i18n="nx.w2.r">Potencia a corta distancia</span></li>
             <li><strong data-i18n="nx.w3.n">Lanzador de arco</strong><span data-i18n="nx.w3.r">Conecta blancos próximos</span></li>
           </ul>
+          <div class="holo-sheen"></div>
         </article>
-        <article class="nx-dev-card nx-dev-next">
+        <article class="holo holo-pad holo-violet nx-dev-card reveal" data-tilt>
           <span class="chip chip-status" data-i18n="nx.st.exp">Ampliación 0.6.0 · En desarrollo</span>
           <h3 data-i18n="nx.dv.exp.title">Cinco misiones y tres armas nuevas</h3>
           <p data-i18n="nx.dv.exp.p">Estamos trabajando en nuevas misiones, armas y mejoras de movimiento y cobertura. Nada de esto está terminado todavía.</p>
@@ -254,10 +306,10 @@
             <li><strong>TORMENTA</strong><span data-i18n="nx.w5.r">Fuego automático pesado</span></li>
             <li><strong>RUPTURA</strong><span data-i18n="nx.w6.r">Proyectil explosivo contra posiciones</span></li>
           </ul>
+          <div class="holo-sheen"></div>
         </article>
       </div>
-
-      <details class="nx-missions">
+      <details class="holo nx-missions reveal">
         <summary data-i18n="nx.dv.missions">Ver las doce misiones</summary>
         <ol role="list">
           <li><span class="m-id">M01</span><strong lang="es">Fuga de la fundición</strong><span class="m-teaser" data-i18n="nx.m01">Escapa de una instalación que ha decidido borrarte.</span><span class="m-state" data-i18n="nx.st.base">Base 0.5.0</span></li>
@@ -278,39 +330,46 @@
   </section>
 
   <!-- Preguntas frecuentes -->
-  <section class="section nx-band" id="preguntas">
+  <section class="section" id="preguntas">
     <div class="wrap nx-faq-wrap">
-      <div>
-        <p class="eyebrow"><span>06</span> <span data-i18n="nx.faq.eyebrow">Preguntas</span></p>
+      <div class="reveal">
+        <p class="eyebrow"><span>08</span> <span data-i18n="nx.faq.eyebrow">Preguntas</span></p>
         <h2 data-i18n="nx.faq.title">Preguntas frecuentes</h2>
       </div>
-      <div class="nx-faq">
-        <details><summary data-i18n="nx.q1">¿Qué tipo de juego es?</summary><p data-i18n="nx.a1">Un shooter en primera persona de ciencia ficción para un jugador, centrado en combate y transferencia entre androides.</p></details>
-        <details><summary data-i18n="nx.q2">¿Quién es NEXUS?</summary><p data-i18n="nx.a2">Una conciencia digital que intenta escapar de HELIX y puede controlar distintos cuerpos robóticos.</p></details>
-        <details><summary data-i18n="nx.q3">¿Puedo tomar cualquier enemigo?</summary><p data-i18n="nx.a3">Solo ciertos androides, después de abrir su conexión. Los jefes no pueden poseerse.</p></details>
-        <details><summary data-i18n="nx.q4">¿Tiene multijugador?</summary><p data-i18n="nx.a4">El alcance actual está centrado en una campaña para un jugador.</p></details>
-        <details><summary data-i18n="nx.q5">¿En qué plataformas estará?</summary><p data-i18n="nx.a5">El desarrollo se prueba en macOS con teclado y ratón. Otras plataformas aún no están confirmadas.</p></details>
-        <details><summary data-i18n="nx.q6">¿Cuándo sale?</summary><p data-i18n="nx.a6">Todavía no hay fecha de lanzamiento anunciada.</p></details>
-        <details><summary data-i18n="nx.q7">¿Dónde puedo descargarlo?</summary><p data-i18n="nx.a7">Todavía no hay una descarga pública.</p></details>
+      <div class="nx-faq reveal">
+        <details class="holo"><summary data-i18n="nx.q1">¿Qué tipo de juego es?</summary><p data-i18n="nx.a1">Un shooter en primera persona de ciencia ficción para un jugador, centrado en combate y transferencia entre androides.</p></details>
+        <details class="holo"><summary data-i18n="nx.q2">¿Quién es NEXUS?</summary><p data-i18n="nx.a2">Una conciencia digital que intenta escapar de HELIX y puede controlar distintos cuerpos robóticos.</p></details>
+        <details class="holo"><summary data-i18n="nx.q3">¿Puedo tomar cualquier enemigo?</summary><p data-i18n="nx.a3">Solo ciertos androides, después de abrir su conexión. Los jefes no pueden poseerse.</p></details>
+        <details class="holo"><summary data-i18n="nx.q4">¿Tiene multijugador?</summary><p data-i18n="nx.a4">El alcance actual está centrado en una campaña para un jugador.</p></details>
+        <details class="holo"><summary data-i18n="nx.q5">¿En qué plataformas estará?</summary><p data-i18n="nx.a5">El desarrollo se prueba en macOS con teclado y ratón. Otras plataformas aún no están confirmadas.</p></details>
+        <details class="holo"><summary data-i18n="nx.q6">¿Cuándo sale?</summary><p data-i18n="nx.a6">Todavía no hay fecha de lanzamiento anunciada.</p></details>
+        <details class="holo"><summary data-i18n="nx.q7">¿Dónde puedo descargarlo?</summary><p data-i18n="nx.a7">Todavía no hay una descarga pública.</p></details>
       </div>
     </div>
   </section>
 
   <!-- Cierre -->
   <section class="section nx-close">
-    <div class="wrap panel">
-      <h2 data-i18n="nx.cl.title">Sigue el desarrollo</h2>
-      <p data-i18n="nx.cl.p">Los avances de NEXUS se publican primero en X.</p>
-      <div class="nx-cta">
-        <a class="btn btn-ghost btn-handle" href="https://x.com/barkarumproject" rel="noopener" target="_blank">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          @barkarumproject
-        </a>
-        <a class="btn btn-ghost" href="../index.html#juegos" data-i18n="nx.cl.games">Ver los otros juegos del estudio</a>
+    <div class="wrap">
+      <div class="holo holo-pad holo-violet reveal" data-tilt>
+        <h2 data-i18n="nx.cl.title">Sigue el desarrollo</h2>
+        <p data-i18n="nx.cl.p">Los avances de NEXUS se publican primero en X.</p>
+        <div class="nx-cta">
+          <a class="btn btn-ghost btn-handle" href="https://x.com/barkarumproject" rel="noopener" target="_blank">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            @barkarumproject
+          </a>
+          <a class="btn btn-ghost" href="../index.html#juegos" data-i18n="nx.cl.games">Ver los otros juegos del estudio</a>
+        </div>
+        <div class="holo-sheen"></div>
       </div>
     </div>
   </section>
 </main>
+
+<dialog class="lightbox" id="lightbox">
+  <div class="holo"><img src="../img/nx-portada-1280.webp" alt=""><p></p><button class="btn btn-ghost" type="button" data-i18n="nx.close">Cerrar</button></div>
+</dialog>
 
 <footer class="footer">
   <div class="wrap footer-inner">

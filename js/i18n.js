@@ -64,6 +64,7 @@
       if (value != null) write(item.el, item.prop, value);
     });
     document.documentElement.lang = lang;
+    document.dispatchEvent(new CustomEvent('langchange', { detail: lang }));
     var buttons = document.querySelectorAll('[data-lang]');
     Array.prototype.forEach.call(buttons, function (b) {
       b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang));

@@ -1,0 +1,55 @@
+/* Portada del estudio: logo holográfico y juegos en paneles HUD. Se carga después de styles.css y holo.css. */
+
+/* ---------- Logo holográfico ---------- */
+.logo-holo { position: relative; display: grid; place-items: center; margin-bottom: 10px; }
+.page-home .hero-logo { position: relative; z-index: 2; width: min(520px, 78vw); margin: 0; animation: holo-flicker 7s infinite steps(1); }
+@keyframes holo-flicker { 0%, 92%, 100% { opacity: 1; } 93% { opacity: .7; } 94% { opacity: 1; } 96% { opacity: .82; } }
+.logo-rings { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; perspective: 900px; }
+.logo-rings i { position: absolute; aspect-ratio: 1; border-radius: 50%; }
+.logo-rings i:nth-child(1) { width: min(600px, 92vw); border: 1px dashed rgba(0, 216, 240, .4); animation: ring-spin 48s linear infinite; }
+.logo-rings i:nth-child(2) { width: min(500px, 76vw); border: 2px solid rgba(240, 0, 192, .45); border-top-color: transparent; border-bottom-color: transparent; animation: ring-spin 22s linear infinite reverse; filter: drop-shadow(0 0 8px rgba(240, 0, 192, .6)); }
+.logo-rings i:nth-child(3) { width: min(700px, 100vw); border: 1px solid rgba(139, 92, 246, .35); animation: orbit 16s linear infinite; box-shadow: 0 0 30px rgba(139, 92, 246, .15) inset; }
+@keyframes orbit { from { transform: rotateX(74deg) rotateZ(0); } to { transform: rotateX(74deg) rotateZ(360deg); } }
+.logo-holo .scanline { inset: 8% 18%; z-index: 3; }
+.logo-holo .hud-label.hl-left { left: -4%; top: 34%; }
+.logo-holo .hud-label.hl-right { right: -4%; bottom: 30%; }
+
+/* ---------- Estudio ---------- */
+.page-home .studio-text p { color: #C9D1E3; }
+
+/* ---------- Juegos ---------- */
+.game-feature { --cut: 22px; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); margin-top: clamp(26px, 3.5vw, 40px); }
+.game-art { position: relative; margin: 0; overflow: hidden; background: var(--bg-2); }
+.game-art img { display: block; width: 100%; height: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.game-feature .game-art img { object-position: 40% 45%; }
+.game-art .chip { position: absolute; top: 16px; z-index: 2; }
+.game-art .chip-status { left: 16px; }
+.game-art .chip-art { right: 16px; }
+.sphere-art img { object-position: 50% 46%; }
+.game-body { padding: clamp(22px, 3vw, 40px); display: flex; flex-direction: column; justify-content: center; color: #C9D1E3; }
+.game-body > p:not(.genre):not(.tagline):not(.legal-links) { color: #C9D1E3; }
+.game-title { font: 700 clamp(30px, 3.8vw, 50px)/1 var(--display); letter-spacing: .04em; text-transform: uppercase; color: #fff; margin: 2px 0 6px; }
+.bp-title .glitch { color: transparent; -webkit-text-stroke: 1.5px #FFB3EC; text-shadow: 0 0 30px rgba(240, 0, 192, .6); }
+.nx-title span, .sor-title span { display: block; font-size: .42em; letter-spacing: .24em; margin-top: 8px; }
+.nx-title span { color: var(--violet-soft); }
+.sor-title span { color: var(--gold); }
+.game-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.page-home .cards { margin-top: clamp(18px, 2.4vw, 28px); }
+.card-game { display: flex; flex-direction: column; }
+.card-game .game-art img { aspect-ratio: 16 / 10; }
+.card-game .game-body { justify-content: flex-start; }
+.card-game .legal-links { margin-top: auto; }
+
+/* ---------- Novedades y contacto ---------- */
+.page-home .panels .holo p { color: #C9D1E3; }
+
+@media (max-width: 1000px) {
+  .game-feature { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .logo-holo .hud-label { display: none; }
+  .game-cta .btn { flex: 1 1 auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-home .hero-logo, .logo-rings i { animation: none !important; }
+}

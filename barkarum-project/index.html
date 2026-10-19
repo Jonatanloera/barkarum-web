@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.title">Barkarum Project | Acción run-and-gun 2.5D</title>
+<meta name="description" data-i18n-content="meta.desc" content="Una escapó. Va por las otras tres. Akira atraviesa un futuro monumental en un juego de acción run-and-gun 2.5D, en desarrollo.">
+<meta name="theme-color" content="#05060A">
+<link rel="canonical" href="https://barkarum.com/barkarum-project/">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Barkarum Project Studio">
+<meta property="og:title" content="Barkarum Project">
+<meta property="og:description" content="Una escapó. Va por las otras tres. Acción run-and-gun 2.5D, en desarrollo.">
+<meta property="og:url" content="https://barkarum.com/barkarum-project/">
+<meta property="og:image" content="https://barkarum.com/img/bp-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@barkarumproject">
+<link rel="preload" href="../fonts/chakra-petch-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/holo.css">
+<link rel="stylesheet" href="../css/bp.css">
+<script type="module" src="../js/vendor/model-viewer-4.0.0.min.js"></script>
+<script src="../js/en-bp.js" defer></script>
+<script src="../js/i18n.js" defer></script>
+<script src="../js/holo.js" defer></script>
+</head>
+<body class="page-bp">
+<canvas id="energy" aria-hidden="true" data-colors="240,0,192|0,216,240|139,92,246"></canvas>
+<div class="fx-noise" aria-hidden="true"></div>
+<div class="fx-scan" aria-hidden="true"></div>
+<a class="skip" href="#historia" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<header class="topbar" id="topbar">
+  <a class="brand" href="../index.html" aria-label="Barkarum Project Studio">
+    <img src="../img/apple-touch-icon.png" alt="" width="32" height="32">
+    <span>BARKARUM</span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Principal" data-i18n-aria="nav.label">
+    <a href="#historia" data-i18n="bp.nav.story">Historia</a>
+    <a href="#jugabilidad" data-i18n="bp.nav.play">Cómo se juega</a>
+    <a href="#akira">Akira</a>
+    <a href="#arsenal" data-i18n="bp.nav.arsenal">Arsenal</a>
+    <a href="#galeria" data-i18n="bp.nav.gallery">Galería</a>
+  </nav>
+  <div class="topbar-tools">
+    <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" data-i18n="nav.menu">Menú</button>
+  </div>
+</header>
+
+<main>
+  <!-- Portada -->
+  <section class="bp-hero" id="inicio">
+    <div class="wrap bp-hero-inner">
+      <div class="bp-hero-text reveal">
+        <p class="bp-by"><a href="../index.html#juegos" data-i18n="bp.by">Un juego de Barkarum Project Studio</a></p>
+        <p class="bp-hero-chips">
+          <span class="chip chip-status" data-i18n="common.dev">En desarrollo</span>
+          <span class="bp-eyebrow" data-i18n="bp.genre">Acción run-and-gun 2.5D</span>
+        </p>
+        <h1 class="bp-wordmark"><span class="glitch" data-text="BARKARUM">BARKARUM</span> <span>PROJECT</span></h1>
+        <p class="bp-headline" data-i18n="bp.tagline">«Una escapó. Va por las otras tres.»</p>
+        <p class="bp-sub" data-i18n="bp.sub">Akira es la única de cuatro amigas que escapó de CERBERUS. Ahora va misión por misión a rescatar a las otras tres.</p>
+        <div class="bp-cta">
+          <a class="btn btn-magenta" href="#akira" data-i18n="bp.cta1">Conoce a Akira</a>
+          <a class="btn btn-ghost" href="#galeria" data-i18n="bp.cta2">Ver galería</a>
+        </div>
+      </div>
+      <figure class="holo holo-frame holo-magenta bp-hero-art reveal" data-tilt>
+        <img src="../img/bp-hero-1600.webp" srcset="../img/bp-hero-800.webp 800w, ../img/bp-hero-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 700px" width="1600" height="900" fetchpriority="high" alt="Akira, de espaldas, frente a una cápsula suspendida en una sala inmensa cubierta de enredaderas." data-i18n-alt="bp.hero_alt">
+        <div class="scanline"></div>
+        <span class="hud-label tl" data-i18n="bp.hud.place">CERBERUS · Sala de cápsulas</span>
+        <span class="hud-label br" data-i18n="bp.hud.goal">Objetivo: rescate</span>
+        <span class="chip chip-art" data-i18n="common.cine">Arte de cinemática</span>
+        <div class="holo-sheen"></div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Historia -->
+  <section class="section" id="historia">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span>01</span> <span data-i18n="bp.story_title">La historia</span></p>
+      <div class="bp-split reveal">
+        <h2 data-i18n="bp.story_h">Una escapó. Las otras tres siguen dentro.</h2>
+        <div class="holo holo-pad holo-magenta" data-tilt>
+          <p data-i18n="bp.p1">Akira, Rei, Kaede y Yumi estudiaban informática y trabajaban en tecnología para la medicina, la biología y la botánica. La primera generación de unos tratamientos nuevos mejoró la salud de la gente; la siguiente trae nanobots que imponen obediencia. Cuando intentaron denunciarlo, Rei, Kaede y Yumi fueron capturadas. Akira escapó.</p>
+          <p data-i18n="bp.p2">Ahora tiene nueve meses para impedir que esos tratamientos se fabriquen y lleguen a la Tierra. Enfrente está CERBERUS, el aparato que lo custodia todo: prisiones, fábricas, tropas, drones y colosos.</p>
+          <div class="holo-sheen"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo se juega -->
+  <section class="section" id="jugabilidad">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span>02</span> <span data-i18n="bp.play_title">Cómo se juega</span></p>
+      <h2 class="reveal" data-i18n="bp.play_h">Corre, apunta y esquiva en un mundo monumental.</h2>
+      <ul class="bp-features" role="list">
+        <li class="holo holo-pad holo-magenta reveal" data-tilt><strong data-i18n="bp.f1_t">Ataques que se leen</strong><span data-i18n="bp.f1_d">Cada ataque avisa antes de golpear y llega alto o bajo: te agachas o saltas.</span><div class="holo-sheen"></div></li>
+        <li class="holo holo-pad reveal" data-tilt><strong data-i18n="bp.f2_t">Oleadas por bajas, no por reloj</strong><span data-i18n="bp.f2_d">El combate empieza cuando tú te mueves, y cada oleada llega cuando derribas la anterior.</span><div class="holo-sheen"></div></li>
+        <li class="holo holo-pad holo-violet reveal" data-tilt><strong data-i18n="bp.f3_t">Un arsenal que crece</strong><span data-i18n="bp.f3_d">Nuevas armas en el camino y armaduras que Akira puede pilotar.</span><div class="holo-sheen"></div></li>
+        <li class="holo holo-pad holo-magenta reveal" data-tilt><strong data-i18n="bp.f4_t">Jefes enormes</strong><span data-i18n="bp.f4_d">Colosos que llenan la pantalla y enemigos que estudian cómo esquivas.</span><div class="holo-sheen"></div></li>
+        <li class="holo holo-pad reveal" data-tilt><strong data-i18n="bp.f5_t">Nunca contra personas</strong><span data-i18n="bp.f5_d">Los enemigos son máquinas y seguridad armada; la gente de las ciudades queda fuera de la línea de fuego.</span><div class="holo-sheen"></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Akira en 3D -->
+  <section class="section" id="akira">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span>03</span> <span data-i18n="bp.akira_eyebrow">La protagonista</span></p>
+      <h2 class="reveal" data-i18n="bp.akira_h">Akira, en 3D.</h2>
+      <p class="bp-lead reveal" data-i18n="bp.akira_lead">Gira el modelo con el dedo o el mouse.</p>
+      <div class="bp-solo">
+        <div class="stage reveal">
+          <div class="stage-beam" aria-hidden="true"></div>
+          <div class="stage-base" aria-hidden="true"></div>
+          <model-viewer src="../models/bp-akira.glb" poster="../img/bp-perfil-800.webp" alt="Modelo 3D de Akira" data-i18n-alt="bp.akira_alt" camera-controls auto-rotate auto-rotate-delay="0" rotation-per-second="18deg" interaction-prompt="none" shadow-intensity="0" exposure="1.1" environment-image="neutral" camera-orbit="90deg 84deg 105%" loading="lazy" touch-action="pan-y"></model-viewer>
+          <p class="stage-hint" data-i18n="bp.hint">Arrastra para girar</p>
+        </div>
+        <div class="holo holo-magenta body-info reveal" data-tilt>
+          <span class="role" data-i18n="bp.akira_role">La jugable</span>
+          <h3>AKIRA</h3>
+          <p data-i18n="bp.akira_d">Experta en sistemas seguros y privacidad, y por eso la única que escapó. Traje táctico negro con costuras magenta y cabello violeta: el magenta es su color.</p>
+          <span class="chip chip-art" data-i18n="bp.model3d">Modelo 3D del juego</span>
+          <div class="holo-sheen"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Arsenal en 3D -->
+  <section class="section" id="arsenal">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span>04</span> <span data-i18n="bp.nav.arsenal">Arsenal</span></p>
+      <h2 class="reveal" data-i18n="bp.arsenal_h">Un arsenal que crece.</h2>
+      <div class="weapons">
+        <article class="holo holo-magenta weapon reveal" data-tilt>
+          <model-viewer src="../models/bp-lanzacohetes.glb" alt="Lanzacohetes" data-i18n-alt="bp.w1.n" auto-rotate auto-rotate-delay="0" rotation-per-second="24deg" camera-controls interaction-prompt="none" exposure="1.2" environment-image="neutral" camera-orbit="30deg 78deg 70%" field-of-view="26deg" loading="lazy" touch-action="pan-y"></model-viewer>
+          <h3 data-i18n="bp.w1.n">Lanzacohetes</h3>
+          <p data-i18n="bp.w1.d">Misiles que persiguen al enemigo.</p>
+          <span class="tag" data-i18n="bp.w1.tag">Arsenal de Akira</span>
+          <div class="holo-sheen"></div>
+        </article>
+        <article class="holo weapon reveal" data-tilt>
+          <model-viewer src="../models/bp-vendaval.glb" alt="VENDAVAL" auto-rotate auto-rotate-delay="0" rotation-per-second="24deg" camera-controls interaction-prompt="none" exposure="1.2" environment-image="neutral" camera-orbit="30deg 78deg 70%" field-of-view="26deg" loading="lazy" touch-action="pan-y"></model-viewer>
+          <h3>VENDAVAL</h3>
+          <p data-i18n="bp.w2.d">Ametralladora rotativa que se acopla al traje.</p>
+          <span class="tag" data-i18n="common.dev">En desarrollo</span>
+          <div class="holo-sheen"></div>
+        </article>
+        <article class="holo holo-violet weapon reveal" data-tilt>
+          <model-viewer src="../models/bp-arco.glb" alt="ARCO" auto-rotate auto-rotate-delay="0" rotation-per-second="24deg" camera-controls interaction-prompt="none" exposure="1.2" environment-image="neutral" camera-orbit="30deg 78deg 80%" field-of-view="28deg" loading="lazy" touch-action="pan-y"></model-viewer>
+          <h3>ARCO</h3>
+          <p data-i18n="bp.w3.d">Emisor de plasma que salta de un androide a otro.</p>
+          <span class="tag" data-i18n="common.dev">En desarrollo</span>
+          <div class="holo-sheen"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carrete 3D -->
+  <section class="reel" id="galeria" aria-labelledby="bp-gal-title">
+    <div class="reel-sticky">
+      <div class="wrap">
+        <p class="eyebrow"><span>05</span> <span data-i18n="bp.nav.gallery">Galería</span></p>
+        <h2 id="bp-gal-title" data-i18n="bp.gal_h">Un futuro monumental.</h2>
+      </div>
+      <div class="reel-scene">
+        <div class="reel-ring">
+          <figure class="reel-card" role="button" tabindex="0" data-full="../img/bp-hero-1600.webp"><div class="holo holo-magenta"><img src="../img/bp-hero-800.webp" loading="lazy" alt="Akira, de espaldas, frente a una cápsula suspendida en una sala inmensa cubierta de enredaderas." data-i18n-alt="bp.hero_alt"></div><figcaption class="sr-only" data-i18n="bp.c.capsula">La sala de cápsulas</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/bp-perfil-1600.webp"><div class="holo holo-magenta"><img src="../img/bp-perfil-800.webp" loading="lazy" alt="Akira de perfil, con el cabello violeta, apunta junto a una cápsula iluminada." data-i18n-alt="bp.a.perfil"></div><figcaption class="sr-only" data-i18n="bp.c.perfil">Akira</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/bp-silueta-1600.webp"><div class="holo holo-magenta"><img src="../img/bp-silueta-800.webp" loading="lazy" alt="La silueta de Akira, con un láser rojo cruzando la sala." data-i18n-alt="bp.a.silueta"></div><figcaption class="sr-only" data-i18n="bp.c.silueta">Bajo la mira</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/bp-ciudad-1600.webp"><div class="holo holo-magenta"><img src="../img/bp-ciudad-800.webp" loading="lazy" alt="Una ciudad de torres y puentes sobre un abismo, al caer la noche." data-i18n-alt="bp.g1_alt"></div><figcaption class="sr-only" data-i18n="bp.g1_cap">La ciudad al caer la noche</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/bp-fabrica-1600.webp"><div class="holo holo-magenta"><img src="../img/bp-fabrica-800.webp" loading="lazy" alt="Filas de cuerpos mecánicos colgando en una fábrica de CERBERUS entre metal fundido." data-i18n-alt="bp.a.fabrica"></div><figcaption class="sr-only" data-i18n="bp.c.fabrica">Las fábricas de CERBERUS</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/bp-fundicion-1600.webp"><div class="holo holo-magenta"><img src="../img/bp-fundicion-800.webp" loading="lazy" alt="Akira, con traje negro de costuras magenta, en una fundición con metal fundido." data-i18n-alt="bp.g2_alt"></div><figcaption class="sr-only" data-i18n="bp.g2_cap">Akira en la fundición</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/bp-armadura-1600.webp"><div class="holo holo-magenta"><img src="../img/bp-armadura-800.webp" loading="lazy" alt="Una armadura pilotable con luces magenta avanza por la fundición." data-i18n-alt="bp.a.armadura"></div><figcaption class="sr-only" data-i18n="bp.c.armadura">Armadura pilotable</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/bp-alarma-1600.webp"><div class="holo holo-magenta"><img src="../img/bp-alarma-800.webp" loading="lazy" alt="Un pasillo de servidores bañado en láseres rojos de alarma." data-i18n-alt="bp.a.alarma"></div><figcaption class="sr-only" data-i18n="bp.c.alarma">Alarma de CERBERUS</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/bp-coloso-1600.webp"><div class="holo holo-magenta"><img src="../img/bp-coloso-800.webp" loading="lazy" alt="Un guardián mecánico gigante de CERBERUS, iluminado en rojo de alarma." data-i18n-alt="bp.g3_alt"></div><figcaption class="sr-only" data-i18n="bp.g3_cap">Un guardián de CERBERUS</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/bp-moto-1600.webp"><div class="holo holo-magenta"><img src="../img/bp-moto-800.webp" loading="lazy" alt="Akira sobre una moto-armadura negra con luces naranjas en un hangar." data-i18n-alt="bp.a.moto"></div><figcaption class="sr-only" data-i18n="bp.c.moto">La moto-armadura</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/bp-biosfera-1600.webp"><div class="holo holo-magenta"><img src="../img/bp-biosfera-800.webp" loading="lazy" alt="Islas flotantes cubiertas de árboles y cascadas sobre un mar de nubes." data-i18n-alt="bp.g4_alt"></div><figcaption class="sr-only" data-i18n="bp.g4_cap">Una biosfera de islas flotantes</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/bp-mapa-1600.webp"><div class="holo holo-magenta"><img src="../img/bp-mapa-800.webp" loading="lazy" alt="Un mapa holográfico de una ciudad bajo raíces gigantes y cascadas." data-i18n-alt="bp.a.mapa"></div><figcaption class="sr-only" data-i18n="bp.c.mapa">Mapa táctico</figcaption></figure>
+        </div>
+      </div>
+      <div class="reel-caption" aria-live="polite"><strong>La sala de cápsulas</strong><span data-i18n="common.cine">Arte de cinemática</span></div>
+      <div class="reel-progress" aria-hidden="true"><i></i></div>
+    </div>
+  </section>
+  <div class="wrap"><p class="bp-note" data-i18n="bp.gallery_note">Las imágenes de Barkarum Project salen de las cinemáticas del juego, no de partidas.</p></div>
+
+  <!-- Datos -->
+  <section class="section" id="datos">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span>06</span> <span data-i18n="bp.facts_eyebrow">Ficha</span></p>
+      <div class="holo holo-pad holo-magenta reveal" data-tilt>
+        <dl class="facts">
+          <div><dt data-i18n="bp.k_status">Estado</dt><dd data-i18n="common.dev">En desarrollo</dd></div>
+          <div><dt data-i18n="bp.k_platforms">Plataformas previstas</dt><dd>PC (Steam) · iPad</dd></div>
+          <div><dt data-i18n="bp.k_lang">Idioma</dt><dd data-i18n="bp.v_lang">Voces y textos en español latinoamericano</dd></div>
+          <div><dt data-i18n="bp.k_release">Lanzamiento</dt><dd data-i18n="bp.v_release">Primero saldrá una Parte 1 para escuchar a los jugadores. Todavía sin fecha.</dd></div>
+        </dl>
+        <div class="holo-sheen"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cierre -->
+  <section class="section bp-close">
+    <div class="wrap">
+      <div class="holo holo-pad holo-magenta reveal" data-tilt>
+        <h2 data-i18n="bp.cl.title">Sigue a Akira</h2>
+        <p data-i18n="bp.cl.p">Los avances de Barkarum Project se publican primero en X.</p>
+        <div class="bp-cta">
+          <a class="btn btn-ghost btn-handle" href="https://x.com/barkarumproject" rel="noopener" target="_blank">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            @barkarumproject
+          </a>
+          <a class="btn btn-ghost" href="../index.html#juegos" data-i18n="bp.cl.games">Ver los otros juegos del estudio</a>
+        </div>
+        <div class="holo-sheen"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dialog class="lightbox" id="lightbox">
+  <div class="holo holo-magenta"><img src="../img/bp-hero-800.webp" alt=""><p></p><button class="btn btn-ghost" type="button" data-i18n="bp.close">Cerrar</button></div>
+</dialog>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>Barkarum Project — <span data-i18n="bp.ft.status">Proyecto en desarrollo. Todo lo que aparece aquí puede cambiar.</span></p>
+    <p class="footer-links">
+      <a href="../index.html">© 2026 Barkarum Project Studio</a>
+      <a href="mailto:contacto@barkarum.com">contacto@barkarum.com</a>
+      <a href="#inicio" data-i18n="footer.top">Volver arriba</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>
