@@ -2,7 +2,7 @@
  * Idioma y menú del sitio.
  * El español está escrito en el HTML; al cargar se guarda una copia y el
  * inglés sale del diccionario de la página (js/en-*.js). Cada clave corresponde
- * a un atributo data-i18n* del HTML (tools/check_site.py comprueba que coincidan).
+ * a un atributo data-i18n* del HTML (herramientas/check_site.py comprueba que coincidan).
  */
 (function () {
   'use strict';

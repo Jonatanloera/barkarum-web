@@ -29,7 +29,7 @@ window.BARKARUM_EN = {
     'bp.genre': '2.5D run-and-gun action',
     'bp.tagline': '“One got away. She’s going back for the other three.”',
     'bp.short': 'Akira is the only one of four friends who escaped CERBERUS. Now she’s going back, mission by mission, to rescue the other three, in a monumental future of colossi and living cities.',
-    'bp.fact1': 'Planned platforms: PC (Steam) and iPad',
+    'bp.fact1': 'Planned platforms: PC (Steam and desktop web), iPhone and iPad',
     'bp.fact2': 'Latin American Spanish voices and text',
     'bp.cta': 'Explore Barkarum Project',
     'bp.cta3d': 'Akira in 3D',
