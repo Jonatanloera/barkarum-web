@@ -57,6 +57,18 @@
 .nx-zones.tags li:nth-child(n) { color: var(--violet-soft); border-color: rgba(139, 92, 246, .35); background: rgba(139, 92, 246, .08); }
 .nx-helix-intro { padding-bottom: 0; }
 
+/* Animática */
+.nx-film { margin: clamp(22px, 3vw, 34px) 0 0; }
+.nx-film-part { margin-top: clamp(30px, 4.5vw, 56px); }
+.nx-film-part > h3 { margin: 0 0 8px; font: 700 clamp(20px, 2.4vw, 26px)/1.2 var(--display); letter-spacing: .04em; text-transform: none; color: #fff; }
+.nx-film-part > p { margin: 0; max-width: 46em; color: #C9D1E3; }
+.nx-film-part .nx-film { margin-top: 18px; }
+.nx-film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #000; }
+.nx-film-cap { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding: 14px 18px; font-size: 14px; color: var(--muted); }
+.nx-transcript { --cut: 12px; margin-top: 14px; }
+.nx-transcript ol { margin: 0; padding: 0 22px 18px 46px; display: grid; gap: 8px; color: #C9D1E3; }
+.nx-transcript li::marker { color: var(--violet-soft); font-family: var(--display); }
+
 /* Desarrollo */
 .nx-dev { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 2vw, 22px); margin-top: clamp(26px, 3vw, 36px); }
 .nx-dev-card { color: #C9D1E3; }
@@ -69,9 +81,9 @@
 details > summary { cursor: pointer; list-style: none; }
 details > summary::-webkit-details-marker { display: none; }
 .nx-missions { margin-top: 22px; }
-.nx-missions > summary, .nx-faq summary { position: relative; padding: 18px 52px 18px 22px; font: 600 16px/1.35 var(--display); letter-spacing: .06em; color: var(--text); min-height: 48px; }
-.nx-missions > summary::after, .nx-faq summary::after { content: "+"; position: absolute; right: 22px; top: 50%; transform: translateY(-50%); font: 500 22px/1 var(--display); color: var(--cyan); text-shadow: 0 0 10px var(--cyan); }
-.nx-missions[open] > summary::after, .nx-faq details[open] summary::after { content: "–"; }
+.nx-missions > summary, .nx-faq summary, .nx-transcript > summary { position: relative; padding: 18px 52px 18px 22px; font: 600 16px/1.35 var(--display); letter-spacing: .06em; color: var(--text); min-height: 48px; }
+.nx-missions > summary::after, .nx-faq summary::after, .nx-transcript > summary::after { content: "+"; position: absolute; right: 22px; top: 50%; transform: translateY(-50%); font: 500 22px/1 var(--display); color: var(--cyan); text-shadow: 0 0 10px var(--cyan); }
+.nx-missions[open] > summary::after, .nx-faq details[open] summary::after, .nx-transcript[open] > summary::after { content: "–"; }
 .nx-missions ol { list-style: none; margin: 0; padding: 0 22px 14px; }
 .nx-missions li { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; grid-template-areas: "id title state" "id teaser state"; gap: 2px 14px; padding: 12px 0; border-top: 1px solid var(--line); align-items: center; }
 .m-id { grid-area: id; font: 700 14px/1 var(--display); color: var(--violet-soft); letter-spacing: .08em; }

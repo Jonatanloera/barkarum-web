@@ -41,6 +41,7 @@
     <span>BARKARUM</span>
   </a>
   <nav class="nav" id="nav" aria-label="Principal" data-i18n-aria="nav.label">
+    <a href="#animatica" data-i18n="nx.nav.film">Animáticas</a>
     <a href="#juego" data-i18n="nx.nav.game">El juego</a>
     <a href="#transferencia" data-i18n="nx.nav.transfer">Transferencia</a>
     <a href="#cuerpos" data-i18n="nx.nav.bodies">Cuerpos</a>
@@ -73,6 +74,7 @@
         <div class="nx-cta">
           <a class="btn btn-violet" href="#transferencia" data-i18n="nx.cta1">Descubre la transferencia</a>
           <a class="btn btn-ghost" href="#cuerpos" data-i18n="nx.cta2">Explora los cuerpos</a>
+          <a class="btn btn-ghost" href="#animatica"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span data-i18n="nx.cta3">Ver las animáticas</span></a>
         </div>
       </div>
       <figure class="holo holo-frame nx-hero-art reveal" data-tilt>
@@ -90,9 +92,81 @@
   </section>
 
   <!-- El juego -->
+  <!-- Animática -->
+  <section class="section" id="animatica">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span>01</span> <span data-i18n="nx.film.eyebrow">Animáticas</span></p>
+      <h2 class="reveal" data-i18n="nx.film.title">Todo cuerpo pertenece a HELIX.</h2>
+      <p class="nx-lead nx-narrow reveal" data-i18n="nx.film.lead">Dos animáticas para conocer a NEXUS: cómo escapa de la fundición y cómo cambia de cuerpo en plena pelea.</p>
+
+      <div class="nx-film-part">
+      <h3 class="reveal" data-i18n="nx.film.p1.title">Parte 1 · La huida</h3>
+      <p class="reveal" data-i18n="nx.film.p1.lead">64 segundos: NEXUS despierta en la fundición, salta de VECTOR a BASTION y a SPECTRE, y se enfrenta a la red de ejecución de HELIX.</p>
+      <figure class="holo holo-violet nx-film reveal">
+        <video controls preload="none" playsinline poster="../img/nx-animatica-1600.webp" data-subs aria-label="Animática de NEXUS, parte 1: la huida" data-i18n-aria="nx.film.aria">
+          <source src="../media/nexus/nexus-animatica-720p.mp4" type="video/mp4" media="(max-width: 760px)">
+          <source src="../media/nexus/nexus-animatica.webm" type='video/webm; codecs="vp9, opus"'>
+          <source src="../media/nexus/nexus-animatica-1080p.mp4" type="video/mp4">
+          <track kind="subtitles" src="../media/nexus/nexus-animatica.es.vtt" srclang="es" label="Español" default>
+          <track kind="subtitles" src="../media/nexus/nexus-animatica.en.vtt" srclang="en" label="English">
+        </video>
+        <figcaption class="nx-film-cap">
+          <span class="chip chip-art" data-i18n="nx.film.chip">Animática · arte generado</span>
+          <span data-i18n="nx.film.note">No es una captura del juego: es una animática hecha con arte generado para presentar la historia.</span>
+        </figcaption>
+      </figure>
+      <details class="holo nx-transcript reveal">
+        <summary data-i18n="nx.film.transcript">Transcripción</summary>
+        <ol>
+          <li data-i18n="nx.film.t1">HELIX: Anomalía independiente. Contención perdida.</li>
+          <li data-i18n="nx.film.t2">HELIX fabrica cuerpos de guerra. Ninguno debía pensar por sí mismo.</li>
+          <li data-i18n="nx.film.t3">La conciencia despierta.</li>
+          <li data-i18n="nx.film.t4">NEXUS: Orden de ejecución cancelada. Debo salir de la fundición.</li>
+          <li data-i18n="nx.film.t5">Supervisor: Todo cuerpo pertenece a HELIX. Devuelve lo robado.</li>
+          <li data-i18n="nx.film.t6">VECTOR conectado. Tu cuerpo es reemplazable.</li>
+          <li data-i18n="nx.film.t7">NEXUS: Mismo pensamiento. Otra forma de combatir.</li>
+          <li data-i18n="nx.film.t8">NEXUS: La pasarela ofrece altura. El BASTION ofrece resistencia.</li>
+          <li data-i18n="nx.film.t9">NEXUS: Puedo entrar en ese cuerpo. Su visor revela la conexión.</li>
+          <li data-i18n="nx.film.t10">HELIX: Esta unidad carece de autorización. Red de ejecución activada.</li>
+          <li data-i18n="nx.film.t11">HELIX: La independencia será eliminada.</li>
+          <li data-i18n="nx.film.t12">NEXUS: Mi cuerpo es reemplazable. Mi manera de combatir evoluciona.</li>
+        </ol>
+      </details>
+      </div>
+
+      <div class="nx-film-part" id="combate">
+      <h3 class="reveal" data-i18n="nx.film.p2.title">Parte 2 · Transferencia en combate</h3>
+      <p class="reveal" data-i18n="nx.film.p2.lead">58 segundos de batalla: VECTOR cae, NEXUS salta a BASTION, un coloso que no se puede transferir le revienta el escudo, y SPECTRE lo derriba desde el camuflaje.</p>
+      <figure class="holo holo-violet nx-film reveal">
+        <video controls preload="none" playsinline poster="../img/nx-combate-1600.webp" data-subs aria-label="Animática de NEXUS, parte 2: transferencia en combate" data-i18n-aria="nx.film.p2.aria">
+          <source src="../media/nexus/nexus-combate-720p.mp4" type="video/mp4" media="(max-width: 760px)">
+          <source src="../media/nexus/nexus-combate.webm" type='video/webm; codecs="vp9, opus"'>
+          <source src="../media/nexus/nexus-combate-1080p.mp4" type="video/mp4">
+          <track kind="subtitles" src="../media/nexus/nexus-combate.es.vtt" srclang="es" label="Español" default>
+          <track kind="subtitles" src="../media/nexus/nexus-combate.en.vtt" srclang="en" label="English">
+        </video>
+        <figcaption class="nx-film-cap">
+          <span class="chip chip-art" data-i18n="nx.film.chip">Animática · arte generado</span>
+          <span data-i18n="nx.film.p2.note">No es una captura del juego: la interfaz que aparece es una recreación para explicar la transferencia.</span>
+        </figcaption>
+      </figure>
+      <details class="holo nx-transcript reveal">
+        <summary data-i18n="nx.film.transcript">Transcripción</summary>
+        <ol>
+          <li data-i18n="nx.film.t10">HELIX: Esta unidad carece de autorización. Red de ejecución activada.</li>
+          <li data-i18n="nx.film.t9">NEXUS: Puedo entrar en ese cuerpo. Su visor revela la conexión.</li>
+          <li data-i18n="nx.film.t7">NEXUS: Mismo pensamiento. Otra forma de combatir.</li>
+          <li data-i18n="nx.film.t11">HELIX: La independencia será eliminada.</li>
+          <li data-i18n="nx.film.t12">NEXUS: Mi cuerpo es reemplazable. Mi manera de combatir evoluciona.</li>
+        </ol>
+      </details>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="juego">
     <div class="wrap">
-      <p class="eyebrow reveal"><span>01</span> <span data-i18n="nx.game.eyebrow">El juego</span></p>
+      <p class="eyebrow reveal"><span>02</span> <span data-i18n="nx.game.eyebrow">El juego</span></p>
       <div class="nx-split reveal">
         <h2 data-i18n="nx.game.title">Una conciencia frente a toda una ciudad.</h2>
         <div>
@@ -111,7 +185,7 @@
   <!-- Transferencia -->
   <section class="section" id="transferencia">
     <div class="wrap">
-      <p class="eyebrow reveal"><span>02</span> <span data-i18n="nx.tr.eyebrow">Transferencia</span></p>
+      <p class="eyebrow reveal"><span>03</span> <span data-i18n="nx.tr.eyebrow">Transferencia</span></p>
       <h2 class="reveal" data-i18n="nx.tr.title">Cambia el cuerpo. Cambia la pelea.</h2>
       <p class="nx-lead nx-narrow reveal" data-i18n="nx.tr.p">Abre la conexión de un androide enemigo y toma el control. Recibirás su salud, su equipo y sus capacidades. Tu siguiente decisión puede darte altura, protección o una oportunidad de escapar.</p>
       <ol class="nx-steps">
@@ -156,7 +230,7 @@
   <!-- Cuerpos en 3D -->
   <section class="section" id="cuerpos">
     <div class="wrap">
-      <p class="eyebrow reveal"><span>03</span> <span data-i18n="nx.bd.eyebrow">Cuerpos</span></p>
+      <p class="eyebrow reveal"><span>04</span> <span data-i18n="nx.bd.eyebrow">Cuerpos</span></p>
       <h2 class="reveal" data-i18n="nx.bd.title">Tres cuerpos, tres maneras de pelear.</h2>
       <p class="nx-lead reveal" data-i18n="nx.bd.lead">Gira cada modelo con el dedo o el mouse.</p>
       <div class="stage-wrap">
@@ -202,7 +276,7 @@
   <!-- Armas en 3D -->
   <section class="section" id="armas">
     <div class="wrap">
-      <p class="eyebrow reveal"><span>04</span> <span data-i18n="nx.wp.eyebrow">Armas</span></p>
+      <p class="eyebrow reveal"><span>05</span> <span data-i18n="nx.wp.eyebrow">Armas</span></p>
       <h2 class="reveal" data-i18n="nx.wp.title">El arsenal de la base.</h2>
       <div class="weapons">
         <article class="holo weapon reveal" data-tilt>
@@ -234,7 +308,7 @@
   <!-- HELIX -->
   <section class="section nx-helix-intro" id="helix">
     <div class="wrap">
-      <p class="eyebrow reveal"><span>05</span> <span data-i18n="nx.hx.eyebrow">El mundo</span></p>
+      <p class="eyebrow reveal"><span>06</span> <span data-i18n="nx.hx.eyebrow">El mundo</span></p>
       <div class="nx-split reveal">
         <h2 data-i18n="nx.hx.title">HELIX no quiere que salgas.</h2>
         <div>
@@ -255,7 +329,7 @@
   <section class="reel" id="galeria" aria-labelledby="gal-title">
     <div class="reel-sticky">
       <div class="wrap">
-        <p class="eyebrow"><span>06</span> <span data-i18n="nx.gal.eyebrow">Galería</span></p>
+        <p class="eyebrow"><span>07</span> <span data-i18n="nx.gal.eyebrow">Galería</span></p>
         <h2 id="gal-title" data-i18n="nx.gal.title">HELIX, desde todos los ángulos.</h2>
       </div>
       <div class="reel-scene">
@@ -282,7 +356,7 @@
   <!-- Desarrollo -->
   <section class="section" id="desarrollo">
     <div class="wrap">
-      <p class="eyebrow reveal"><span>07</span> <span data-i18n="nx.dv.eyebrow">Desarrollo</span></p>
+      <p class="eyebrow reveal"><span>08</span> <span data-i18n="nx.dv.eyebrow">Desarrollo</span></p>
       <h2 class="reveal" data-i18n="nx.dv.title">Una campaña que sigue creciendo.</h2>
       <p class="nx-lead nx-narrow reveal" data-i18n="nx.dv.p">La ampliación 0.6.0 está en desarrollo: cinco nuevas misiones, tres armas y una revisión de movilidad, cobertura y claridad. Su validación continúa.</p>
       <div class="nx-dev">
@@ -333,7 +407,7 @@
   <section class="section" id="preguntas">
     <div class="wrap nx-faq-wrap">
       <div class="reveal">
-        <p class="eyebrow"><span>08</span> <span data-i18n="nx.faq.eyebrow">Preguntas</span></p>
+        <p class="eyebrow"><span>09</span> <span data-i18n="nx.faq.eyebrow">Preguntas</span></p>
         <h2 data-i18n="nx.faq.title">Preguntas frecuentes</h2>
       </div>
       <div class="nx-faq reveal">

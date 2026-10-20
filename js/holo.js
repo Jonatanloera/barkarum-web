@@ -182,5 +182,21 @@
     }
   }
 
-  energy(); tilt(); reveal(); stages(); reels();
+  // Subtítulos de los videos en el idioma del sitio.
+  function films() {
+    var vids = document.querySelectorAll('video[data-subs]');
+    if (!vids.length) return;
+    function sync() {
+      var lang = document.documentElement.lang || 'es';
+      vids.forEach(function (v) {
+        for (var i = 0; i < v.textTracks.length; i++) {
+          v.textTracks[i].mode = v.textTracks[i].language === lang ? 'showing' : 'disabled';
+        }
+      });
+    }
+    sync();
+    document.addEventListener('langchange', sync);
+  }
+
+  energy(); tilt(); reveal(); stages(); reels(); films();
 })();
