@@ -85,6 +85,8 @@ window.BARKARUM_EN = {
     'bp.k_release': 'Release',
     'bp.v_release': 'Part 1 comes first, so we can hear from players, and platforms will arrive in stages. No date yet.',
     'bp.cl.title': 'Follow Akira',
+    'follow.main': 'Follow us',
+    'follow.sub': 'Updates, art and news, first on X',
     'bp.cl.p': 'Barkarum Project updates are posted on X first.',
     'bp.cl.games': 'See the studio’s other games',
     'bp.close': 'Close',
