@@ -65,3 +65,9 @@
   .bp-hero { padding-top: 88px; }
   .bp-cta .btn { width: 100%; }
 }
+
+/* Video de la Misión 01 (mismo esquema que las animáticas de NEXUS) */
+.bp-film-lead { margin: 0; max-width: 46em; font-size: clamp(17px, 1.8vw, 19px); color: #C9D1E3; }
+.bp-film { margin: clamp(22px, 3vw, 34px) 0 0; }
+.bp-film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #000; }
+.bp-film-cap { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding: 14px 18px; font-size: 14px; color: var(--muted); }
