@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.title">Demo gratis de Barkarum Project | Regístrate</title>
+<meta name="description" data-i18n-content="meta.desc" content="Regístrate con tu correo y obtén la demo gratis de Barkarum Project, un juego de acción run-and-gun 2.5D en desarrollo.">
+<meta name="theme-color" content="#05060A">
+<link rel="canonical" href="https://barkarum.com/registro/">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Barkarum Project Studio">
+<meta property="og:title" content="Demo gratis de Barkarum Project">
+<meta property="og:description" content="Regístrate y obtén la demo gratis de Barkarum Project.">
+<meta property="og:url" content="https://barkarum.com/registro/">
+<meta property="og:image" content="https://barkarum.com/img/registro-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@barkarumproject">
+<link rel="preload" href="../fonts/chakra-petch-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/holo.css">
+<link rel="stylesheet" href="../css/bp.css">
+<link rel="stylesheet" href="../css/registro.css">
+<script src="../js/en-registro.js" defer></script>
+<script src="../js/i18n.js" defer></script>
+<script src="../js/holo.js" defer></script>
+<script src="../js/registro.js" defer></script>
+</head>
+<body class="page-bp page-registro">
+<canvas id="energy" aria-hidden="true" data-colors="240,0,192|0,216,240|139,92,246"></canvas>
+<div class="fx-noise" aria-hidden="true"></div>
+<div class="fx-scan" aria-hidden="true"></div>
+<a class="skip" href="#registro" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<header class="topbar" id="topbar">
+  <a class="brand" href="../index.html" aria-label="Barkarum Project Studio">
+    <img src="../img/apple-touch-icon.png" alt="" width="32" height="32">
+    <span>BARKARUM</span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Principal" data-i18n-aria="nav.label">
+    <a href="../barkarum-project/index.html">Barkarum Project</a>
+    <a href="#registro" data-i18n="reg.nav.form">Registro</a>
+    <a href="privacidad.html" data-i18n="reg.nav.privacy">Aviso de privacidad</a>
+  </nav>
+  <div class="topbar-tools">
+    <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" data-i18n="nav.menu">Menú</button>
+  </div>
+</header>
+
+<main>
+  <section class="reg-hero" id="inicio">
+    <div class="wrap reg-inner">
+      <div class="reg-text reveal">
+        <p class="bp-hero-chips">
+          <span class="chip chip-status" data-i18n="reg.chip">Demo gratis</span>
+          <span class="bp-eyebrow">Barkarum Project · <span data-i18n="reg.genre">Acción run-and-gun 2.5D</span></span>
+        </p>
+        <h1 class="reg-title" data-i18n="reg.title">Regístrate y obtén la demo gratis de Barkarum Project</h1>
+        <p class="bp-sub" data-i18n="reg.sub">Deja tu correo y te enviaremos la demo. Akira es la única de cuatro amigas que escapó de CERBERUS, y ahora va por las otras tres.</p>
+        <ul class="mini-facts reg-facts" role="list">
+          <li data-i18n="reg.fact1">Plataformas previstas: PC (Steam y web de escritorio), iPhone y iPad</li>
+          <li data-i18n="reg.fact2">Voces y textos en español latinoamericano</li>
+          <li data-i18n="reg.fact3">Solo te escribimos sobre la demo y Barkarum Project; puedes darte de baja cuando quieras</li>
+        </ul>
+      </div>
+
+      <div class="holo holo-pad holo-magenta reg-panel reveal" id="registro">
+        <form class="reg-form" id="regForm" action="https://formspree.io/f/mljgqvjd" method="POST" data-endpoint="https://formspree.io/f/mljgqvjd" novalidate>
+          <h2 class="reg-form-title" data-i18n="reg.form.title">Recibe la demo en tu correo</h2>
+
+          <label class="reg-field">
+            <span><span data-i18n="reg.email">Correo electrónico</span> <em data-i18n="reg.required">(obligatorio)</em></span>
+            <input type="email" name="email" id="regEmail" required autocomplete="email" inputmode="email" maxlength="254" placeholder="tu@correo.com">
+          </label>
+
+          <label class="reg-field">
+            <span><span data-i18n="reg.name">Nombre</span> <em data-i18n="reg.optional">(opcional)</em></span>
+            <input type="text" name="nombre" autocomplete="name" maxlength="80">
+          </label>
+
+          <fieldset class="reg-platforms">
+            <legend data-i18n="reg.platforms">¿En qué plataforma te interesa jugar?</legend>
+            <label><input type="checkbox" name="plataforma" value="PC (Steam y web)"> <span data-i18n="reg.pc">PC (Steam y web)</span></label>
+            <label><input type="checkbox" name="plataforma" value="iPhone"> <span>iPhone</span></label>
+            <label><input type="checkbox" name="plataforma" value="iPad"> <span>iPad</span></label>
+          </fieldset>
+
+          <label class="reg-consent">
+            <input type="checkbox" name="consentimiento" value="sí" required>
+            <span><span data-i18n="reg.consent">Acepto el</span> <a href="privacidad.html" data-i18n="reg.consent.link">aviso de privacidad</a> <span data-i18n="reg.consent.rest">y que me escriban para enviarme la demo y novedades de Barkarum Project.</span></span>
+          </label>
+
+          <!-- Campos ocultos para Formspree: asunto, idioma, origen y trampa para bots. -->
+          <input type="hidden" name="_subject" value="Nuevo registro · demo de Barkarum Project">
+          <input type="hidden" name="idioma" value="es">
+          <input type="hidden" name="origen" value="barkarum.com/registro">
+          <input type="text" name="_gotcha" class="reg-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <button class="btn btn-magenta reg-submit" type="submit" data-i18n="reg.submit">Quiero la demo gratis</button>
+
+          <p class="reg-msg reg-error" id="regInvalid" role="alert" hidden data-i18n="reg.invalid">Escribe un correo válido y acepta el aviso de privacidad.</p>
+          <p class="reg-msg reg-error" id="regFail" role="alert" hidden data-i18n-html="reg.fail">No pudimos enviar tu registro. Inténtalo de nuevo o escríbenos a <a href="mailto:contacto@barkarum.com">contacto@barkarum.com</a>.</p>
+        </form>
+
+        <div class="reg-done" id="regDone" hidden tabindex="-1">
+          <p class="chip chip-status" data-i18n="reg.done.chip">Registro recibido</p>
+          <h2 data-i18n="reg.done.title">¡Listo, estás registrado!</h2>
+          <p><span data-i18n="reg.done.p">Te enviaremos la demo de Barkarum Project a</span> <strong id="regDoneEmail"></strong>.</p>
+          <p class="reg-note" data-i18n="reg.done.spam">Si no ves nuestro correo, revisa la carpeta de spam o promociones.</p>
+        </div>
+        <div class="holo-sheen"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reg-art-section">
+    <div class="wrap">
+      <figure class="holo holo-frame holo-magenta reg-art reveal" data-tilt>
+        <img src="../img/bp-hero-1600.webp" srcset="../img/bp-hero-800.webp 800w, ../img/bp-hero-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 1100px" width="1600" height="900" loading="lazy" alt="Akira, de espaldas, frente a una cápsula suspendida en una sala inmensa cubierta de enredaderas." data-i18n-alt="reg.art.alt">
+        <div class="scanline" aria-hidden="true"></div>
+        <span class="hud-label hl-left" aria-hidden="true">CERBERUS · <span data-i18n="reg.art.hud">Sala de cápsulas</span></span>
+        <figcaption><span class="chip chip-art" data-i18n="reg.art.label">Arte de cinemática</span></figcaption>
+      </figure>
+      <p class="reg-more reveal"><a class="btn btn-ghost" href="../barkarum-project/index.html" data-i18n="reg.more">Conoce Barkarum Project</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>Barkarum Project — <span data-i18n="reg.ft.status">Proyecto en desarrollo. Todo lo que aparece aquí puede cambiar.</span></p>
+    <p class="footer-links">
+      <a href="../index.html">© 2026 Barkarum Project Studio</a>
+      <a href="privacidad.html" data-i18n="reg.nav.privacy">Aviso de privacidad</a>
+      <a href="mailto:contacto@barkarum.com">contacto@barkarum.com</a>
+      <a href="#inicio" data-i18n="footer.top">Volver arriba</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

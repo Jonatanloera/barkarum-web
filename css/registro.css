@@ -1,0 +1,77 @@
+/* Página de registro de la demo de Barkarum Project. Se carga después de styles.css, holo.css y bp.css. */
+
+.reg-hero { min-height: 100vh; min-height: 100svh; display: grid; align-items: center; padding: 110px 0 40px; }
+.reg-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .95fr); gap: clamp(24px, 4vw, 60px); align-items: center; }
+.reg-title { margin: 0 0 18px; font: 700 clamp(34px, 4.6vw, 60px)/1.04 var(--display); letter-spacing: .01em; text-wrap: balance; color: #fff; text-shadow: 0 0 36px rgba(240, 0, 192, .45); }
+.reg-facts { margin-top: 22px; }
+
+/* Panel del formulario */
+.reg-panel { --cut: 20px; }
+.reg-form { display: grid; gap: 18px; }
+.reg-form[hidden] { display: none; }
+.reg-form-title { margin: 0; font-size: clamp(22px, 2.4vw, 28px); color: #fff; }
+.reg-field { display: grid; gap: 8px; font: 600 14px/1.3 var(--display); letter-spacing: .06em; color: #E8ECF6; }
+.reg-field em, .reg-platforms legend em { font-style: normal; font-weight: 500; color: var(--muted); }
+.reg-field input {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 14px;
+  font: 500 17px/1.3 var(--body);
+  color: #fff;
+  background: rgba(5, 6, 10, .65);
+  border: 1px solid rgba(255, 179, 236, .35);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.reg-field input::placeholder { color: #6F7890; }
+.reg-field input:focus-visible { border-color: var(--pink); box-shadow: 0 0 0 3px rgba(240, 0, 192, .25), 0 0 24px rgba(240, 0, 192, .25); }
+.reg-platforms { margin: 0; padding: 0; border: 0; display: flex; flex-wrap: wrap; gap: 10px 12px; }
+.reg-platforms legend { width: 100%; margin-bottom: 10px; padding: 0; font: 600 14px/1.3 var(--display); letter-spacing: .06em; color: #E8ECF6; }
+.reg-platforms label { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 14px; border: 1px solid rgba(0, 216, 240, .35); border-radius: 999px; background: rgba(5, 6, 10, .55); color: #E8ECF6; cursor: pointer; }
+.reg-platforms label:has(input:checked) { border-color: var(--pink); box-shadow: 0 0 18px rgba(240, 0, 192, .3); }
+.reg-platforms input, .reg-consent input { width: 18px; height: 18px; accent-color: var(--pink); flex: none; }
+.reg-consent { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #C9D1E3; cursor: pointer; }
+.reg-consent input { margin-top: 3px; }
+.reg-consent a { color: #FFB3EC; }
+.reg-submit { width: 100%; min-height: 54px; font-size: 15px; }
+.reg-submit[disabled] { opacity: .6; cursor: progress; }
+.reg-trap { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.reg-msg { margin: 0; font-size: 15px; }
+.reg-error { color: #FFB4A6; }
+.reg-error a { color: #FFB3EC; }
+
+/* Confirmación */
+.reg-done { display: grid; gap: 12px; outline: none; }
+.reg-done[hidden] { display: none; }
+.reg-done h2 { margin: 0; font-size: clamp(26px, 3vw, 34px); color: #fff; }
+.reg-done p { margin: 0; color: #C9D1E3; }
+.reg-done strong { color: #FFB3EC; overflow-wrap: anywhere; }
+.reg-done .chip { justify-self: start; }
+.reg-note { font-size: 14px; color: var(--muted); }
+
+/* Arte */
+.reg-art-section { padding-top: 0; }
+.reg-art { margin: 0; }
+.reg-art figcaption { position: absolute; left: 18px; bottom: 16px; z-index: 3; }
+.reg-art .hud-label.hl-left { left: 18px; top: 16px; }
+.reg-more { margin: 22px 0 0; text-align: center; }
+
+@media (max-width: 1000px) {
+  .reg-hero { min-height: 0; }
+  .reg-inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .reg-hero { padding-top: 88px; }
+  .reg-platforms label { flex: 1 1 auto; justify-content: center; }
+}
+
+/* Aviso de privacidad */
+.reg-legal { padding-top: clamp(110px, 12vw, 150px); }
+.reg-legal .wrap { max-width: 860px; }
+.reg-updated { margin: 0 0 24px; color: var(--muted); font-size: 15px; }
+.reg-legal-body h2 { margin: 26px 0 8px; font-size: clamp(19px, 2vw, 22px); color: #fff; }
+.reg-legal-body h2:first-child { margin-top: 0; }
+.reg-legal-body p, .reg-legal-body li { color: #C9D1E3; }
+.reg-legal-body ul { margin: 0 0 10px; padding-left: 20px; display: grid; gap: 6px; }
+.reg-legal-body a { color: #FFB3EC; }

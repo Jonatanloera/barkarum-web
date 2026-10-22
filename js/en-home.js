@@ -32,6 +32,7 @@ window.BARKARUM_EN = {
     'bp.short': 'Akira is the only one of four friends who escaped CERBERUS. Now she’s going back, mission by mission, to rescue the other three, in a monumental future of colossi and living cities.',
     'bp.fact1': 'Planned platforms: PC (Steam and desktop web), iPhone and iPad',
     'bp.fact2': 'Latin American Spanish voices and text',
+    'bp.cta.demo': 'Free demo',
     'bp.cta': 'Explore Barkarum Project',
     'bp.cta3d': 'Akira in 3D',
     'nx.card.alt': 'NEXUS concept art: a cyan and violet consciousness leaps from a dark android to a white one inside a foundry.',
