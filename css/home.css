@@ -40,11 +40,48 @@
 .card-game .game-body { justify-content: flex-start; }
 .card-game .legal-links { margin-top: auto; }
 
+/* ---------- Bandas sonoras ---------- */
+.ost-lead { max-width: 40em; color: #C9D1E3; font-size: clamp(16px, 1.7vw, 18px); }
+.ost-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 28px); margin-top: clamp(24px, 3vw, 36px); }
+.ost-card { --cut: 20px; display: flex; flex-direction: column; }
+.ost-cover { position: relative; display: block; overflow: hidden; background: var(--bg-2); }
+.ost-cover img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; transition: transform .5s ease, filter .3s ease; }
+.ost-cover:hover img { transform: scale(1.03); filter: brightness(1.08); }
+.ost-cover .chip { position: absolute; left: 14px; bottom: 12px; z-index: 2; }
+.ost-play { position: absolute; left: 50%; top: 50%; z-index: 2; display: grid; place-items: center; width: 68px; height: 68px; transform: translate(-50%, -50%); border-radius: 50%; background: rgba(5, 6, 10, .6); border: 2px solid rgba(255, 255, 255, .85); box-shadow: 0 0 30px rgba(240, 0, 192, .45); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+.ost-play svg { width: 28px; height: 28px; margin-left: 4px; fill: #fff; }
+.ost-body { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; padding: clamp(18px, 2.4vw, 28px); color: #C9D1E3; }
+.ost-body p { margin: 0; }
+.ost-title { margin: 0; font: 700 clamp(24px, 2.6vw, 32px)/1.05 var(--display); letter-spacing: .04em; text-transform: uppercase; color: #fff; }
+.ost-title span { display: block; margin-top: 8px; font-size: .5em; letter-spacing: .24em; }
+.ost-title.nx-title span { color: var(--violet-soft); }
+.ost-title.bp-title span { color: #FFB3EC; }
+.ost-body .btn .ico { width: 18px; height: 18px; }
+
+/* Video de presentación dentro de la tarjeta de Barkarum Project */
+.ost-video { display: flex; align-items: center; gap: 14px; width: 100%; margin-top: 4px; padding: 10px; border: 1px solid rgba(255, 179, 236, .3); border-radius: 12px; background: rgba(5, 6, 10, .5); color: #fff; text-decoration: none; transition: border-color .2s, box-shadow .2s; }
+.ost-video:hover { color: #fff; border-color: var(--pink); box-shadow: 0 0 24px rgba(240, 0, 192, .3); }
+.ost-video-thumb { position: relative; flex: none; width: min(200px, 42%); overflow: hidden; border-radius: 8px; }
+.ost-video-thumb img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.ost-video-thumb .ost-play { width: 40px; height: 40px; }
+.ost-video-thumb .ost-play svg { width: 18px; height: 18px; margin-left: 3px; }
+.ost-video-text { display: grid; gap: 4px; }
+.ost-video-text small { font: 600 12px/1.2 var(--display); letter-spacing: .16em; text-transform: uppercase; color: #FFB3EC; }
+.ost-video-text strong { font: 700 18px/1.2 var(--display); }
+.ost-video-label { font-size: 13px; color: var(--muted); }
+
+/* Botón «Suscríbete»: el mismo del de X, con el rojo de YouTube en el ícono */
+.ost-sub { margin-top: clamp(26px, 3vw, 38px); text-align: center; }
+.follow-yt .follow-x-icon { background: #fff; box-shadow: 0 0 0 1px rgba(255, 255, 255, .3), 0 0 22px rgba(255, 0, 51, .55); }
+.follow-yt .follow-x-icon svg { fill: #FF0033; width: 28px; height: 28px; }
+.follow-yt .follow-x-icon::after { border-color: rgba(255, 0, 51, .6); }
+
 /* ---------- Novedades y contacto ---------- */
 .page-home .panels .holo p { color: #C9D1E3; }
 
 @media (max-width: 1000px) {
   .game-feature { grid-template-columns: 1fr; }
+  .ost-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
   .logo-holo .hud-label { display: none; }
