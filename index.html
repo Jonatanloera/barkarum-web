@@ -28,6 +28,7 @@
 <script src="js/en-home.js" defer></script>
 <script src="js/i18n.js" defer></script>
 <script src="js/holo.js" defer></script>
+<script src="js/ost.js" defer></script>
 </head>
 <body class="page-home">
 <canvas id="energy" aria-hidden="true"></canvas>
@@ -82,6 +83,7 @@
         </a>
         <a class="btn btn-ghost" href="#juegos" data-i18n="hero.cta_games">Ver juegos</a>
       </div>
+      <a class="hero-ost" href="#bandas-sonoras"><span class="ost-eq ost-eq-sm" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span data-i18n="hero.ost">Escucha las bandas sonoras originales</span></a>
     </div>
   </section>
 
@@ -193,20 +195,23 @@
   </section>
 
   <!-- Bandas sonoras -->
-  <section class="section" id="bandas-sonoras">
+  <section class="section ost-section" id="bandas-sonoras">
     <div class="wrap">
       <p class="eyebrow reveal"><span>03</span> <span data-i18n="ost.eyebrow">Bandas sonoras</span></p>
-      <h2 class="reveal" data-i18n="ost.title">Escucha los mundos que estamos construyendo.</h2>
-      <p class="ost-lead reveal" data-i18n="ost.lead">La música original de nuestros juegos, en YouTube.</p>
+      <h2 class="ost-h2 reveal"><span data-i18n="ost.title">Escucha los mundos que estamos construyendo.</span></h2>
+      <svg class="ost-wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="ostWave" x1="0" x2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset=".5" stop-color="#00D8F0"/><stop offset="1" stop-color="#F000C0"/></linearGradient></defs><polyline points="0,30.0 5,36.9 10,40.4 15,39.5 20,36.5 25,35.2 30,37.9 35,43.7 40,48.7 45,49.6 50,45.3 55,38.5 60,33.2 65,31.8 70,33.4 75,34.7 80,32.2 85,25.3 90,16.9 95,11.1 100,10.2 105,13.4 110,17.2 115,18.0 120,15.3 125,11.6 130,10.9 135,15.2 140,23.4 145,31.5 150,36.0 155,36.2 160,34.4 165,34.6 170,38.7 175,45.4 180,51.1 185,52.2 190,48.3 195,42.0 200,37.5 205,36.9 210,39.1 215,40.7 220,38.3 225,31.7 230,23.7 235,18.5 240,18.2 245,21.6 250,25.0 255,25.1 260,21.5 265,16.9 270,15.3 275,18.4 280,24.9 285,30.9 290,33.0 295,30.7 300,26.8 305,25.2 310,27.8 315,33.2 320,37.6 325,37.7 330,33.4 335,27.7 340,24.5 345,25.8 350,30.3 355,34.2 360,34.3 365,30.6 370,25.9 375,24.2 380,27.3 385,33.5 390,39.1 395,40.7 400,38.0 405,34.0 410,32.5 415,35.1 420,40.2 425,43.9 430,43.1 435,37.6 440,30.6 445,26.0 450,25.6 455,27.9 460,29.2 465,26.5 470,20.1 475,13.0 480,9.3 485,10.7 490,15.7 495,20.3 500,21.6 505,19.4 510,17.0 515,17.9 520,23.8 525,32.5 530,40.2 535,43.5 540,42.5 545,40.1 550,40.1 555,43.9 560,49.6 565,53.2 570,51.9 575,45.9 580,38.4 585,33.4 590,32.6 595,34.1 600,34.4 605,30.6 610,23.2 615,15.5 620,11.4 625,12.5 630,16.9 635,20.6 640,20.8 645,17.7 650,14.4 655,14.8 660,19.9 665,27.7 670,34.0 675,36.0 680,33.8 685,30.7 690,30.4 695,34.1 700,39.8 705,43.5 710,42.6 715,37.4 720,31.5 725,28.7 730,30.3 735,34.3 740,36.9 745,35.4 750,30.3 755,25.1 760,23.5 765,26.7 770,32.4 775,36.6 780,36.5 785,32.7 790,28.4 795,27.4 800,30.5 805,35.6 810,38.6 815,36.9 820,31.1 825,24.8 830,21.7 835,22.9 840,26.3 845,28.0 850,25.5 855,19.7 860,14.1 865,12.5 870,15.9 875,22.0 880,26.9 885,27.9 890,25.7 895,23.8 900,25.6 905,32.0 910,40.3 915,46.5 920,47.8 925,45.1 930,41.7 935,41.2 940,44.2 945,48.5 950,50.0 955,46.5 960,38.8 965,30.7 970,26.0 975,25.5 980,27.1 985,26.8 990,22.5 995,15.3 1000,8.9 1005,6.9 1010,10.0 1015,15.8 1020,20.2 1025,20.9 1030,18.6 1035,17.0 1040,19.4 1045,26.2 1050,34.7 1055,40.8 1060,42.1 1065,39.5 1070,36.7 1075,36.9 1080,40.9 1085,45.8 1090,48.0 1095,45.2 1100,38.6 1105,32.1 1110,29.3 1115,30.7 1120,33.8 1125,34.9 1130,31.7 1135,25.6 1140,20.3 1145,19.2 1150,22.8 1155,28.3 1160,31.7 1165,30.7 1170,26.6 1175,23.1 1180,23.3 1185,27.6 1190,33.2 1195,36.0 1200,34.0"/></svg>
+      <p class="ost-lead reveal" data-i18n="ost.lead">La música original de nuestros juegos. Dale play aquí mismo o escúchala en YouTube.</p>
 
       <div class="ost-grid">
         <!-- NEXUS -->
         <article class="holo holo-violet ost-card reveal" aria-labelledby="ost-nx-title">
-          <a class="ost-cover" href="https://www.youtube.com/playlist?list=PLdLNtEna0gVQ" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true">
+          <div class="ost-cover" data-yt-list="PLdLNtEna0gVQ" data-yt-title="NEXUS · Banda sonora original">
             <img src="img/nx-animatica-800.webp" srcset="img/nx-animatica-800.webp 800w, img/nx-animatica-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 580px" width="1600" height="900" loading="lazy" alt="Portada de la banda sonora de NEXUS: los cuerpos IRIS, BASTION y VELA unidos por un hilo de conciencia cian." data-i18n-alt="ost.nx.alt">
-            <span class="ost-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="ost-eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            <button class="ost-play" type="button" aria-label="Reproducir aquí la banda sonora de NEXUS" data-i18n-aria="ost.nx.play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
             <span class="chip chip-art" data-i18n="ost.concept">Arte conceptual</span>
-          </a>
+            <span class="ost-now" aria-hidden="true" data-i18n="ost.now">Escuchar ahora</span>
+          </div>
           <div class="ost-body">
             <h3 id="ost-nx-title" class="ost-title nx-title">NEXUS <span data-i18n="ost.kind">Banda sonora original</span></h3>
             <p data-i18n="ost.nx.p">La música de las misiones y las batallas de jefe de HELIX, la ciudad de máquinas de NEXUS: Cuerpos de guerra.</p>
@@ -216,11 +221,13 @@
 
         <!-- Barkarum Project -->
         <article class="holo holo-magenta ost-card reveal" aria-labelledby="ost-bp-title">
-          <a class="ost-cover" href="https://www.youtube.com/playlist?list=PLXKDt9dAHXw0" rel="noopener" target="_blank" tabindex="-1" aria-hidden="true">
+          <div class="ost-cover" data-yt-list="PLXKDt9dAHXw0" data-yt-title="Barkarum Project · Banda sonora original">
             <img src="img/bp-ciudad-800.webp" srcset="img/bp-ciudad-800.webp 800w, img/bp-ciudad-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 580px" width="1600" height="900" loading="lazy" alt="Una ciudad monumental cubierta de vegetación, con torres y puentes iluminados al anochecer." data-i18n-alt="ost.bp.alt">
-            <span class="ost-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="ost-eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            <button class="ost-play" type="button" aria-label="Reproducir aquí la banda sonora de Barkarum Project" data-i18n-aria="ost.bp.play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
             <span class="chip chip-art" data-i18n="ost.cine">Arte de cinemática</span>
-          </a>
+            <span class="ost-now" aria-hidden="true" data-i18n="ost.now">Escuchar ahora</span>
+          </div>
           <div class="ost-body">
             <h3 id="ost-bp-title" class="ost-title bp-title">Barkarum Project <span data-i18n="ost.kind">Banda sonora original</span></h3>
             <p data-i18n="ost.bp.p">Electrónica de pulso continuo y oleadas pesadas para el combate: la música original de cada misión de Akira.</p>
@@ -228,7 +235,7 @@
             <a class="ost-video" href="https://youtu.be/zIAhh3FmgEo" rel="noopener" target="_blank">
               <span class="ost-video-thumb">
                 <img src="img/bp-video-mision01-640.webp" srcset="img/bp-video-mision01-640.webp 640w, img/bp-video-mision01-1280.webp 1280w" sizes="200px" width="1280" height="720" loading="lazy" alt="Miniatura del video: Akira y sus tres amigas con armadura táctica en una ciudad nocturna." data-i18n-alt="ost.video.alt">
-                <span class="ost-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+                <span class="ost-play ost-play-sm" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
               </span>
               <span class="ost-video-text">
                 <small data-i18n="ost.video.kicker">Video de presentación</small>
@@ -239,16 +246,27 @@
           </div>
         </article>
       </div>
+      <p class="ost-note reveal" data-i18n="ost.note">Al darle play aquí se carga el reproductor de YouTube.</p>
 
-      <div class="follow-row ost-sub reveal">
-        <a class="follow-x follow-yt" href="https://www.youtube.com/@barkarumproject?sub_confirmation=1" rel="noopener" target="_blank">
-          <span class="follow-x-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></span>
-          <span class="follow-x-text">
-            <span class="follow-x-main"><span data-i18n="ost.sub.main">Suscríbete en YouTube</span> <strong>@barkarumproject</strong></span>
-            <span class="follow-x-sub" data-i18n="ost.sub.sub">Bandas sonoras, videos y avances del estudio</span>
-          </span>
-          <span class="follow-x-arrow" aria-hidden="true">→</span>
-        </a>
+      <!-- Suscripción -->
+      <div class="holo holo-pad ost-band reveal">
+        <div class="ost-band-text">
+          <p class="ost-band-kicker"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22zm7-6V11a7 7 0 0 0-5-6.71V3.5a2 2 0 0 0-4 0v.79A7 7 0 0 0 5 11v5l-2 2v1h18v-1z"/></svg><span>YouTube · @barkarumproject</span></p>
+          <h3 data-i18n="ost.band.title">Suscríbete y activa la campanita</h3>
+          <p data-i18n="ost.band.p">Así YouTube te avisa de cada pista, video y avance nuevo del estudio.</p>
+        </div>
+        <div class="ost-band-cta">
+          <a class="follow-x follow-yt" href="https://www.youtube.com/@barkarumproject?sub_confirmation=1" rel="noopener" target="_blank">
+            <span class="follow-x-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></span>
+            <span class="follow-x-text">
+              <span class="follow-x-main"><span data-i18n="ost.sub.main">Suscríbete en YouTube</span> <strong>@barkarumproject</strong></span>
+              <span class="follow-x-sub" data-i18n="ost.sub.sub">Bandas sonoras, videos y avances del estudio</span>
+            </span>
+            <span class="follow-x-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="ost-band-x" href="https://x.com/barkarumproject" rel="noopener" target="_blank"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span data-i18n="ost.band.x">¿Prefieres X? Síguenos también ahí</span></a>
+        </div>
+        <div class="holo-sheen"></div>
       </div>
     </div>
   </section>

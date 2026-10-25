@@ -151,6 +151,7 @@ window.BARKARUM_EN = {
     'nx.a7': 'There’s no public download yet.',
     'nx.cl.title': 'Follow development',
     'nx.cl.p': 'NEXUS updates are posted on X first.',
+    'nx.cta.ost': 'Soundtrack on YouTube',
     'nx.cl.games': 'See the studio’s other games',
     'nx.ft.status': 'Project in development. Everything shown here may change.',
     'footer.top': 'Back to top',

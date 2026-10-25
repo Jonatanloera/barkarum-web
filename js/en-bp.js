@@ -20,6 +20,7 @@ window.BARKARUM_EN = {
     'bp.tagline': '“One got away. She’s going back for the other three.”',
     'bp.sub': 'Akira is the only one of four friends who escaped CERBERUS. Now she’s going back, mission by mission, to rescue the other three.',
     'bp.cta.demo': 'Get the free demo',
+    'bp.cta.ost': 'Soundtrack on YouTube',
     'bp.cta1': 'Meet Akira',
     'bp.cta2': 'See the gallery',
     'bp.hero_alt': 'Akira, seen from behind, facing a suspended capsule in a vast hall covered in vines.',
