@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.title">Página no encontrada | Barkarum Project Studio</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#05060A">
+<link rel="icon" href="/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preload" href="/fonts/chakra-petch-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/holo.css">
+<link rel="stylesheet" href="/css/home.css">
+<script src="/js/en-404.js" defer></script>
+<script src="/js/i18n.js" defer></script>
+<script src="/js/holo.js" defer></script>
+</head>
+<body class="page-home page-404">
+<canvas id="energy" aria-hidden="true"></canvas>
+<div class="fx-noise" aria-hidden="true"></div>
+<div class="fx-scan" aria-hidden="true"></div>
+<a class="skip" href="#perdido" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<header class="topbar" id="topbar">
+  <a class="brand" href="/" aria-label="Barkarum Project Studio">
+    <img src="/img/apple-touch-icon.png" alt="" width="32" height="32">
+    <span>BARKARUM</span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Principal" data-i18n-aria="nav.label">
+    <div class="nav-global">
+      <div class="nav-games">
+        <button type="button" class="nav-games-btn" aria-haspopup="true" data-i18n="gnav.games">Juegos</button>
+        <div class="nav-games-menu">
+          <a href="/barkarum-project/"><strong>Barkarum Project</strong><span data-i18n="gnav.bp">Acción run-and-gun 2.5D</span></a>
+          <a href="/nexus/"><strong>NEXUS</strong><span data-i18n="gnav.nx">FPS de ciencia ficción</span></a>
+          <a href="/#sphere-of-rings"><strong>Sphere of Rings</strong><span data-i18n="gnav.sor">Puzzle 3D para iPhone y iPad</span></a>
+        </div>
+      </div>
+      <a href="/#bandas-sonoras" data-i18n="gnav.ost">Bandas sonoras</a>
+      <a href="/#contacto" data-i18n="gnav.contact">Contacto</a>
+      <a class="nav-demo" href="/registro/" data-i18n="gnav.demo">Demo gratis</a>
+    </div>
+  </nav>
+  <div class="topbar-tools">
+    <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" data-i18n="nav.menu">Menú</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero lost" id="perdido">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="lost-inner holo holo-pad holo-magenta">
+      <p class="lost-code glitch" data-text="404">404</p>
+      <h1 data-i18n="lost.title">Señal perdida</h1>
+      <p data-i18n="lost.p">Esta página no existe o cambió de lugar. Elige a dónde quieres ir:</p>
+      <div class="lost-links">
+        <a class="btn btn-magenta" href="/registro/" data-i18n="lost.demo">Obtén la demo gratis</a>
+        <a class="btn btn-ghost" href="/barkarum-project/">Barkarum Project</a>
+        <a class="btn btn-ghost" href="/nexus/">NEXUS</a>
+        <a class="btn btn-ghost" href="/#bandas-sonoras" data-i18n="lost.ost">Bandas sonoras</a>
+        <a class="btn btn-ghost" href="/" data-i18n="lost.home">Inicio</a>
+      </div>
+      <div class="holo-sheen"></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

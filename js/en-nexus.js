@@ -1,5 +1,18 @@
 /* Textos en inglés de la página de NEXUS (nexus/index.html). El español está en el HTML. */
 window.BARKARUM_EN = {
+    'nx.bp.kicker': 'From the same studio',
+    'nx.bp.title': 'Barkarum Project has a free demo.',
+    'nx.bp.p': '2.5D run-and-gun action: Akira escaped CERBERUS and is going back for the other three. Sign up and we’ll send you the free Barkarum Project demo.',
+    'nx.bp.demo': 'Get the Barkarum Project demo',
+    'nx.bp.more': 'Discover Barkarum Project',
+    'gnav.games': 'Games',
+    'gnav.bp': '2.5D run-and-gun action',
+    'gnav.nx': 'Sci-fi FPS',
+    'gnav.sor': '3D puzzle for iPhone and iPad',
+    'gnav.ost': 'Soundtracks',
+    'gnav.contact': 'Contact',
+    'gnav.demo': 'Barkarum Project demo',
+    'gnav.onpage': 'On this page',
     'meta.title': 'NEXUS: Cuerpos de guerra | Sci-fi FPS',
     'meta.desc': 'A fugitive consciousness, three bodies and a city of machines. Discover NEXUS, a single-player sci-fi FPS in development.',
     'a11y.skip': 'Skip to content',

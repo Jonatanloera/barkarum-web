@@ -198,5 +198,17 @@
     document.addEventListener('langchange', sync);
   }
 
-  energy(); tilt(); reveal(); stages(); reels(); films();
+  // Botón fijo de la demo en celular: aparece entre secciones y se esconde en la portada, las bandas de la demo y el cierre.
+  function stickyCta() {
+    var cta = document.querySelector('.sticky-cta');
+    if (!cta || !('IntersectionObserver' in window)) return;
+    var seen = new Set();
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) seen.add(e.target); else seen.delete(e.target); });
+      cta.classList.toggle('show', seen.size === 0);
+    });
+    document.querySelectorAll('[data-hide-sticky]').forEach(function (el) { io.observe(el); });
+  }
+
+  energy(); tilt(); reveal(); stages(); reels(); films(); stickyCta();
 })();

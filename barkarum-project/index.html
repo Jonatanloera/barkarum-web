@@ -41,14 +41,30 @@
     <span>BARKARUM</span>
   </a>
   <nav class="nav" id="nav" aria-label="Principal" data-i18n-aria="nav.label">
-    <a href="#historia" data-i18n="bp.nav.story">Historia</a>
-    <a href="#mision-01" data-i18n="bp.nav.film">Misión 01</a>
-    <a href="#mision-02" data-i18n="bp.nav.battle">Misión 02</a>
-    <a href="#coloso" data-i18n="bp.nav.colossus">Coloso</a>
-    <a href="#jugabilidad" data-i18n="bp.nav.play">Cómo se juega</a>
-    <a href="#akira">Akira</a>
-    <a href="#arsenal" data-i18n="bp.nav.arsenal">Arsenal</a>
-    <a href="#galeria" data-i18n="bp.nav.gallery">Galería</a>
+    <div class="nav-global">
+      <div class="nav-games">
+        <button type="button" class="nav-games-btn" aria-haspopup="true" data-i18n="gnav.games">Juegos</button>
+        <div class="nav-games-menu">
+          <a href="../barkarum-project/index.html" aria-current="page"><strong>Barkarum Project</strong><span data-i18n="gnav.bp">Acción run-and-gun 2.5D</span></a>
+          <a href="../nexus/index.html"><strong>NEXUS</strong><span data-i18n="gnav.nx">FPS de ciencia ficción</span></a>
+          <a href="../index.html#sphere-of-rings"><strong>Sphere of Rings</strong><span data-i18n="gnav.sor">Puzzle 3D para iPhone y iPad</span></a>
+        </div>
+      </div>
+      <a href="../index.html#bandas-sonoras" data-i18n="gnav.ost">Bandas sonoras</a>
+      <a href="../index.html#contacto" data-i18n="gnav.contact">Contacto</a>
+      <a class="nav-demo" href="../registro/index.html" data-i18n="gnav.demo">Demo gratis</a>
+    </div>
+    <div class="nav-page">
+      <span class="nav-page-label" data-i18n="gnav.onpage">En esta página</span>
+      <a href="#historia" data-i18n="bp.nav.story">Historia</a>
+      <a href="#mision-01" data-i18n="bp.nav.film">Misión 01</a>
+      <a href="#mision-02" data-i18n="bp.nav.battle">Misión 02</a>
+      <a href="#coloso" data-i18n="bp.nav.colossus">Coloso</a>
+      <a href="#jugabilidad" data-i18n="bp.nav.play">Cómo se juega</a>
+      <a href="#akira">Akira</a>
+      <a href="#arsenal" data-i18n="bp.nav.arsenal">Arsenal</a>
+      <a href="#galeria" data-i18n="bp.nav.gallery">Galería</a>
+    </div>
   </nav>
   <div class="topbar-tools">
     <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
@@ -61,7 +77,7 @@
 
 <main>
   <!-- Portada -->
-  <section class="bp-hero" id="inicio">
+  <section class="bp-hero" id="inicio" data-hide-sticky>
     <div class="wrap bp-hero-inner">
       <div class="bp-hero-text reveal">
         <p class="bp-by"><a href="../index.html#juegos" data-i18n="bp.by">Un juego de Barkarum Project Studio</a></p>
@@ -189,6 +205,22 @@
     </div>
   </section>
 
+  <!-- Demo gratis a mitad de la página -->
+  <section class="section cta-band-section" data-hide-sticky>
+    <div class="wrap">
+      <div class="holo holo-pad holo-magenta cta-band reveal">
+        <figure class="cta-band-art"><img src="../img/bp-perfil-800.webp" width="800" height="450" loading="lazy" alt=""></figure>
+        <div class="cta-band-text">
+          <p class="chip chip-status" data-i18n="bp.demo.chip">Demo gratis</p>
+          <h2 data-i18n="bp.demo.title">Pruébalo tú.</h2>
+          <p data-i18n="bp.demo.p">Regístrate con tu correo y te enviaremos la demo gratis de Barkarum Project.</p>
+          <a class="btn btn-magenta" href="../registro/index.html" data-i18n="bp.cta.demo">Obtén la demo gratis</a>
+        </div>
+        <div class="holo-sheen"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- Akira en 3D -->
   <section class="section" id="akira">
     <div class="wrap">
@@ -290,7 +322,7 @@
   </section>
 
   <!-- Cierre -->
-  <section class="section bp-close">
+  <section class="section bp-close" data-hide-sticky>
     <div class="wrap">
       <div class="holo holo-pad holo-magenta reveal" data-tilt>
         <h2 data-i18n="bp.cl.title">Sigue a Akira</h2>
@@ -312,12 +344,13 @@
     </div>
   </section>
 </main>
+<a class="sticky-cta" href="../registro/index.html" data-i18n="bp.cta.demo">Obtén la demo gratis</a>
 
 <dialog class="lightbox" id="lightbox">
   <div class="holo holo-magenta"><img src="../img/bp-hero-800.webp" alt=""><p></p><button class="btn btn-ghost" type="button" data-i18n="bp.close">Cerrar</button></div>
 </dialog>
 
-<footer class="footer">
+<footer class="footer" data-hide-sticky>
   <div class="wrap footer-inner">
     <p>Barkarum Project — <span data-i18n="bp.ft.status">Proyecto en desarrollo. Todo lo que aparece aquí puede cambiar.</span></p>
     <p class="footer-links">

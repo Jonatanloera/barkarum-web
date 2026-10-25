@@ -190,7 +190,7 @@
 .weapon .tag { display: inline-block; margin: 12px 20px 0; font: 600 10px/1 var(--display); letter-spacing: .16em; text-transform: uppercase; color: var(--cyan); }
 
 /* ---------- Carrete 3D ---------- */
-.reel { position: relative; height: 380vh; }
+.reel { position: relative; height: 240vh; }
 .reel-sticky { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; display: grid; grid-template-rows: auto 1fr auto; padding: 88px 0 34px; }
 .reel-scene { position: relative; perspective: 1500px; perspective-origin: 50% 40%; }
 .reel-ring { position: absolute; left: 50%; top: 46%; width: 0; height: 0; transform-style: preserve-3d; }
@@ -294,7 +294,35 @@ dialog.lightbox button { position: absolute; top: 14px; right: 14px; z-index: 5;
   .follow-x-icon { width: 46px; height: 46px; }
 }
 
+/* ---------- Banda de llamada a la acción (demo) dentro de las páginas de juego ---------- */
+.cta-band-section { padding-block: clamp(36px, 6vw, 70px); }
+.cta-band { --cut: 22px; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(18px, 3vw, 36px); align-items: center; }
+.cta-band-art { margin: 0; overflow: hidden; clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px); }
+.cta-band-art img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.cta-band-text { display: grid; justify-items: start; gap: 12px; }
+.cta-band-text h2 { margin: 0; }
+.cta-band-text p { margin: 0; color: #C9D1E3; }
+.cta-band-text .chip-status { color: #FFB3EC; border-color: rgba(240, 0, 192, .6); }
+.cta-band-text .chip-status::before { background: var(--pink); box-shadow: 0 0 8px var(--pink); }
+.cta-band-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Botón fijo «Obtén la demo gratis» en celular (solo aparece entre secciones, ver holo.js) */
+.sticky-cta { display: none; }
+@media (max-width: 760px) {
+  .cta-band { grid-template-columns: 1fr; }
+  .cta-band-cta .btn { width: 100%; }
+  .sticky-cta {
+    position: fixed; left: 50%; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); z-index: 45;
+    display: block; padding: 15px 26px; border-radius: 999px; white-space: nowrap;
+    font: 600 14px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: #fff; text-decoration: none;
+    background: linear-gradient(90deg, var(--magenta), var(--pink) 55%, #8B5CF6); box-shadow: 0 10px 30px rgba(0, 0, 0, .5), 0 0 26px rgba(240, 0, 192, .55);
+    opacity: 0; pointer-events: none; transform: translate(-50%, 24px); transition: opacity .25s ease, transform .25s ease;
+  }
+  .sticky-cta.show { opacity: 1; pointer-events: auto; transform: translate(-50%, 0); }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .sticky-cta { transition: none; }
   .follow-x::before, .follow-x-icon::after,
   .fx-scan, .holo::before, .glitch::before, .glitch::after, .scanline::before, .stage-base::before, .stage-base::after, .stage-beam { animation: none !important; }
   .holo { transform: none !important; }

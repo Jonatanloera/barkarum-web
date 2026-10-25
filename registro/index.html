@@ -42,9 +42,19 @@
     <span>BARKARUM</span>
   </a>
   <nav class="nav" id="nav" aria-label="Principal" data-i18n-aria="nav.label">
-    <a href="../barkarum-project/index.html">Barkarum Project</a>
-    <a href="#registro" data-i18n="reg.nav.form">Registro</a>
-    <a href="privacidad.html" data-i18n="reg.nav.privacy">Aviso de privacidad</a>
+    <div class="nav-global">
+      <div class="nav-games">
+        <button type="button" class="nav-games-btn" aria-haspopup="true" data-i18n="gnav.games">Juegos</button>
+        <div class="nav-games-menu">
+          <a href="../barkarum-project/index.html"><strong>Barkarum Project</strong><span data-i18n="gnav.bp">Acción run-and-gun 2.5D</span></a>
+          <a href="../nexus/index.html"><strong>NEXUS</strong><span data-i18n="gnav.nx">FPS de ciencia ficción</span></a>
+          <a href="../index.html#sphere-of-rings"><strong>Sphere of Rings</strong><span data-i18n="gnav.sor">Puzzle 3D para iPhone y iPad</span></a>
+        </div>
+      </div>
+      <a href="../index.html#bandas-sonoras" data-i18n="gnav.ost">Bandas sonoras</a>
+      <a href="../index.html#contacto" data-i18n="gnav.contact">Contacto</a>
+      <a class="nav-demo" href="../registro/index.html" data-i18n="gnav.demo">Demo gratis</a>
+    </div>
   </nav>
   <div class="topbar-tools">
     <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
@@ -58,12 +68,15 @@
 <main>
   <section class="reg-hero" id="inicio">
     <div class="wrap reg-inner">
-      <div class="reg-text reveal">
+      <div class="reg-head reveal">
         <p class="bp-hero-chips">
           <span class="chip chip-status" data-i18n="reg.chip">Demo gratis</span>
           <span class="bp-eyebrow">Barkarum Project · <span data-i18n="reg.genre">Acción run-and-gun 2.5D</span></span>
         </p>
         <h1 class="reg-title" data-i18n="reg.title">Regístrate y obtén la demo gratis de Barkarum Project</h1>
+      </div>
+
+      <div class="reg-info reveal">
         <p class="bp-sub" data-i18n="reg.sub">Deja tu correo y te enviaremos la demo. Akira es la única de cuatro amigas que escapó de CERBERUS, y ahora va por las otras tres.</p>
         <ul class="mini-facts reg-facts" role="list">
           <li data-i18n="reg.fact1">Plataformas previstas: PC (Steam y web de escritorio), iPhone y iPad</li>
@@ -115,6 +128,11 @@
           <h2 data-i18n="reg.done.title">¡Listo, estás registrado!</h2>
           <p><span data-i18n="reg.done.p">Te enviaremos la demo de Barkarum Project a</span> <strong id="regDoneEmail"></strong>.</p>
           <p class="reg-note" data-i18n="reg.done.spam">Si no ves nuestro correo, revisa la carpeta de spam o promociones.</p>
+          <div class="reg-next">
+            <p data-i18n="reg.next">Mientras tanto, no te pierdas nada:</p>
+            <a class="btn btn-ghost" href="https://x.com/barkarumproject" rel="noopener" target="_blank"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span data-i18n="reg.next.x">Síguenos en X</span></a>
+            <a class="btn btn-ghost" href="https://www.youtube.com/@barkarumproject?sub_confirmation=1" rel="noopener" target="_blank"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span data-i18n="reg.next.yt">Suscríbete en YouTube</span></a>
+          </div>
         </div>
         <div class="holo-sheen"></div>
       </div>

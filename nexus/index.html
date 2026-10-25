@@ -41,13 +41,29 @@
     <span>BARKARUM</span>
   </a>
   <nav class="nav" id="nav" aria-label="Principal" data-i18n-aria="nav.label">
-    <a href="#animatica" data-i18n="nx.nav.film">Animáticas</a>
-    <a href="#juego" data-i18n="nx.nav.game">El juego</a>
-    <a href="#transferencia" data-i18n="nx.nav.transfer">Transferencia</a>
-    <a href="#cuerpos" data-i18n="nx.nav.bodies">Cuerpos</a>
-    <a href="#armas" data-i18n="nx.nav.weapons">Armas</a>
-    <a href="#helix">HELIX</a>
-    <a href="#desarrollo" data-i18n="nx.nav.dev">Desarrollo</a>
+    <div class="nav-global">
+      <div class="nav-games">
+        <button type="button" class="nav-games-btn" aria-haspopup="true" data-i18n="gnav.games">Juegos</button>
+        <div class="nav-games-menu">
+          <a href="../barkarum-project/index.html"><strong>Barkarum Project</strong><span data-i18n="gnav.bp">Acción run-and-gun 2.5D</span></a>
+          <a href="../nexus/index.html" aria-current="page"><strong>NEXUS</strong><span data-i18n="gnav.nx">FPS de ciencia ficción</span></a>
+          <a href="../index.html#sphere-of-rings"><strong>Sphere of Rings</strong><span data-i18n="gnav.sor">Puzzle 3D para iPhone y iPad</span></a>
+        </div>
+      </div>
+      <a href="../index.html#bandas-sonoras" data-i18n="gnav.ost">Bandas sonoras</a>
+      <a href="../index.html#contacto" data-i18n="gnav.contact">Contacto</a>
+      <a class="nav-demo" href="../registro/index.html" data-i18n="gnav.demo">Demo de Barkarum Project</a>
+    </div>
+    <div class="nav-page">
+      <span class="nav-page-label" data-i18n="gnav.onpage">En esta página</span>
+      <a href="#animatica" data-i18n="nx.nav.film">Animáticas</a>
+      <a href="#juego" data-i18n="nx.nav.game">El juego</a>
+      <a href="#transferencia" data-i18n="nx.nav.transfer">Transferencia</a>
+      <a href="#cuerpos" data-i18n="nx.nav.bodies">Cuerpos</a>
+      <a href="#armas" data-i18n="nx.nav.weapons">Armas</a>
+      <a href="#helix">HELIX</a>
+      <a href="#desarrollo" data-i18n="nx.nav.dev">Desarrollo</a>
+    </div>
   </nav>
   <div class="topbar-tools">
     <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
@@ -302,6 +318,25 @@
         </article>
       </div>
       <p class="nx-note reveal" data-i18n="nx.wp.note">En desarrollo para la ampliación 0.6.0: AGUJA, TORMENTA y RUPTURA.</p>
+    </div>
+  </section>
+
+  <!-- Del mismo estudio: la demo de Barkarum Project -->
+  <section class="section cta-band-section">
+    <div class="wrap">
+      <div class="holo holo-pad holo-magenta cta-band reveal">
+        <figure class="cta-band-art"><img src="../img/bp-hero-800.webp" width="800" height="450" loading="lazy" alt=""></figure>
+        <div class="cta-band-text">
+          <p class="chip chip-status" data-i18n="nx.bp.kicker">Del mismo estudio</p>
+          <h2 data-i18n="nx.bp.title">Barkarum Project ya tiene demo gratis.</h2>
+          <p data-i18n="nx.bp.p">Acción run-and-gun 2.5D: Akira escapó de CERBERUS y va por las otras tres. Regístrate y te enviamos la demo gratis de Barkarum Project.</p>
+          <div class="cta-band-cta">
+            <a class="btn btn-magenta" href="../registro/index.html" data-i18n="nx.bp.demo">Obtén la demo de Barkarum Project</a>
+            <a class="btn btn-ghost" href="../barkarum-project/index.html" data-i18n="nx.bp.more">Conoce Barkarum Project</a>
+          </div>
+        </div>
+        <div class="holo-sheen"></div>
+      </div>
     </div>
   </section>
 

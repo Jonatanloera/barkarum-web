@@ -7,7 +7,7 @@
 .chip-base { color: #D7DCEA; border-color: rgba(255, 255, 255, .22); }
 
 /* ---------- Portada ---------- */
-.nx-hero { min-height: 100vh; min-height: 100svh; display: grid; align-items: center; padding: 110px 0 60px; }
+.nx-hero { min-height: 100vh; min-height: 100svh; display: grid; align-items: center; padding: 140px 0 60px; }
 .nx-hero-inner { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.25fr); gap: clamp(24px, 4vw, 60px); align-items: center; }
 .nx-by { margin-bottom: 18px; }
 .nx-by a { color: var(--muted); text-decoration: none; font: 600 12px/1 var(--display); letter-spacing: .22em; text-transform: uppercase; }

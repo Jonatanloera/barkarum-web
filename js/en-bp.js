@@ -1,5 +1,16 @@
 /* Textos en inglés de la página de Barkarum Project (barkarum-project/index.html). El español está en el HTML. */
 window.BARKARUM_EN = {
+    'bp.demo.chip': 'Free demo',
+    'bp.demo.title': 'Try it yourself.',
+    'bp.demo.p': 'Sign up with your email and we’ll send you the free Barkarum Project demo.',
+    'gnav.games': 'Games',
+    'gnav.bp': '2.5D run-and-gun action',
+    'gnav.nx': 'Sci-fi FPS',
+    'gnav.sor': '3D puzzle for iPhone and iPad',
+    'gnav.ost': 'Soundtracks',
+    'gnav.contact': 'Contact',
+    'gnav.demo': 'Free demo',
+    'gnav.onpage': 'On this page',
     'meta.title': 'Barkarum Project | 2.5D run-and-gun action',
     'meta.desc': 'One got away. She’s going back for the other three. Akira crosses a monumental future in a 2.5D run-and-gun action game, in development.',
     'a11y.skip': 'Skip to content',

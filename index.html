@@ -34,7 +34,7 @@
 <canvas id="energy" aria-hidden="true"></canvas>
 <div class="fx-noise" aria-hidden="true"></div>
 <div class="fx-scan" aria-hidden="true"></div>
-<a class="skip" href="#estudio" data-i18n="a11y.skip">Saltar al contenido</a>
+<a class="skip" href="#juegos" data-i18n="a11y.skip">Saltar al contenido</a>
 
 <header class="topbar" id="topbar">
   <a class="brand" href="#inicio" aria-label="Barkarum Project Studio">
@@ -42,11 +42,19 @@
     <span>BARKARUM</span>
   </a>
   <nav class="nav" id="nav" aria-label="Principal" data-i18n-aria="nav.label">
-    <a href="#estudio" data-i18n="nav.studio">Estudio</a>
-    <a href="#juegos" data-i18n="nav.games">Juegos</a>
-    <a href="#bandas-sonoras" data-i18n="nav.ost">Bandas sonoras</a>
-    <a href="#novedades" data-i18n="nav.news">Novedades</a>
-    <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+    <div class="nav-global">
+      <div class="nav-games">
+        <button type="button" class="nav-games-btn" aria-haspopup="true" data-i18n="gnav.games">Juegos</button>
+        <div class="nav-games-menu">
+          <a href="barkarum-project/index.html"><strong>Barkarum Project</strong><span data-i18n="gnav.bp">Acción run-and-gun 2.5D</span></a>
+          <a href="nexus/index.html"><strong>NEXUS</strong><span data-i18n="gnav.nx">FPS de ciencia ficción</span></a>
+          <a href="#sphere-of-rings"><strong>Sphere of Rings</strong><span data-i18n="gnav.sor">Puzzle 3D para iPhone y iPad</span></a>
+        </div>
+      </div>
+      <a href="#bandas-sonoras" data-i18n="gnav.ost">Bandas sonoras</a>
+      <a href="#contacto" data-i18n="gnav.contact">Contacto</a>
+      <a class="nav-demo" href="registro/index.html" data-i18n="gnav.demo">Demo gratis</a>
+    </div>
   </nav>
   <div class="topbar-tools">
     <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
@@ -58,12 +66,13 @@
 </header>
 
 <main>
-  <!-- Portada: logo holográfico -->
-  <section class="hero" id="inicio">
+  <!-- Portada: el estudio, su juego principal con la demo y los tres juegos -->
+  <section class="hero hero-split" id="inicio">
     <div class="hero-glow" aria-hidden="true"></div>
     <div class="hero-grid" aria-hidden="true"></div>
-    <div class="hero-inner">
-      <h1 class="sr-only">Barkarum Project Studio</h1>
+    <div class="wrap hero-split-inner">
+      <div class="hero-brand">
+        <h1 class="sr-only">Barkarum Project Studio</h1>
       <div class="logo-holo">
         <div class="logo-rings" aria-hidden="true"><i></i><i></i><i></i></div>
         <img class="hero-logo" src="img/logo-685.webp" width="685" height="563" alt="Barkarum Project Studio" fetchpriority="high">
@@ -72,7 +81,26 @@
         <span class="hud-label hl-right" aria-hidden="true" data-i18n="hero.hud">3 juegos en desarrollo</span>
       </div>
       <p class="hero-tagline" data-i18n="hero.tagline">Estudio indie · cyberpunk y futuros con IA. Juegos que van del arcade 2.5D a los shooters 3D.</p>
-      <div class="hero-cta">
+      </div>
+
+      <article class="holo holo-magenta hero-spot" aria-labelledby="spot-title" data-tilt>
+        <figure class="hero-spot-art">
+          <img src="img/bp-hero-800.webp" srcset="img/bp-hero-800.webp 800w, img/bp-hero-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 600px" width="1600" height="900" fetchpriority="high" alt="Akira, de espaldas, frente a una cápsula suspendida en una sala inmensa cubierta de enredaderas." data-i18n-alt="bp.hero_alt">
+          <span class="chip chip-status" data-i18n="spot.chip">Demo gratis</span>
+          <span class="chip chip-art" data-i18n="common.cine">Arte de cinemática</span>
+        </figure>
+        <div class="hero-spot-body">
+          <p class="genre"><span class="hero-spot-name">Barkarum Project</span> · <span data-i18n="bp.genre">Acción run-and-gun 2.5D</span></p>
+          <h2 id="spot-title" class="hero-spot-title" data-i18n="bp.tagline">«Una escapó. Va por las otras tres.»</h2>
+          <div class="hero-spot-cta">
+            <a class="btn btn-magenta" href="registro/index.html" data-i18n="spot.demo">Obtén la demo gratis</a>
+            <a class="btn btn-ghost" href="barkarum-project/index.html" data-i18n="spot.more">Conoce el juego</a>
+          </div>
+        </div>
+        <div class="holo-sheen"></div>
+      </article>
+
+      <div class="hero-follow">
         <a class="follow-x" href="https://x.com/barkarumproject" rel="noopener" target="_blank">
           <span class="follow-x-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
           <span class="follow-x-text">
@@ -81,36 +109,30 @@
           </span>
           <span class="follow-x-arrow" aria-hidden="true">→</span>
         </a>
-        <a class="btn btn-ghost" href="#juegos" data-i18n="hero.cta_games">Ver juegos</a>
+        <a class="hero-ost" href="#bandas-sonoras"><span class="ost-eq ost-eq-sm" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span data-i18n="hero.ost">Escucha las bandas sonoras originales</span></a>
       </div>
-      <a class="hero-ost" href="#bandas-sonoras"><span class="ost-eq ost-eq-sm" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span data-i18n="hero.ost">Escucha las bandas sonoras originales</span></a>
     </div>
-  </section>
 
-  <!-- Estudio -->
-  <section class="section" id="estudio">
-    <div class="wrap studio">
-      <div class="reveal">
-        <p class="eyebrow"><span>01</span> <span data-i18n="studio.eyebrow">Estudio</span></p>
-        <h2 data-i18n="studio.title">Juegos sobre futuros que ya se sienten cerca.</h2>
-      </div>
-      <div class="holo holo-pad studio-text reveal" data-tilt>
-        <p data-i18n="studio.p1">Barkarum Project Studio es un estudio indie de Mérida, México. Hacemos juegos de acción, shooters y puzzles con estética cyberpunk, y con historias sobre lo que pasa cuando la inteligencia artificial, las máquinas y las personas comparten el mismo mundo.</p>
-        <p data-i18n="studio.p2">Hoy tenemos tres juegos en desarrollo: uno de acción 2.5D, un shooter en primera persona y un puzzle 3D.</p>
-        <ul class="tags" role="list">
-          <li data-i18n="studio.tag1">Arcade 2.5D</li>
-          <li data-i18n="studio.tag2">Shooter 3D</li>
-          <li data-i18n="studio.tag3">Puzzle 3D</li>
-        </ul>
-        <div class="holo-sheen"></div>
-      </div>
-    </div>
+    <nav class="wrap hero-games" aria-label="Nuestros juegos" data-i18n-aria="strip.label">
+      <a class="hero-game" href="barkarum-project/index.html" style="--c: #F000C0">
+        <img src="img/bp-silueta-800.webp" width="800" height="450" loading="lazy" alt="">
+        <span><strong>Barkarum Project</strong><small data-i18n="strip.bp">Acción 2.5D · Demo gratis</small></span>
+      </a>
+      <a class="hero-game" href="nexus/index.html" style="--c: #8B5CF6">
+        <img src="img/nx-portada-1280.webp" width="1280" height="720" loading="lazy" alt="">
+        <span><strong>NEXUS</strong><small data-i18n="strip.nx">FPS de ciencia ficción</small></span>
+      </a>
+      <a class="hero-game" href="#sphere-of-rings" style="--c: #00D8F0">
+        <img src="img/sor-ipad-600.webp" width="600" height="800" loading="lazy" alt="">
+        <span><strong>Sphere of Rings</strong><small data-i18n="strip.sor">Puzzle 3D · iPhone y iPad</small></span>
+      </a>
+    </nav>
   </section>
 
   <!-- Juegos -->
   <section class="section" id="juegos">
     <div class="wrap">
-      <p class="eyebrow reveal"><span>02</span> <span data-i18n="games.eyebrow">Juegos</span></p>
+      <p class="eyebrow reveal"><span>01</span> <span data-i18n="games.eyebrow">Juegos</span></p>
       <h2 class="reveal" data-i18n="games.title">Lo que estamos construyendo</h2>
 
       <!-- Barkarum Project -->
@@ -197,7 +219,7 @@
   <!-- Bandas sonoras -->
   <section class="section ost-section" id="bandas-sonoras">
     <div class="wrap">
-      <p class="eyebrow reveal"><span>03</span> <span data-i18n="ost.eyebrow">Bandas sonoras</span></p>
+      <p class="eyebrow reveal"><span>02</span> <span data-i18n="ost.eyebrow">Bandas sonoras</span></p>
       <h2 class="ost-h2 reveal"><span data-i18n="ost.title">Escucha los mundos que estamos construyendo.</span></h2>
       <svg class="ost-wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="ostWave" x1="0" x2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset=".5" stop-color="#00D8F0"/><stop offset="1" stop-color="#F000C0"/></linearGradient></defs><polyline points="0,30.0 5,36.9 10,40.4 15,39.5 20,36.5 25,35.2 30,37.9 35,43.7 40,48.7 45,49.6 50,45.3 55,38.5 60,33.2 65,31.8 70,33.4 75,34.7 80,32.2 85,25.3 90,16.9 95,11.1 100,10.2 105,13.4 110,17.2 115,18.0 120,15.3 125,11.6 130,10.9 135,15.2 140,23.4 145,31.5 150,36.0 155,36.2 160,34.4 165,34.6 170,38.7 175,45.4 180,51.1 185,52.2 190,48.3 195,42.0 200,37.5 205,36.9 210,39.1 215,40.7 220,38.3 225,31.7 230,23.7 235,18.5 240,18.2 245,21.6 250,25.0 255,25.1 260,21.5 265,16.9 270,15.3 275,18.4 280,24.9 285,30.9 290,33.0 295,30.7 300,26.8 305,25.2 310,27.8 315,33.2 320,37.6 325,37.7 330,33.4 335,27.7 340,24.5 345,25.8 350,30.3 355,34.2 360,34.3 365,30.6 370,25.9 375,24.2 380,27.3 385,33.5 390,39.1 395,40.7 400,38.0 405,34.0 410,32.5 415,35.1 420,40.2 425,43.9 430,43.1 435,37.6 440,30.6 445,26.0 450,25.6 455,27.9 460,29.2 465,26.5 470,20.1 475,13.0 480,9.3 485,10.7 490,15.7 495,20.3 500,21.6 505,19.4 510,17.0 515,17.9 520,23.8 525,32.5 530,40.2 535,43.5 540,42.5 545,40.1 550,40.1 555,43.9 560,49.6 565,53.2 570,51.9 575,45.9 580,38.4 585,33.4 590,32.6 595,34.1 600,34.4 605,30.6 610,23.2 615,15.5 620,11.4 625,12.5 630,16.9 635,20.6 640,20.8 645,17.7 650,14.4 655,14.8 660,19.9 665,27.7 670,34.0 675,36.0 680,33.8 685,30.7 690,30.4 695,34.1 700,39.8 705,43.5 710,42.6 715,37.4 720,31.5 725,28.7 730,30.3 735,34.3 740,36.9 745,35.4 750,30.3 755,25.1 760,23.5 765,26.7 770,32.4 775,36.6 780,36.5 785,32.7 790,28.4 795,27.4 800,30.5 805,35.6 810,38.6 815,36.9 820,31.1 825,24.8 830,21.7 835,22.9 840,26.3 845,28.0 850,25.5 855,19.7 860,14.1 865,12.5 870,15.9 875,22.0 880,26.9 885,27.9 890,25.7 895,23.8 900,25.6 905,32.0 910,40.3 915,46.5 920,47.8 925,45.1 930,41.7 935,41.2 940,44.2 945,48.5 950,50.0 955,46.5 960,38.8 965,30.7 970,26.0 975,25.5 980,27.1 985,26.8 990,22.5 995,15.3 1000,8.9 1005,6.9 1010,10.0 1015,15.8 1020,20.2 1025,20.9 1030,18.6 1035,17.0 1040,19.4 1045,26.2 1050,34.7 1055,40.8 1060,42.1 1065,39.5 1070,36.7 1075,36.9 1080,40.9 1085,45.8 1090,48.0 1095,45.2 1100,38.6 1105,32.1 1110,29.3 1115,30.7 1120,33.8 1125,34.9 1130,31.7 1135,25.6 1140,20.3 1145,19.2 1150,22.8 1155,28.3 1160,31.7 1165,30.7 1170,26.6 1175,23.1 1180,23.3 1185,27.6 1190,33.2 1195,36.0 1200,34.0"/></svg>
       <p class="ost-lead reveal" data-i18n="ost.lead">La música original de nuestros juegos. Dale play aquí mismo o escúchala en YouTube.</p>
@@ -266,6 +288,26 @@
           </a>
           <a class="ost-band-x" href="https://x.com/barkarumproject" rel="noopener" target="_blank"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span data-i18n="ost.band.x">¿Prefieres X? Síguenos también ahí</span></a>
         </div>
+        <div class="holo-sheen"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estudio -->
+  <section class="section" id="estudio">
+    <div class="wrap studio">
+      <div class="reveal">
+        <p class="eyebrow"><span>03</span> <span data-i18n="studio.eyebrow">Estudio</span></p>
+        <h2 data-i18n="studio.title">Juegos sobre futuros que ya se sienten cerca.</h2>
+      </div>
+      <div class="holo holo-pad studio-text reveal" data-tilt>
+        <p data-i18n="studio.p1">Barkarum Project Studio es un estudio indie de Mérida, México. Hacemos juegos de acción, shooters y puzzles con estética cyberpunk, y con historias sobre lo que pasa cuando la inteligencia artificial, las máquinas y las personas comparten el mismo mundo.</p>
+        <p data-i18n="studio.p2">Hoy tenemos tres juegos en desarrollo: uno de acción 2.5D, un shooter en primera persona y un puzzle 3D.</p>
+        <ul class="tags" role="list">
+          <li data-i18n="studio.tag1">Arcade 2.5D</li>
+          <li data-i18n="studio.tag2">Shooter 3D</li>
+          <li data-i18n="studio.tag3">Puzzle 3D</li>
+        </ul>
         <div class="holo-sheen"></div>
       </div>
     </div>
