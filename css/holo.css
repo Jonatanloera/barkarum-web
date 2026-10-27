@@ -138,6 +138,9 @@
 
 /* ---------- Visor 3D de personajes ---------- */
 .stage-wrap { display: grid; grid-template-columns: 250px minmax(0, 1fr) 300px; gap: clamp(16px, 2.4vw, 32px); align-items: center; margin-top: 32px; }
+/* model-viewer se carga al acercarse (holo.js): mientras tanto ya ocupa su lugar y no mueve la página. */
+model-viewer { display: block; }
+
 .body-tabs { display: grid; gap: 12px; }
 .body-tab { appearance: none; border: 0; margin: 0; font: inherit; text-align: left; width: 100%; cursor: pointer; display: block; padding: 16px 18px; color: var(--muted); }
 .body-tab strong { display: block; font: 700 20px/1.1 var(--display); letter-spacing: .2em; color: #fff; }

@@ -24,7 +24,6 @@
 <link rel="stylesheet" href="../css/styles.css">
 <link rel="stylesheet" href="../css/holo.css">
 <link rel="stylesheet" href="../css/bp.css">
-<script type="module" src="../js/vendor/model-viewer-4.0.0.min.js"></script>
 <script src="../js/en-bp.js" defer></script>
 <script src="../js/i18n.js" defer></script>
 <script src="../js/holo.js" defer></script>
@@ -137,7 +136,7 @@
       <h2 class="reveal" data-i18n="bp.film.title">Antes de todo, eran cuatro.</h2>
       <p class="bp-film-lead reveal" data-i18n="bp.film.lead">Akira, Rei, Kaede y Yumi estudiaban informática y trabajaban juntas en tecnología para la medicina, la biología y la botánica; Akira era la experta del grupo en sistemas seguros y privacidad. Antes de su primera misión pasaron una noche en el laboratorio diseñando sus armaduras, se las pusieron pieza por pieza, probaron sus armas de energía y salieron juntas, como equipo.</p>
       <figure class="holo holo-magenta bp-film reveal">
-        <video controls preload="none" playsinline poster="../img/bp-mision01-1600.webp" aria-label="Video de la Misión 01: antes de la misión" data-i18n-aria="bp.film.aria">
+        <video controls preload="none" playsinline data-poster="../img/bp-mision01-1600.webp" data-poster-small="../img/bp-mision01-800.webp" aria-label="Video de la Misión 01: antes de la misión" data-i18n-aria="bp.film.aria">
           <source src="../media/barkarum-project/mision-01-720p.mp4" type="video/mp4" media="(max-width: 760px)">
           <source src="../media/barkarum-project/mision-01.webm" type='video/webm; codecs="vp9, opus"'>
           <source src="../media/barkarum-project/mision-01-1080p.mp4" type="video/mp4">
@@ -157,7 +156,7 @@
       <h2 class="reveal" data-i18n="bp.battle.title">Cuatro contra un ejército de máquinas.</h2>
       <p class="bp-film-lead reveal" data-i18n="bp.battle.lead">Una noche de lluvia, una plaza industrial y filas de androides de combate que encienden sus ojos rojos. Akira, Rei, Kaede y Yumi pelean juntas, cada una con su arma de energía, al ritmo de la canción de la Misión 02 de la banda sonora original.</p>
       <figure class="holo holo-magenta bp-film reveal">
-        <video controls preload="none" playsinline poster="../img/bp-mision02-1600.webp" aria-label="Video de la Misión 02: la batalla" data-i18n-aria="bp.battle.aria">
+        <video controls preload="none" playsinline data-poster="../img/bp-mision02-1600.webp" data-poster-small="../img/bp-mision02-800.webp" aria-label="Video de la Misión 02: la batalla" data-i18n-aria="bp.battle.aria">
           <source src="../media/barkarum-project/mision-02-720p.mp4" type="video/mp4" media="(max-width: 760px)">
           <source src="../media/barkarum-project/mision-02.webm" type='video/webm; codecs="vp9, opus"'>
           <source src="../media/barkarum-project/mision-02-1080p.mp4" type="video/mp4">
@@ -177,7 +176,7 @@
       <h2 class="reveal" data-i18n="bp.colossus.title">Un coloso le cierra el paso.</h2>
       <p class="bp-film-lead reveal" data-i18n="bp.colossus.lead">En una caverna bajo la ciudad, un coloso de acero se levanta y barre el suelo con los rayos de sus ojos. Akira lo enfrenta sola con VENDAVAL, la ametralladora rotativa acoplada a su traje, al ritmo de un tema de jefe de la banda sonora original.</p>
       <figure class="holo holo-magenta bp-film reveal">
-        <video controls preload="none" playsinline poster="../img/bp-coloso-video-1600.webp" aria-label="Video: Akira contra el coloso" data-i18n-aria="bp.colossus.aria">
+        <video controls preload="none" playsinline data-poster="../img/bp-coloso-video-1600.webp" data-poster-small="../img/bp-coloso-video-800.webp" aria-label="Video: Akira contra el coloso" data-i18n-aria="bp.colossus.aria">
           <source src="../media/barkarum-project/coloso-720p.mp4" type="video/mp4" media="(max-width: 760px)">
           <source src="../media/barkarum-project/coloso.webm" type='video/webm; codecs="vp9, opus"'>
           <source src="../media/barkarum-project/coloso-1080p.mp4" type="video/mp4">
@@ -347,7 +346,7 @@
 <a class="sticky-cta" href="../registro/index.html" data-i18n="bp.cta.demo">Obtén la demo gratis</a>
 
 <dialog class="lightbox" id="lightbox">
-  <div class="holo holo-magenta"><img src="../img/bp-hero-800.webp" alt=""><p></p><button class="btn btn-ghost" type="button" data-i18n="bp.close">Cerrar</button></div>
+  <div class="holo holo-magenta"><img src="../img/bp-hero-800.webp" alt="" loading="lazy"><p></p><button class="btn btn-ghost" type="button" data-i18n="bp.close">Cerrar</button></div>
 </dialog>
 
 <footer class="footer" data-hide-sticky>

@@ -24,7 +24,6 @@
 <link rel="stylesheet" href="../css/styles.css">
 <link rel="stylesheet" href="../css/holo.css">
 <link rel="stylesheet" href="../css/nexus.css">
-<script type="module" src="../js/vendor/model-viewer-4.0.0.min.js"></script>
 <script src="../js/en-nexus.js" defer></script>
 <script src="../js/i18n.js" defer></script>
 <script src="../js/holo.js" defer></script>
@@ -97,7 +96,7 @@
       </div>
       <figure class="holo holo-frame nx-hero-art reveal" data-tilt>
         <picture>
-          <source media="(max-width: 760px)" srcset="../img/nx-portada-movil-720.webp 720w, ../img/nx-portada-movil-1080.webp 1080w" sizes="100vw" width="1080" height="1350">
+          <source media="(max-width: 760px)" srcset="../img/nx-portada-movil-720.webp 720w, ../img/nx-portada-movil-1080.webp 1080w" sizes="calc(92vw - 20px)" width="1080" height="1350">
           <img src="../img/nx-portada-1920.webp" srcset="../img/nx-portada-1280.webp 1280w, ../img/nx-portada-1920.webp 1920w" sizes="(max-width: 1000px) 100vw, 700px" width="1920" height="1080" fetchpriority="high" alt="Arte conceptual: una conciencia cian y violeta salta de un androide oscuro a un androide blanco sobre una pasarela de la fundición." data-i18n-alt="nx.hero.alt">
         </picture>
         <div class="scanline"></div>
@@ -121,7 +120,7 @@
       <h3 class="reveal" data-i18n="nx.in.title">Intro · Todo empieza en HELIX</h3>
       <p class="reveal" data-i18n="nx.in.lead">88 segundos: la ciudad de HELIX, la orden de ejecución y todo lo que HELIX manda tras NEXUS: el Supervisor, las cazadoras y los colosos.</p>
       <figure class="holo holo-violet nx-film reveal">
-        <video controls preload="none" playsinline poster="../img/nx-cin-cuerpos-1600.webp" data-subs aria-label="Intro de la historia de NEXUS" data-i18n-aria="nx.in.aria">
+        <video controls preload="none" playsinline data-poster="../img/nx-cin-cuerpos-1600.webp" data-poster-small="../img/nx-cin-cuerpos-800.webp" data-subs aria-label="Intro de la historia de NEXUS" data-i18n-aria="nx.in.aria">
           <source src="../media/nexus/nexus-intro-720p.mp4" type="video/mp4" media="(max-width: 760px)">
           <source src="../media/nexus/nexus-intro.webm" type='video/webm; codecs="vp9, opus"'>
           <source src="../media/nexus/nexus-intro-1080p.mp4" type="video/mp4">
@@ -155,7 +154,7 @@
       <h3 class="reveal" data-i18n="nx.cz.title">Las cazadoras de HELIX</h3>
       <p class="reveal" data-i18n="nx.cz.lead">80 segundos: LINCE, AEGIS, IRIS y VELA, las cuatro unidades que HELIX manda a buscar a NEXUS, cada una con su expediente.</p>
       <figure class="holo holo-violet nx-film reveal">
-        <video controls preload="none" playsinline poster="../img/nx-cin-cazadoras-1600.webp" data-subs aria-label="Las cazadoras de HELIX: LINCE, AEGIS, IRIS y VELA" data-i18n-aria="nx.cz.aria">
+        <video controls preload="none" playsinline data-poster="../img/nx-cin-cazadoras-1600.webp" data-poster-small="../img/nx-cin-cazadoras-800.webp" data-subs aria-label="Las cazadoras de HELIX: LINCE, AEGIS, IRIS y VELA" data-i18n-aria="nx.cz.aria">
           <source src="../media/nexus/nexus-cazadoras-720p.mp4" type="video/mp4" media="(max-width: 760px)">
           <source src="../media/nexus/nexus-cazadoras.webm" type='video/webm; codecs="vp9, opus"'>
           <source src="../media/nexus/nexus-cazadoras-1080p.mp4" type="video/mp4">
@@ -186,7 +185,7 @@
       <h3 class="reveal" data-i18n="nx.film.p1.title">Parte 1 · La huida</h3>
       <p class="reveal" data-i18n="nx.film.p1.lead">64 segundos: NEXUS despierta en la fundición, salta de VECTOR a BASTION y a SPECTRE, y se enfrenta a la red de ejecución de HELIX.</p>
       <figure class="holo holo-violet nx-film reveal">
-        <video controls preload="none" playsinline poster="../img/nx-animatica-1600.webp" data-subs aria-label="Animática de NEXUS, parte 1: la huida" data-i18n-aria="nx.film.aria">
+        <video controls preload="none" playsinline data-poster="../img/nx-animatica-1600.webp" data-poster-small="../img/nx-animatica-800.webp" data-subs aria-label="Animática de NEXUS, parte 1: la huida" data-i18n-aria="nx.film.aria">
           <source src="../media/nexus/nexus-animatica-720p.mp4" type="video/mp4" media="(max-width: 760px)">
           <source src="../media/nexus/nexus-animatica.webm" type='video/webm; codecs="vp9, opus"'>
           <source src="../media/nexus/nexus-animatica-1080p.mp4" type="video/mp4">
@@ -221,7 +220,7 @@
       <h3 class="reveal" data-i18n="nx.film.p2.title">Parte 2 · Transferencia en combate</h3>
       <p class="reveal" data-i18n="nx.film.p2.lead">58 segundos de batalla: VECTOR cae, NEXUS salta a BASTION, un coloso que no se puede transferir le revienta el escudo, y SPECTRE lo derriba desde el camuflaje.</p>
       <figure class="holo holo-violet nx-film reveal">
-        <video controls preload="none" playsinline poster="../img/nx-combate-1600.webp" data-subs aria-label="Animática de NEXUS, parte 2: transferencia en combate" data-i18n-aria="nx.film.p2.aria">
+        <video controls preload="none" playsinline data-poster="../img/nx-combate-1600.webp" data-poster-small="../img/nx-combate-800.webp" data-subs aria-label="Animática de NEXUS, parte 2: transferencia en combate" data-i18n-aria="nx.film.p2.aria">
           <source src="../media/nexus/nexus-combate-720p.mp4" type="video/mp4" media="(max-width: 760px)">
           <source src="../media/nexus/nexus-combate.webm" type='video/webm; codecs="vp9, opus"'>
           <source src="../media/nexus/nexus-combate-1080p.mp4" type="video/mp4">
@@ -695,7 +694,7 @@
 </main>
 
 <dialog class="lightbox" id="lightbox">
-  <div class="holo"><img src="../img/nx-portada-1280.webp" alt=""><p></p><button class="btn btn-ghost" type="button" data-i18n="nx.close">Cerrar</button></div>
+  <div class="holo"><img src="../img/nx-portada-1280.webp" alt="" loading="lazy"><p></p><button class="btn btn-ghost" type="button" data-i18n="nx.close">Cerrar</button></div>
 </dialog>
 
 <footer class="footer">
