@@ -15,15 +15,16 @@
 @keyframes scan-drift { to { background-position: 0 120px; } }
 
 /* ---------- Botones de acento ---------- */
+/* Tonos del degradado elegidos para que el texto blanco tenga al menos 4,5:1 en todo el botón (WCAG AA). */
 .btn-violet {
   color: #fff;
-  background: linear-gradient(90deg, #6D3FE0, var(--violet) 55%, #00A8F0);
+  background: linear-gradient(90deg, #6D3FE0, #8452F5 55%, #007CB2);
   box-shadow: 0 0 24px rgba(139, 92, 246, .45);
 }
 .btn-violet:hover { color: #fff; box-shadow: 0 0 36px rgba(0, 216, 240, .4); transform: translateY(-1px); }
 .btn-magenta {
   color: #fff;
-  background: linear-gradient(90deg, var(--magenta), var(--pink) 55%, #8B5CF6);
+  background: linear-gradient(90deg, var(--magenta), #D900AD 55%, #8452F5);
   box-shadow: 0 0 24px rgba(240, 0, 192, .45);
 }
 .btn-magenta:hover { color: #fff; box-shadow: 0 0 36px rgba(240, 0, 192, .6); transform: translateY(-1px); }
@@ -323,7 +324,7 @@ dialog.lightbox button { position: absolute; top: 14px; right: 14px; z-index: 5;
     position: fixed; left: 50%; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); z-index: 45;
     display: block; padding: 15px 26px; border-radius: 999px; white-space: nowrap;
     font: 600 14px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: #fff; text-decoration: none;
-    background: linear-gradient(90deg, var(--magenta), var(--pink) 55%, #8B5CF6); box-shadow: 0 10px 30px rgba(0, 0, 0, .5), 0 0 26px rgba(240, 0, 192, .55);
+    background: linear-gradient(90deg, var(--magenta), #D900AD 55%, #8452F5); box-shadow: 0 10px 30px rgba(0, 0, 0, .5), 0 0 26px rgba(240, 0, 192, .55);
     opacity: 0; pointer-events: none; transform: translate(-50%, 24px); transition: opacity .25s ease, transform .25s ease;
   }
   .sticky-cta.show { opacity: 1; pointer-events: auto; transform: translate(-50%, 0); }
