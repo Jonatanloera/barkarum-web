@@ -15,15 +15,16 @@
 @keyframes scan-drift { to { background-position: 0 120px; } }
 
 /* ---------- Botones de acento ---------- */
+/* Tonos del degradado elegidos para que el texto blanco tenga al menos 4,5:1 en todo el botón (WCAG AA). */
 .btn-violet {
   color: #fff;
-  background: linear-gradient(90deg, #6D3FE0, var(--violet) 55%, #00A8F0);
+  background: linear-gradient(90deg, #6D3FE0, #8452F5 55%, #007CB2);
   box-shadow: 0 0 24px rgba(139, 92, 246, .45);
 }
 .btn-violet:hover { color: #fff; box-shadow: 0 0 36px rgba(0, 216, 240, .4); transform: translateY(-1px); }
 .btn-magenta {
   color: #fff;
-  background: linear-gradient(90deg, var(--magenta), var(--pink) 55%, #8B5CF6);
+  background: linear-gradient(90deg, var(--magenta), #D900AD 55%, #8452F5);
   box-shadow: 0 0 24px rgba(240, 0, 192, .45);
 }
 .btn-magenta:hover { color: #fff; box-shadow: 0 0 36px rgba(240, 0, 192, .6); transform: translateY(-1px); }
@@ -58,6 +59,7 @@
   pointer-events: none;
 }
 @keyframes plasma-run { to { --a: 360deg; } }
+.holo.holo-idle::before, .follow-x.holo-idle::before { animation-play-state: paused; } /* fuera de pantalla (holo.js) */
 .holo::after {
   content: "";
   position: absolute;
@@ -82,6 +84,8 @@
   transition: transform .4s ease-out;
 }
 .holo-pad { padding: clamp(20px, 3vw, 32px); }
+/* El clip-path de .holo también recorta el contorno de foco: dentro de un panel se dibuja hacia dentro. */
+.holo video:focus-visible, .holo > summary:focus-visible { outline-offset: -3px; }
 
 /* Barrido de escaneo sobre imágenes */
 .scanline { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 1; }
@@ -136,6 +140,9 @@
 .reveal.in { opacity: 1; transform: none; filter: none; }
 .no-js .reveal { opacity: 1; transform: none; filter: none; }
 
+/* model-viewer se carga al acercarse (holo.js): mientras tanto ya ocupa su lugar y no mueve la página. */
+model-viewer { display: block; }
+
 /* ---------- Visor 3D de personajes ---------- */
 .stage-wrap { display: grid; grid-template-columns: 250px minmax(0, 1fr) 300px; gap: clamp(16px, 2.4vw, 32px); align-items: center; margin-top: 32px; }
 .body-tabs { display: grid; gap: 12px; }
@@ -144,7 +151,7 @@
 .body-tab span { font: 600 11px/1 var(--display); letter-spacing: .2em; text-transform: uppercase; color: var(--cyan); }
 .body-tab[aria-selected="true"] { --edge: var(--pink); }
 .body-tab[aria-selected="true"]::before { animation-duration: 2.4s; }
-.body-tab:focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; }
+.body-tab:focus-visible { outline: 2px solid var(--cyan); outline-offset: -4px; }
 .stage { position: relative; height: min(68vh, 600px); }
 .stage model-viewer { position: absolute; inset: 0 0 6% 0; width: 100%; height: 94%; background: transparent; --poster-color: transparent; --progress-bar-color: var(--cyan); --progress-bar-height: 2px; }
 .stage-base {
@@ -232,8 +239,11 @@ dialog.lightbox button { position: absolute; top: 14px; right: 14px; z-index: 5;
 
 @media (max-width: 1000px) {
   .stage-wrap { grid-template-columns: 1fr; }
-  .body-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .body-tab { padding: 12px; }
+  /* Pestañas en filas que se reparten el ancho, sin cortar nombres como SUPERVISOR; con cuatro, 2 + 2. */
+  .body-tabs { display: flex; flex-wrap: wrap; }
+  .body-tab { flex: 1 1 140px; width: auto; padding: 12px; }
+  .body-tab:first-child:nth-last-child(4), .body-tab:first-child:nth-last-child(4) ~ .body-tab { flex-basis: calc(50% - 6px); }
+  .body-tab span { display: block; line-height: 1.35; margin-bottom: 6px; }
   .body-tab strong { font-size: 15px; letter-spacing: .12em; }
   .stage { height: 54vh; min-height: 360px; }
   .weapons { grid-template-columns: 1fr; }
@@ -277,7 +287,7 @@ dialog.lightbox button { position: absolute; top: 14px; right: 14px; z-index: 5;
   pointer-events: none;
 }
 .follow-x:hover { color: #fff; transform: translateY(-2px); filter: brightness(1.15); }
-.follow-x:focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; }
+.follow-x:focus-visible { outline: 2px solid var(--cyan); outline-offset: -4px; }
 .follow-x-icon { position: relative; flex: none; display: grid; place-items: center; width: 54px; height: 54px; border-radius: 50%; background: #000; box-shadow: 0 0 0 1px rgba(255, 255, 255, .3), 0 0 22px rgba(0, 216, 240, .55); }
 .follow-x-icon svg { width: 24px; height: 24px; fill: #fff; }
 .follow-x-icon::after { content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid rgba(240, 0, 192, .7); animation: follow-ping 2.4s ease-out infinite; }
@@ -315,7 +325,7 @@ dialog.lightbox button { position: absolute; top: 14px; right: 14px; z-index: 5;
     position: fixed; left: 50%; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); z-index: 45;
     display: block; padding: 15px 26px; border-radius: 999px; white-space: nowrap;
     font: 600 14px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: #fff; text-decoration: none;
-    background: linear-gradient(90deg, var(--magenta), var(--pink) 55%, #8B5CF6); box-shadow: 0 10px 30px rgba(0, 0, 0, .5), 0 0 26px rgba(240, 0, 192, .55);
+    background: linear-gradient(90deg, var(--magenta), #D900AD 55%, #8452F5); box-shadow: 0 10px 30px rgba(0, 0, 0, .5), 0 0 26px rgba(240, 0, 192, .55);
     opacity: 0; pointer-events: none; transform: translate(-50%, 24px); transition: opacity .25s ease, transform .25s ease;
   }
   .sticky-cta.show { opacity: 1; pointer-events: auto; transform: translate(-50%, 0); }

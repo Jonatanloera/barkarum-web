@@ -1,11 +1,14 @@
 /*
  * Efectos holográficos de barkarum.com: fondo de energía, paneles que reaccionan
  * al cursor, aparición al desplazarse, visor 3D con pestañas y carrete 3D.
+ * model-viewer y los pósters de los videos se cargan cuando se acercan a la pantalla.
  * Con prefers-reduced-motion todo queda quieto y el carrete pasa a cuadrícula.
  */
 (function () {
   'use strict';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Carpeta js/ del sitio, para cargar después js/vendor/ desde cualquier página.
+  var jsDir = ((document.currentScript && document.currentScript.src) || '').replace(/[^\/]*$/, '');
   document.documentElement.classList.remove('no-js');
 
   /* ---------- Fondo de energía: partículas que fluyen por un campo de corrientes ---------- */
@@ -79,6 +82,17 @@
         el.style.setProperty('--sheen', '-30%');
       });
     });
+  }
+
+  /* ---------- Bordes animados en pausa fuera de pantalla ---------- */
+  // Cada borde (.holo::before, animado con @property) recalcula estilos en cada fotograma: con decenas
+  // de paneles en la página el teléfono tenía el hilo principal ocupado aunque nadie los viera.
+  function idlePanels() {
+    if (reduce || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { en.target.classList.toggle('holo-idle', !en.isIntersecting); });
+    });
+    document.querySelectorAll('.holo, .follow-x').forEach(function (el) { io.observe(el); });
   }
 
   /* ---------- Aparición al entrar en pantalla ---------- */
@@ -182,6 +196,41 @@
     }
   }
 
+  // Ejecuta fn(el) cuando el elemento está a menos de una pantalla de distancia
+  // (o enseguida, si el navegador no tiene IntersectionObserver).
+  function whenNear(els, fn) {
+    if (!('IntersectionObserver' in window)) { els.forEach(fn); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { io.unobserve(en.target); fn(en.target); } });
+    }, { rootMargin: '100% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  }
+
+  // model-viewer pesa ~950 KB: se carga cuando el primer visor 3D se acerca a la pantalla,
+  // así no compite con la portada ni retrasa al resto de los scripts.
+  function modelViewer() {
+    var els = [].slice.call(document.querySelectorAll('model-viewer'));
+    if (!els.length || !window.customElements || customElements.get('model-viewer')) return;
+    var loaded = false;
+    whenNear(els, function () {
+      if (loaded) return;
+      loaded = true;
+      var s = document.createElement('script');
+      s.type = 'module';
+      s.src = jsDir + 'vendor/model-viewer-4.0.0.min.js';
+      document.head.appendChild(s);
+    });
+  }
+
+  // Pósters de los videos: el navegador los descarga aunque el video tenga preload="none",
+  // así que se ponen al acercarse a la pantalla, en 800 px si el reproductor no necesita más.
+  function posters() {
+    whenNear([].slice.call(document.querySelectorAll('video[data-poster]')), function (v) {
+      var small = v.dataset.posterSmall;
+      v.poster = small && v.clientWidth * (window.devicePixelRatio || 1) <= 800 ? small : v.dataset.poster;
+    });
+  }
+
   // Subtítulos de los videos en el idioma del sitio.
   function films() {
     var vids = document.querySelectorAll('video[data-subs]');
@@ -210,5 +259,5 @@
     document.querySelectorAll('[data-hide-sticky]').forEach(function (el) { io.observe(el); });
   }
 
-  energy(); tilt(); reveal(); stages(); reels(); films(); stickyCta();
+  energy(); tilt(); idlePanels(); reveal(); stages(); reels(); modelViewer(); posters(); films(); stickyCta();
 })();
