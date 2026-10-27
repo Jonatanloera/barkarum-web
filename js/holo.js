@@ -84,6 +84,17 @@
     });
   }
 
+  /* ---------- Bordes animados en pausa fuera de pantalla ---------- */
+  // Cada borde (.holo::before, animado con @property) recalcula estilos en cada fotograma: con decenas
+  // de paneles en la página el teléfono tenía el hilo principal ocupado aunque nadie los viera.
+  function idlePanels() {
+    if (reduce || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { en.target.classList.toggle('holo-idle', !en.isIntersecting); });
+    });
+    document.querySelectorAll('.holo, .follow-x').forEach(function (el) { io.observe(el); });
+  }
+
   /* ---------- Aparición al entrar en pantalla ---------- */
   function reveal() {
     var els = document.querySelectorAll('.reveal');
@@ -248,5 +259,5 @@
     document.querySelectorAll('[data-hide-sticky]').forEach(function (el) { io.observe(el); });
   }
 
-  energy(); tilt(); reveal(); stages(); reels(); modelViewer(); posters(); films(); stickyCta();
+  energy(); tilt(); idlePanels(); reveal(); stages(); reels(); modelViewer(); posters(); films(); stickyCta();
 })();

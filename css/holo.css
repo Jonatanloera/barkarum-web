@@ -59,6 +59,7 @@
   pointer-events: none;
 }
 @keyframes plasma-run { to { --a: 360deg; } }
+.holo.holo-idle::before, .follow-x.holo-idle::before { animation-play-state: paused; } /* fuera de pantalla (holo.js) */
 .holo::after {
   content: "";
   position: absolute;
