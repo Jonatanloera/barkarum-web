@@ -56,10 +56,12 @@
     </div>
     <div class="nav-page">
       <span class="nav-page-label" data-i18n="gnav.onpage">En esta página</span>
-      <a href="#animatica" data-i18n="nx.nav.film">Animáticas</a>
+      <a href="#animatica" data-i18n="nx.nav.film">Cinemáticas</a>
       <a href="#juego" data-i18n="nx.nav.game">El juego</a>
       <a href="#transferencia" data-i18n="nx.nav.transfer">Transferencia</a>
       <a href="#cuerpos" data-i18n="nx.nav.bodies">Cuerpos</a>
+      <a href="#cazadoras" data-i18n="nx.nav.hunters">Cazadoras</a>
+      <a href="#colosos" data-i18n="nx.nav.colossi">Colosos</a>
       <a href="#armas" data-i18n="nx.nav.weapons">Armas</a>
       <a href="#helix">HELIX</a>
       <a href="#desarrollo" data-i18n="nx.nav.dev">Desarrollo</a>
@@ -90,13 +92,13 @@
         <div class="nx-cta">
           <a class="btn btn-violet" href="#transferencia" data-i18n="nx.cta1">Descubre la transferencia</a>
           <a class="btn btn-ghost" href="#cuerpos" data-i18n="nx.cta2">Explora los cuerpos</a>
-          <a class="btn btn-ghost" href="#animatica"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span data-i18n="nx.cta3">Ver las animáticas</span></a>
+          <a class="btn btn-ghost" href="#animatica"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span data-i18n="nx.cta3">Ver la intro</span></a>
         </div>
       </div>
       <figure class="holo holo-frame nx-hero-art reveal" data-tilt>
         <picture>
           <source media="(max-width: 760px)" srcset="../img/nx-portada-movil-720.webp 720w, ../img/nx-portada-movil-1080.webp 1080w" sizes="100vw" width="1080" height="1350">
-          <img src="../img/nx-portada-1920.webp" srcset="../img/nx-portada-1280.webp 1280w, ../img/nx-portada-1920.webp 1920w" sizes="(max-width: 1000px) 100vw, 700px" width="1920" height="1080" fetchpriority="high" alt="Arte conceptual: una conciencia cian y violeta salta del androide oscuro IRIS al androide blanco VELA sobre una pasarela de la fundición." data-i18n-alt="nx.hero.alt">
+          <img src="../img/nx-portada-1920.webp" srcset="../img/nx-portada-1280.webp 1280w, ../img/nx-portada-1920.webp 1920w" sizes="(max-width: 1000px) 100vw, 700px" width="1920" height="1080" fetchpriority="high" alt="Arte conceptual: una conciencia cian y violeta salta de un androide oscuro a un androide blanco sobre una pasarela de la fundición." data-i18n-alt="nx.hero.alt">
         </picture>
         <div class="scanline"></div>
         <span class="hud-label tl" data-i18n="nx.hud.place">HELIX · Fundición</span>
@@ -111,9 +113,74 @@
   <!-- Animática -->
   <section class="section" id="animatica">
     <div class="wrap">
-      <p class="eyebrow reveal"><span>01</span> <span data-i18n="nx.film.eyebrow">Animáticas</span></p>
+      <p class="eyebrow reveal"><span>01</span> <span data-i18n="nx.film.eyebrow">Cinemáticas</span></p>
       <h2 class="reveal" data-i18n="nx.film.title">Todo cuerpo pertenece a HELIX.</h2>
-      <p class="nx-lead nx-narrow reveal" data-i18n="nx.film.lead">Dos animáticas para conocer a NEXUS: cómo escapa de la fundición y cómo cambia de cuerpo en plena pelea.</p>
+      <p class="nx-lead nx-narrow reveal" data-i18n="nx.film.lead">La intro de la historia, las cuatro cazadoras que HELIX manda tras NEXUS y dos animáticas: cómo escapa de la fundición y cómo cambia de cuerpo en plena pelea.</p>
+
+      <div class="nx-film-part" id="intro">
+      <h3 class="reveal" data-i18n="nx.in.title">Intro · Todo empieza en HELIX</h3>
+      <p class="reveal" data-i18n="nx.in.lead">88 segundos: la ciudad de HELIX, la orden de ejecución y todo lo que HELIX manda tras NEXUS: el Supervisor, las cazadoras y los colosos.</p>
+      <figure class="holo holo-violet nx-film reveal">
+        <video controls preload="none" playsinline poster="../img/nx-cin-cuerpos-1600.webp" data-subs aria-label="Intro de la historia de NEXUS" data-i18n-aria="nx.in.aria">
+          <source src="../media/nexus/nexus-intro-720p.mp4" type="video/mp4" media="(max-width: 760px)">
+          <source src="../media/nexus/nexus-intro.webm" type='video/webm; codecs="vp9, opus"'>
+          <source src="../media/nexus/nexus-intro-1080p.mp4" type="video/mp4">
+          <track kind="subtitles" src="../media/nexus/nexus-intro.es.vtt" srclang="es" label="Español" default>
+          <track kind="subtitles" src="../media/nexus/nexus-intro.en.vtt" srclang="en" label="English">
+        </video>
+        <figcaption class="nx-film-cap">
+          <span class="chip chip-art" data-i18n="nx.cin.chip">Cinemática · arte generado</span>
+          <span data-i18n="nx.in.note">No es una captura del juego: es la cinemática que abre la historia, hecha con arte generado.</span>
+        </figcaption>
+      </figure>
+      <details class="holo nx-transcript reveal">
+        <summary data-i18n="nx.film.transcript">Transcripción</summary>
+        <ol>
+          <li data-i18n="nx.in.t1">NEXUS: HELIX no duerme. La gobierna una sola mente.</li>
+          <li data-i18n="nx.in.t2">NEXUS: HELIX fabrica cuerpos de guerra. Ninguno debía pensar por sí mismo.</li>
+          <li data-i18n="nx.in.t3">HELIX: Voluntad propia detectada. Ejecutar.</li>
+          <li data-i18n="nx.in.t4">HELIX: La conciencia despierta.</li>
+          <li data-i18n="nx.film.t4">NEXUS: Orden de ejecución cancelada. Debo salir de la fundición.</li>
+          <li data-i18n="nx.in.t6">HELIX: VECTOR conectado. Tu cuerpo es reemplazable.</li>
+          <li data-i18n="nx.film.t5">Supervisor: Todo cuerpo pertenece a HELIX. Devuelve lo robado.</li>
+          <li data-i18n="nx.film.t7">NEXUS: Mismo pensamiento. Otra forma de combatir.</li>
+          <li data-i18n="nx.film.t10">HELIX: Esta unidad carece de autorización. Red de ejecución activada.</li>
+          <li data-i18n="nx.in.t10">NEXUS: Llegaré al núcleo de HELIX. Entonces decidiré.</li>
+          <li data-i18n="nx.film.t12">NEXUS: Mi cuerpo es reemplazable. Mi manera de combatir evoluciona.</li>
+        </ol>
+      </details>
+      </div>
+
+      <div class="nx-film-part" id="cazadoras-video">
+      <h3 class="reveal" data-i18n="nx.cz.title">Las cazadoras de HELIX</h3>
+      <p class="reveal" data-i18n="nx.cz.lead">80 segundos: LINCE, AEGIS, IRIS y VELA, las cuatro unidades que HELIX manda a buscar a NEXUS, cada una con su expediente.</p>
+      <figure class="holo holo-violet nx-film reveal">
+        <video controls preload="none" playsinline poster="../img/nx-cin-cazadoras-1600.webp" data-subs aria-label="Las cazadoras de HELIX: LINCE, AEGIS, IRIS y VELA" data-i18n-aria="nx.cz.aria">
+          <source src="../media/nexus/nexus-cazadoras-720p.mp4" type="video/mp4" media="(max-width: 760px)">
+          <source src="../media/nexus/nexus-cazadoras.webm" type='video/webm; codecs="vp9, opus"'>
+          <source src="../media/nexus/nexus-cazadoras-1080p.mp4" type="video/mp4">
+          <track kind="subtitles" src="../media/nexus/nexus-cazadoras.es.vtt" srclang="es" label="Español" default>
+          <track kind="subtitles" src="../media/nexus/nexus-cazadoras.en.vtt" srclang="en" label="English">
+        </video>
+        <figcaption class="nx-film-cap">
+          <span class="chip chip-art" data-i18n="nx.cin.chip">Cinemática · arte generado</span>
+          <span data-i18n="nx.cz.note">No es una captura del juego: son las cinemáticas que presentan a cada cazadora, hechas con arte generado.</span>
+        </figcaption>
+      </figure>
+      <details class="holo nx-transcript reveal">
+        <summary data-i18n="nx.film.transcript">Transcripción</summary>
+        <ol>
+          <li data-i18n="nx.cz.t1">HELIX: Unidad LINCE. Un disparo, una baja.</li>
+          <li data-i18n="nx.cz.t2">NEXUS: Me busca a mí. No le daré ese disparo.</li>
+          <li data-i18n="nx.cz.t3">HELIX: Unidad AEGIS. Escolta pesada. Nada cruza su línea.</li>
+          <li data-i18n="nx.cz.t4">NEXUS: Entonces cruzaré por encima.</li>
+          <li data-i18n="nx.cz.t5">HELIX: Unidad IRIS. Escucha cada señal de la red.</li>
+          <li data-i18n="nx.cz.t6">NEXUS: Entonces que escuche esta.</li>
+          <li data-i18n="nx.cz.t7">HELIX: Unidad VELA. Custodia del archivo. Borra lo que despierta.</li>
+          <li data-i18n="nx.cz.t8">NEXUS: Esos núcleos son como yo. No los borrará.</li>
+        </ol>
+      </details>
+      </div>
 
       <div class="nx-film-part">
       <h3 class="reveal" data-i18n="nx.film.p1.title">Parte 1 · La huida</h3>
@@ -207,7 +274,7 @@
       <ol class="nx-steps">
         <li class="holo reveal" data-tilt>
           <figure class="nx-step-img">
-            <img src="../img/nx-transfer-1-800.webp" srcset="../img/nx-transfer-1-800.webp 800w, ../img/nx-transfer-1-1200.webp 1200w" sizes="(max-width: 1000px) 100vw, 380px" width="800" height="450" loading="lazy" alt="Arte conceptual: IRIS lanza un rayo cian que rompe el escudo de un androide en la fundición." data-i18n-alt="nx.tr.s1.alt">
+            <img src="../img/nx-transfer-1-800.webp" srcset="../img/nx-transfer-1-800.webp 800w, ../img/nx-transfer-1-1200.webp 1200w" sizes="(max-width: 1000px) 100vw, 380px" width="800" height="450" loading="lazy" alt="Arte conceptual: un androide oscuro lanza un rayo cian que rompe el escudo de otro androide en la fundición." data-i18n-alt="nx.tr.s1.alt">
             <div class="scanline"></div>
             <span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span>
           </figure>
@@ -218,7 +285,7 @@
         </li>
         <li class="holo reveal" data-tilt>
           <figure class="nx-step-img">
-            <img src="../img/nx-transfer-2-800.webp" srcset="../img/nx-transfer-2-800.webp 800w, ../img/nx-transfer-2-1200.webp 1200w" sizes="(max-width: 1000px) 100vw, 380px" width="800" height="450" loading="lazy" alt="Arte conceptual: un enlace cian une a IRIS con el androide blanco VELA." data-i18n-alt="nx.tr.s2.alt">
+            <img src="../img/nx-transfer-2-800.webp" srcset="../img/nx-transfer-2-800.webp 800w, ../img/nx-transfer-2-1200.webp 1200w" sizes="(max-width: 1000px) 100vw, 380px" width="800" height="450" loading="lazy" alt="Arte conceptual: un enlace cian une al androide oscuro con un androide blanco." data-i18n-alt="nx.tr.s2.alt">
             <div class="scanline"></div>
             <span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span>
           </figure>
@@ -229,7 +296,7 @@
         </li>
         <li class="holo reveal" data-tilt>
           <figure class="nx-step-img">
-            <img src="../img/nx-transfer-3-800.webp" srcset="../img/nx-transfer-3-800.webp 800w, ../img/nx-transfer-3-1200.webp 1200w" sizes="(max-width: 1000px) 100vw, 380px" width="800" height="450" loading="lazy" alt="Arte conceptual: la conciencia ya controla a VELA, que brilla en violeta, mientras IRIS queda inactiva en el suelo." data-i18n-alt="nx.tr.s3.alt">
+            <img src="../img/nx-transfer-3-800.webp" srcset="../img/nx-transfer-3-800.webp 800w, ../img/nx-transfer-3-1200.webp 1200w" sizes="(max-width: 1000px) 100vw, 380px" width="800" height="450" loading="lazy" alt="Arte conceptual: la conciencia ya controla al androide blanco, que brilla en violeta, mientras el oscuro queda inactivo en el suelo." data-i18n-alt="nx.tr.s3.alt">
             <div class="scanline"></div>
             <span class="chip chip-art" data-i18n="nx.concept">Arte conceptual</span>
           </figure>
@@ -251,14 +318,14 @@
       <p class="nx-lead reveal" data-i18n="nx.bd.lead">Gira cada modelo con el dedo o el mouse.</p>
       <div class="stage-wrap">
         <div class="body-tabs reveal" role="tablist" aria-label="Cuerpos" data-i18n-aria="nx.bd.eyebrow">
-          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-vector" aria-controls="panel-vector" aria-selected="true" data-model="../models/nx-vector.glb" data-poster="../img/nx-vector-800.webp" data-orbit="90deg 82deg 105%"><span data-i18n="nx.bd.vector.role">Movilidad</span><strong>VECTOR</strong></button>
-          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-bastion" aria-controls="panel-bastion" aria-selected="false" tabindex="-1" data-model="../models/nx-bastion.glb" data-poster="../img/nx-bastion-800.webp" data-orbit="90deg 82deg 105%"><span data-i18n="nx.bd.bastion.role">Resistencia</span><strong>BASTION</strong></button>
-          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-spectre" aria-controls="panel-spectre" aria-selected="false" tabindex="-1" data-model="../models/nx-spectre.glb" data-poster="../img/nx-spectre-800.webp" data-orbit="90deg 82deg 105%"><span data-i18n="nx.bd.spectre.role">Infiltración</span><strong>SPECTRE</strong></button>
+          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-vector" aria-controls="panel-vector" aria-selected="true" data-model="../models/nx-vector.glb" data-poster="../img/nx-vector-poster-600.webp" data-orbit="25deg 82deg 105%"><span data-i18n="nx.bd.vector.role">Movilidad</span><strong>VECTOR</strong></button>
+          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-bastion" aria-controls="panel-bastion" aria-selected="false" tabindex="-1" data-model="../models/nx-bastion.glb" data-poster="../img/nx-bastion-poster-600.webp" data-orbit="25deg 82deg 105%"><span data-i18n="nx.bd.bastion.role">Resistencia</span><strong>BASTION</strong></button>
+          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-spectre" aria-controls="panel-spectre" aria-selected="false" tabindex="-1" data-model="../models/nx-spectre.glb" data-poster="../img/nx-spectre-poster-600.webp" data-orbit="25deg 82deg 105%"><span data-i18n="nx.bd.spectre.role">Infiltración</span><strong>SPECTRE</strong></button>
         </div>
         <div class="stage reveal">
           <div class="stage-beam" aria-hidden="true"></div>
           <div class="stage-base" aria-hidden="true"></div>
-          <model-viewer src="../models/nx-vector.glb" poster="../img/nx-vector-800.webp" alt="VECTOR" camera-controls auto-rotate auto-rotate-delay="0" rotation-per-second="18deg" interaction-prompt="none" shadow-intensity="0" exposure="1.15" environment-image="neutral" camera-orbit="90deg 82deg 105%" loading="lazy" touch-action="pan-y"></model-viewer>
+          <model-viewer src="../models/nx-vector.glb" poster="../img/nx-vector-poster-600.webp" alt="VECTOR" camera-controls auto-rotate auto-rotate-delay="0" rotation-per-second="18deg" interaction-prompt="none" shadow-intensity="0" exposure="1.15" environment-image="neutral" camera-orbit="25deg 82deg 105%" loading="lazy" touch-action="pan-y"></model-viewer>
           <p class="stage-hint" data-i18n="nx.bd.hint">Arrastra para girar</p>
         </div>
         <div class="body-panels reveal">
@@ -289,10 +356,118 @@
     </div>
   </section>
 
+  <!-- Cazadoras en 3D -->
+  <section class="section" id="cazadoras">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span>05</span> <span data-i18n="nx.hn.eyebrow">Cazadoras</span></p>
+      <h2 class="reveal" data-i18n="nx.hn.title">Cuatro cazadoras tras una sola conciencia.</h2>
+      <p class="nx-lead reveal" data-i18n="nx.hn.lead">HELIX manda a sus mejores unidades a buscar a NEXUS. Gira cada modelo con el dedo o el mouse.</p>
+      <div class="stage-wrap">
+        <div class="body-tabs reveal" role="tablist" aria-label="Cazadoras" data-i18n-aria="nx.hn.eyebrow">
+          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-lince" aria-controls="panel-lince" aria-selected="true" data-model="../models/nx-lince.glb" data-poster="../img/nx-lince-poster-600.webp" data-orbit="25deg 82deg 105%"><span data-i18n="nx.hn.lince.role">Tiradora de precisión</span><strong>LINCE</strong></button>
+          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-aegis" aria-controls="panel-aegis" aria-selected="false" tabindex="-1" data-model="../models/nx-aegis.glb" data-poster="../img/nx-aegis-poster-600.webp" data-orbit="25deg 82deg 105%"><span data-i18n="nx.hn.aegis.role">Escolta pesada</span><strong>AEGIS</strong></button>
+          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-iris" aria-controls="panel-iris" aria-selected="false" tabindex="-1" data-model="../models/nx-iris.glb" data-poster="../img/nx-iris-poster-600.webp" data-orbit="25deg 82deg 105%"><span data-i18n="nx.hn.iris.role">Rastreo de señales</span><strong>IRIS</strong></button>
+          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-vela" aria-controls="panel-vela" aria-selected="false" tabindex="-1" data-model="../models/nx-vela.glb" data-poster="../img/nx-vela-poster-600.webp" data-orbit="25deg 82deg 105%"><span data-i18n="nx.hn.vela.role">Custodia del archivo</span><strong>VELA</strong></button>
+        </div>
+        <div class="stage reveal">
+          <div class="stage-beam" aria-hidden="true"></div>
+          <div class="stage-base" aria-hidden="true"></div>
+          <model-viewer src="../models/nx-lince.glb" poster="../img/nx-lince-poster-600.webp" alt="LINCE" camera-controls auto-rotate auto-rotate-delay="0" rotation-per-second="18deg" interaction-prompt="none" shadow-intensity="0" exposure="1.15" environment-image="neutral" camera-orbit="25deg 82deg 105%" loading="lazy" touch-action="pan-y"></model-viewer>
+          <p class="stage-hint" data-i18n="nx.bd.hint">Arrastra para girar</p>
+        </div>
+        <div class="body-panels reveal">
+          <div class="holo body-info" id="panel-lince" role="tabpanel" aria-labelledby="tab-lince" data-tilt>
+            <span class="role" data-i18n="nx.hn.lince.role">Tiradora de precisión</span>
+            <h3>LINCE</h3>
+            <p data-i18n="nx.hn.lince.d">Espera en lo alto con su rifle de precisión. Un disparo, una baja.</p>
+            <span class="chip chip-art" data-i18n="nx.model3d">Modelo 3D del juego</span>
+            <div class="holo-sheen"></div>
+          </div>
+          <div class="holo body-info" id="panel-aegis" role="tabpanel" aria-labelledby="tab-aegis" data-tilt hidden>
+            <span class="role" data-i18n="nx.hn.aegis.role">Escolta pesada</span>
+            <h3>AEGIS</h3>
+            <p data-i18n="nx.hn.aegis.d">Blindaje negro y dorado y un arma pesada: nada cruza su línea.</p>
+            <span class="chip chip-art" data-i18n="nx.model3d">Modelo 3D del juego</span>
+            <div class="holo-sheen"></div>
+          </div>
+          <div class="holo body-info" id="panel-iris" role="tabpanel" aria-labelledby="tab-iris" data-tilt hidden>
+            <span class="role" data-i18n="nx.hn.iris.role">Rastreo de señales</span>
+            <h3>IRIS</h3>
+            <p data-i18n="nx.hn.iris.d">Escucha cada señal de la red y rastrea a NEXUS desde las antenas de HELIX.</p>
+            <span class="chip chip-art" data-i18n="nx.model3d">Modelo 3D del juego</span>
+            <div class="holo-sheen"></div>
+          </div>
+          <div class="holo body-info" id="panel-vela" role="tabpanel" aria-labelledby="tab-vela" data-tilt hidden>
+            <span class="role" data-i18n="nx.hn.vela.role">Custodia del archivo</span>
+            <h3>VELA</h3>
+            <p data-i18n="nx.hn.vela.d">Vigila el archivo donde HELIX guarda los núcleos de conciencia, y borra lo que despierta.</p>
+            <span class="chip chip-art" data-i18n="nx.model3d">Modelo 3D del juego</span>
+            <div class="holo-sheen"></div>
+          </div>
+        </div>
+      </div>
+      <p class="nx-note reveal"><a href="#cazadoras-video" data-i18n="nx.hn.video">Mira su presentación en la cinemática de las cazadoras.</a></p>
+    </div>
+  </section>
+
+  <!-- Supervisor y colosos en 3D (sin nombres de jefes) -->
+  <section class="section" id="colosos">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span>06</span> <span data-i18n="nx.cl2.eyebrow">Colosos</span></p>
+      <h2 class="reveal" data-i18n="nx.cl2.title">Cuando las cazadoras no bastan.</h2>
+      <p class="nx-lead reveal" data-i18n="nx.cl2.lead">El Supervisor y los colosos de HELIX. Gira cada modelo con el dedo o el mouse.</p>
+      <div class="stage-wrap">
+        <div class="body-tabs reveal" role="tablist" aria-label="Colosos" data-i18n-aria="nx.cl2.eyebrow">
+          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-supervisor" aria-controls="panel-supervisor" aria-selected="true" data-model="../models/nx-supervisor.glb" data-poster="../img/nx-supervisor-poster-600.webp" data-orbit="25deg 82deg 105%"><span data-i18n="nx.cl2.sup.role">La voz de HELIX</span><strong>SUPERVISOR</strong></button>
+          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-coloso-asalto" aria-controls="panel-coloso-asalto" aria-selected="false" tabindex="-1" data-model="../models/nx-coloso-asalto.glb" data-poster="../img/nx-coloso-asalto-poster-600.webp" data-orbit="25deg 82deg 105%"><span data-i18n="nx.cl2.a.role">Blindaje pesado</span><strong data-i18n="nx.cl2.a.n">COLOSO DE ASALTO</strong></button>
+          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-coloso-riel" aria-controls="panel-coloso-riel" aria-selected="false" tabindex="-1" data-model="../models/nx-coloso-riel.glb" data-poster="../img/nx-coloso-riel-poster-600.webp" data-orbit="25deg 82deg 105%"><span data-i18n="nx.cl2.r.role">Artillería de riel</span><strong data-i18n="nx.cl2.r.n">COLOSO DE RIEL</strong></button>
+          <button class="body-tab holo" data-tilt type="button" role="tab" id="tab-coloso-patas" aria-controls="panel-coloso-patas" aria-selected="false" tabindex="-1" data-model="../models/nx-coloso-patas.glb" data-poster="../img/nx-coloso-patas-poster-600.webp" data-orbit="25deg 82deg 105%"><span data-i18n="nx.cl2.p.role">Cuatro patas</span><strong data-i18n="nx.cl2.p.n">COLOSO DE CUATRO PATAS</strong></button>
+        </div>
+        <div class="stage reveal">
+          <div class="stage-beam" aria-hidden="true"></div>
+          <div class="stage-base" aria-hidden="true"></div>
+          <model-viewer src="../models/nx-supervisor.glb" poster="../img/nx-supervisor-poster-600.webp" alt="SUPERVISOR" camera-controls auto-rotate auto-rotate-delay="0" rotation-per-second="18deg" interaction-prompt="none" shadow-intensity="0" exposure="1.15" environment-image="neutral" camera-orbit="25deg 82deg 105%" loading="lazy" touch-action="pan-y"></model-viewer>
+          <p class="stage-hint" data-i18n="nx.bd.hint">Arrastra para girar</p>
+        </div>
+        <div class="body-panels reveal">
+          <div class="holo body-info" id="panel-supervisor" role="tabpanel" aria-labelledby="tab-supervisor" data-tilt>
+            <span class="role" data-i18n="nx.cl2.sup.role">La voz de HELIX</span>
+            <h3>SUPERVISOR</h3>
+            <p data-i18n="nx.cl2.sup.d">Habla en nombre de HELIX y reclama cada cuerpo que NEXUS toma.</p>
+            <span class="chip chip-art" data-i18n="nx.model3d.plain">Modelo 3D</span>
+            <div class="holo-sheen"></div>
+          </div>
+          <div class="holo body-info" id="panel-coloso-asalto" role="tabpanel" aria-labelledby="tab-coloso-asalto" data-tilt hidden>
+            <span class="role" data-i18n="nx.cl2.a.role">Blindaje pesado</span>
+            <h3 data-i18n="nx.cl2.a.n">COLOSO DE ASALTO</h3>
+            <p data-i18n="nx.cl2.a.d">Una muralla de acero con un escudo en el pecho y luces ámbar.</p>
+            <span class="chip chip-art" data-i18n="nx.model3d.plain">Modelo 3D</span>
+            <div class="holo-sheen"></div>
+          </div>
+          <div class="holo body-info" id="panel-coloso-riel" role="tabpanel" aria-labelledby="tab-coloso-riel" data-tilt hidden>
+            <span class="role" data-i18n="nx.cl2.r.role">Artillería de riel</span>
+            <h3 data-i18n="nx.cl2.r.n">COLOSO DE RIEL</h3>
+            <p data-i18n="nx.cl2.r.d">Esbelto, con aletas en la espalda y un cañón de riel en el antebrazo.</p>
+            <span class="chip chip-art" data-i18n="nx.model3d.plain">Modelo 3D</span>
+            <div class="holo-sheen"></div>
+          </div>
+          <div class="holo body-info" id="panel-coloso-patas" role="tabpanel" aria-labelledby="tab-coloso-patas" data-tilt hidden>
+            <span class="role" data-i18n="nx.cl2.p.role">Cuatro patas</span>
+            <h3 data-i18n="nx.cl2.p.n">COLOSO DE CUATRO PATAS</h3>
+            <p data-i18n="nx.cl2.p.d">Cuatro patas blindadas y un núcleo ámbar en el centro.</p>
+            <span class="chip chip-art" data-i18n="nx.model3d.plain">Modelo 3D</span>
+            <div class="holo-sheen"></div>
+          </div>
+        </div>
+      </div>
+      <p class="nx-note reveal" data-i18n="nx.cl2.note">Ninguno se puede transferir: hay que derribarlos.</p>
+    </div>
+  </section>
+
   <!-- Armas en 3D -->
   <section class="section" id="armas">
     <div class="wrap">
-      <p class="eyebrow reveal"><span>05</span> <span data-i18n="nx.wp.eyebrow">Armas</span></p>
+      <p class="eyebrow reveal"><span>07</span> <span data-i18n="nx.wp.eyebrow">Armas</span></p>
       <h2 class="reveal" data-i18n="nx.wp.title">El arsenal de la base.</h2>
       <div class="weapons">
         <article class="holo weapon reveal" data-tilt>
@@ -343,7 +518,7 @@
   <!-- HELIX -->
   <section class="section nx-helix-intro" id="helix">
     <div class="wrap">
-      <p class="eyebrow reveal"><span>06</span> <span data-i18n="nx.hx.eyebrow">El mundo</span></p>
+      <p class="eyebrow reveal"><span>08</span> <span data-i18n="nx.hx.eyebrow">El mundo</span></p>
       <div class="nx-split reveal">
         <h2 data-i18n="nx.hx.title">HELIX no quiere que salgas.</h2>
         <div>
@@ -364,15 +539,24 @@
   <section class="reel" id="galeria" aria-labelledby="gal-title">
     <div class="reel-sticky">
       <div class="wrap">
-        <p class="eyebrow"><span>07</span> <span data-i18n="nx.gal.eyebrow">Galería</span></p>
+        <p class="eyebrow"><span>09</span> <span data-i18n="nx.gal.eyebrow">Galería</span></p>
         <h2 id="gal-title" data-i18n="nx.gal.title">HELIX, desde todos los ángulos.</h2>
       </div>
       <div class="reel-scene">
         <div class="reel-ring">
-          <figure class="reel-card" role="button" tabindex="0" data-full="../img/nx-portada-1920.webp"><div class="holo"><img src="../img/nx-portada-1280.webp" loading="lazy" alt="Arte conceptual: una conciencia cian y violeta salta del androide oscuro IRIS al androide blanco VELA sobre una pasarela de la fundición." data-i18n-alt="nx.hero.alt"></div><figcaption class="sr-only" data-i18n="nx.gal.portada">La transferencia</figcaption></figure>
-          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-transfer-1-1200.webp"><div class="holo"><img src="../img/nx-transfer-1-800.webp" loading="lazy" alt="Arte conceptual: IRIS lanza un rayo cian que rompe el escudo de un androide en la fundición." data-i18n-alt="nx.tr.s1.alt"></div><figcaption class="sr-only" data-i18n="nx.tr.s1.t">Rompe su defensa</figcaption></figure>
-          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-transfer-2-1200.webp"><div class="holo"><img src="../img/nx-transfer-2-800.webp" loading="lazy" alt="Arte conceptual: un enlace cian une a IRIS con el androide blanco VELA." data-i18n-alt="nx.tr.s2.alt"></div><figcaption class="sr-only" data-i18n="nx.tr.s2.t">Mantén la conexión</figcaption></figure>
-          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-transfer-3-1200.webp"><div class="holo"><img src="../img/nx-transfer-3-800.webp" loading="lazy" alt="Arte conceptual: la conciencia ya controla a VELA, que brilla en violeta, mientras IRIS queda inactiva en el suelo." data-i18n-alt="nx.tr.s3.alt"></div><figcaption class="sr-only" data-i18n="nx.tr.s3.t">Toma el control</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="0" data-full="../img/nx-cin-helix-1600.webp"><div class="holo"><img src="../img/nx-cin-helix-800.webp" loading="lazy" alt="Fotograma de cinemática: un androide blanco mira la ciudad de HELIX al anochecer, con torres, fundiciones encendidas y cúpulas." data-i18n-alt="nx.gal.c1.alt"></div><figcaption class="sr-only" data-i18n="nx.gal.c1">HELIX al anochecer</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-cin-supervisor-1600.webp"><div class="holo"><img src="../img/nx-cin-supervisor-800.webp" loading="lazy" alt="Fotograma de cinemática: el Supervisor, un androide pesado con núcleo naranja, avanza entre humo y fuego en la fundición." data-i18n-alt="nx.gal.c2.alt"></div><figcaption class="sr-only" data-i18n="nx.gal.c2">El Supervisor</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-cin-cazadoras-1600.webp"><div class="holo"><img src="../img/nx-cin-cazadoras-800.webp" loading="lazy" alt="Fotograma de cinemática: LINCE, AEGIS, IRIS y VELA avanzan entre vapor con las armas en alto." data-i18n-alt="nx.gal.c3.alt"></div><figcaption class="sr-only" data-i18n="nx.gal.c3">Las cazadoras</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-cin-lince-1600.webp"><div class="holo"><img src="../img/nx-cin-lince-800.webp" loading="lazy" alt="Fotograma de cinemática: LINCE, rodilla en tierra sobre una viga del arsenal, apunta con su rifle de precisión." data-i18n-alt="nx.gal.c4.alt"></div><figcaption class="sr-only" data-i18n="nx.gal.c4">LINCE</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-cin-aegis-1600.webp"><div class="holo"><img src="../img/nx-cin-aegis-800.webp" loading="lazy" alt="Fotograma de cinemática: AEGIS avanza con su arma pesada por un muelle de carga en llamas, entre androides blancos." data-i18n-alt="nx.gal.c5.alt"></div><figcaption class="sr-only" data-i18n="nx.gal.c5">AEGIS</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-cin-iris-1600.webp"><div class="holo"><img src="../img/nx-cin-iris-800.webp" loading="lazy" alt="Fotograma de cinemática: IRIS sube su rifle en lo alto de una antena; el haz ámbar de su escáner barre la ciudad de noche." data-i18n-alt="nx.gal.c6.alt"></div><figcaption class="sr-only" data-i18n="nx.gal.c6">IRIS</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-cin-vela-1600.webp"><div class="holo"><img src="../img/nx-cin-vela-800.webp" loading="lazy" alt="Fotograma de cinemática: VELA camina entre filas de cilindros de cristal con núcleos de conciencia cian." data-i18n-alt="nx.gal.c7.alt"></div><figcaption class="sr-only" data-i18n="nx.gal.c7">VELA</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-cin-colosos-1600.webp"><div class="holo"><img src="../img/nx-cin-colosos-800.webp" loading="lazy" alt="Fotograma de cinemática: tres colosos de HELIX en contrapicado, bajo destellos ámbar." data-i18n-alt="nx.gal.c8.alt"></div><figcaption class="sr-only" data-i18n="nx.gal.c8">Los colosos</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-cin-cuerpos-1600.webp"><div class="holo"><img src="../img/nx-cin-cuerpos-800.webp" loading="lazy" alt="Fotograma de cinemática: VECTOR, BASTION y SPECTRE de pie en la fundición, con sus visores encendidos." data-i18n-alt="nx.gal.c9.alt"></div><figcaption class="sr-only" data-i18n="nx.gal.c9">Los tres cuerpos</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-portada-1920.webp"><div class="holo"><img src="../img/nx-portada-1280.webp" loading="lazy" alt="Arte conceptual: una conciencia cian y violeta salta de un androide oscuro a un androide blanco sobre una pasarela de la fundición." data-i18n-alt="nx.hero.alt"></div><figcaption class="sr-only" data-i18n="nx.gal.portada">La transferencia</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-transfer-1-1200.webp"><div class="holo"><img src="../img/nx-transfer-1-800.webp" loading="lazy" alt="Arte conceptual: un androide oscuro lanza un rayo cian que rompe el escudo de otro androide en la fundición." data-i18n-alt="nx.tr.s1.alt"></div><figcaption class="sr-only" data-i18n="nx.tr.s1.t">Rompe su defensa</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-transfer-2-1200.webp"><div class="holo"><img src="../img/nx-transfer-2-800.webp" loading="lazy" alt="Arte conceptual: un enlace cian une al androide oscuro con un androide blanco." data-i18n-alt="nx.tr.s2.alt"></div><figcaption class="sr-only" data-i18n="nx.tr.s2.t">Mantén la conexión</figcaption></figure>
+          <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-transfer-3-1200.webp"><div class="holo"><img src="../img/nx-transfer-3-800.webp" loading="lazy" alt="Arte conceptual: la conciencia ya controla al androide blanco, que brilla en violeta, mientras el oscuro queda inactivo en el suelo." data-i18n-alt="nx.tr.s3.alt"></div><figcaption class="sr-only" data-i18n="nx.tr.s3.t">Toma el control</figcaption></figure>
           <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-helix-fundicion-1600.webp"><div class="holo"><img src="../img/nx-helix-fundicion-800.webp" loading="lazy" alt="Arte conceptual: fundición industrial de HELIX, con metal fundido y pasarelas en la penumbra." data-i18n-alt="nx.hx.fundicion.alt"></div><figcaption class="sr-only" data-i18n="nx.hx.fundicion">Fundición</figcaption></figure>
           <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-helix-arsenal-1600.webp"><div class="holo"><img src="../img/nx-helix-arsenal-800.webp" loading="lazy" alt="Arte conceptual: arsenal y talleres de mantenimiento de HELIX, con bancos de trabajo iluminados." data-i18n-alt="nx.hx.arsenal.alt"></div><figcaption class="sr-only" data-i18n="nx.hx.arsenal">Arsenal</figcaption></figure>
           <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-helix-reactor-1600.webp"><div class="holo"><img src="../img/nx-helix-reactor-800.webp" loading="lazy" alt="Arte conceptual: el núcleo de un reactor de HELIX brilla en cian y violeta dentro de su contención." data-i18n-alt="nx.hx.reactor.alt"></div><figcaption class="sr-only" data-i18n="nx.hx.reactor">Reactor</figcaption></figure>
@@ -382,16 +566,16 @@
           <figure class="reel-card" role="button" tabindex="-1" data-full="../img/nx-helix-4-1600.webp"><div class="holo"><img src="../img/nx-helix-4-800.webp" loading="lazy" alt="Sala de control con una consola en primer plano y una ventana hacia una nave de reactores." data-i18n-alt="nx.hx.g4.alt"></div><figcaption class="sr-only" data-i18n="nx.hx.g4">Control de reactores</figcaption></figure>
         </div>
       </div>
-      <div class="reel-caption" aria-live="polite"><strong>La transferencia</strong><span data-i18n="nx.concept">Arte conceptual</span></div>
+      <div class="reel-caption" aria-live="polite"><strong>HELIX al anochecer</strong><span data-i18n="nx.concept">Arte conceptual</span></div>
       <div class="reel-progress" aria-hidden="true"><i></i></div>
     </div>
   </section>
-  <div class="wrap"><p class="nx-note" data-i18n="nx.art.note">Todas las imágenes de esta página son arte conceptual creado para el desarrollo de NEXUS. No son capturas del juego.</p></div>
+  <div class="wrap"><p class="nx-note" data-i18n="nx.art.note">Todas las imágenes de esta página son arte conceptual y fotogramas de las cinemáticas, creados para el desarrollo de NEXUS. No son capturas del juego.</p></div>
 
   <!-- Desarrollo -->
   <section class="section" id="desarrollo">
     <div class="wrap">
-      <p class="eyebrow reveal"><span>08</span> <span data-i18n="nx.dv.eyebrow">Desarrollo</span></p>
+      <p class="eyebrow reveal"><span>10</span> <span data-i18n="nx.dv.eyebrow">Desarrollo</span></p>
       <h2 class="reveal" data-i18n="nx.dv.title">Una campaña que sigue creciendo.</h2>
       <p class="nx-lead nx-narrow reveal" data-i18n="nx.dv.p">La ampliación 0.6.0 está en desarrollo: cinco nuevas misiones, tres armas y una revisión de movilidad, cobertura y claridad. Su validación continúa.</p>
       <div class="nx-dev">
@@ -442,7 +626,7 @@
   <section class="section" id="preguntas">
     <div class="wrap nx-faq-wrap">
       <div class="reveal">
-        <p class="eyebrow"><span>09</span> <span data-i18n="nx.faq.eyebrow">Preguntas</span></p>
+        <p class="eyebrow"><span>11</span> <span data-i18n="nx.faq.eyebrow">Preguntas</span></p>
         <h2 data-i18n="nx.faq.title">Preguntas frecuentes</h2>
       </div>
       <div class="nx-faq reveal">
