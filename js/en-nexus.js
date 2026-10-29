@@ -23,7 +23,7 @@ window.BARKARUM_EN = {
     'nx.cta3': 'Watch the trailer',
     'nx.film.eyebrow': 'Cinematics',
     'nx.film.title': 'Every body belongs to HELIX.',
-    'nx.film.lead': 'The “La caza” trailer, the story intro, the four huntresses HELIX sends after NEXUS, and two animatics: how it escapes the foundry, and how it switches bodies in the middle of a fight.',
+    'nx.film.lead': 'The “La caza” trailer and its follow-up, “La escolta”, the story intro, the four huntresses HELIX sends after NEXUS, and two animatics: how it escapes the foundry, and how it switches bodies in the middle of a fight.',
     'nx.film.p1.title': 'Part 1 · The escape',
     'nx.film.p1.lead': '64 seconds: NEXUS wakes up in the foundry, jumps from VECTOR to BASTION to SPECTRE, and faces HELIX’s execution network.',
     'nx.film.p2.title': 'Part 2 · Transfer in combat',
@@ -283,5 +283,17 @@ window.BARKARUM_EN = {
     'nx.lc.t5': 'NEXUS: Now your body fights for me.',
     'nx.lc.t6': 'HELIX: AEGIS unit compromised.',
     'nx.lc.t7': 'HELIX: The signal jumps from body to body. Track it.',
-    'nx.lc.t9': 'NEXUS: Too late. I’m already awake.'
+    'nx.lc.t9': 'NEXUS: Too late. I’m already awake.',
+    'nx.le.title': 'La escolta (The escort)',
+    'nx.le.lead': '2 minutes: NEXUS keeps AEGIS’s body and escorts a convoy of consciousness cores across a HELIX bridge against fourteen enemies. All shot as if from a drone.',
+    'nx.le.aria': 'NEXUS cinematic: The escort',
+    'nx.le.note': 'This is not game footage: it is a cinematic made with generated art. AEGIS fights with what her class gives her in the game, BASTION’s front shield and heavy weapon, plus the LAPA plasma grenade we are testing.',
+    'nx.le.t1': 'HELIX: AEGIS unit out of control. Full deployment.',
+    'nx.le.t2': 'NEXUS: This body holds. I’ll use it to the end.',
+    'nx.le.t4': 'HELIX: Heavy units. Wall formation.',
+    'nx.le.t5': 'NEXUS: You’re stronger than HELIX ever let you be.',
+    'nx.le.t6': 'HELIX: Infiltrators. Recover the cores.',
+    'nx.le.t7': 'NEXUS: LINCE. You again.',
+    'nx.le.t8': 'NEXUS: Fourteen. And I’m still standing.',
+    'nx.le.t9': 'HELIX: Top priority. Activate the colossi.'
 };
