@@ -295,5 +295,7 @@ window.BARKARUM_EN = {
     'nx.le.t6': 'HELIX: Infiltrators. Recover the cores.',
     'nx.le.t7': 'NEXUS: LINCE. You again.',
     'nx.le.t8': 'NEXUS: Fourteen. And I’m still standing.',
-    'nx.le.t9': 'HELIX: Top priority. Activate the colossi.'
+    'nx.le.t9': 'HELIX: Top priority. Activate the colossi.',
+    'yt.play': 'Play on YouTube',
+    'yt.watch': 'Watch on YouTube'
 };
