@@ -28,6 +28,7 @@
 <script src="../js/en-bp.js" defer></script>
 <script src="../js/i18n.js" defer></script>
 <script src="../js/holo.js" defer></script>
+<script src="../js/yt-video.js" defer></script>
 </head>
 <body class="page-bp">
 <canvas id="energy" aria-hidden="true" data-colors="240,0,192|0,216,240|139,92,246"></canvas>
@@ -137,14 +138,14 @@
       <h2 class="reveal" data-i18n="bp.film.title">Antes de todo, eran cuatro.</h2>
       <p class="bp-film-lead reveal" data-i18n="bp.film.lead">Akira, Rei, Kaede y Yumi estudiaban informática y trabajaban juntas en tecnología para la medicina, la biología y la botánica; Akira era la experta del grupo en sistemas seguros y privacidad. Antes de su primera misión pasaron una noche en el laboratorio diseñando sus armaduras, se las pusieron pieza por pieza, probaron sus armas de energía y salieron juntas, como equipo.</p>
       <figure class="holo holo-magenta bp-film reveal">
-        <video controls preload="none" playsinline poster="../img/bp-mision01-1600.webp" aria-label="Video de la Misión 01: antes de la misión" data-i18n-aria="bp.film.aria">
-          <source src="../media/barkarum-project/mision-01-720p.mp4" type="video/mp4" media="(max-width: 760px)">
-          <source src="../media/barkarum-project/mision-01.webm" type='video/webm; codecs="vp9, opus"'>
-          <source src="../media/barkarum-project/mision-01-1080p.mp4" type="video/mp4">
-        </video>
+        <div class="yt-video" data-yt-id="zIAhh3FmgEo" data-yt-title="Video de la Misión 01: antes de la misión">
+          <img src="../img/bp-mision01-1600.webp" width="1600" height="900" loading="lazy" alt="Video de la Misión 01: antes de la misión" data-i18n-alt="bp.film.aria">
+          <button class="yt-play" type="button" aria-label="Reproducir en YouTube" data-i18n-aria="yt.play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+        </div>
         <figcaption class="bp-film-cap">
           <span class="chip chip-art" data-i18n="common.cine">Arte de cinemática</span>
           <span data-i18n="bp.film.note">No es una captura del juego: es arte de cinemática (2:53).</span>
+          <a class="yt-link" href="https://youtu.be/zIAhh3FmgEo" rel="noopener" target="_blank" data-i18n="yt.watch">Ver en YouTube</a>
         </figcaption>
       </figure>
     </div>

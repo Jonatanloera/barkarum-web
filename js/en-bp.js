@@ -122,5 +122,7 @@ window.BARKARUM_EN = {
     'bp.cl.games': 'See the studio’s other games',
     'bp.close': 'Close',
     'bp.ft.status': 'Project in development. Everything shown here may change.',
-    'footer.top': 'Back to top'
+    'footer.top': 'Back to top',
+    'yt.play': 'Play on YouTube',
+    'yt.watch': 'Watch on YouTube'
 };
