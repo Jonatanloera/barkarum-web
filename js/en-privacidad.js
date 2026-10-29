@@ -34,7 +34,7 @@ window.BARKARUM_EN = {
     'pv.h6': 'Your rights',
     'pv.p6': 'You can access your data, correct it, ask us to delete it or object to its use (ARCO rights under Mexican law), and you can also withdraw your consent. Write to contacto@barkarum.com from the email you signed up with and we’ll reply within the time limits set by Mexico’s Federal Law on the Protection of Personal Data Held by Private Parties.',
     'pv.h7': 'Cookies',
-    'pv.p7': 'This site doesn’t use tracking cookies or analytics tools. It only stores the language you choose in your browser. If you press play on a soundtrack within the site, the YouTube player (youtube-nocookie.com) loads, and it may store data under Google’s privacy policy.',
+    'pv.p7': 'This site doesn’t use tracking cookies or analytics tools. It only stores the language you choose in your browser. If you press play on a soundtrack or a YouTube video within the site, the YouTube player (youtube-nocookie.com) loads, and it may store data under Google’s privacy policy.',
     'pv.h8': 'Changes to this notice',
     'pv.p8': 'If anything changes, we’ll post it on this page with its new date.',
     'pv.back': 'Back to sign-up',
