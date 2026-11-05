@@ -1,0 +1,148 @@
+/* Nexo Prime: página del juego, soporte y privacidad. Base de styles.css + holo.css, con fondo #03090F y acentos esmeralda y dorado. */
+
+.page-nexo {
+  --bg: #03090F;
+  --emerald: #5BE8A8;
+  --emerald-soft: #B4F7DA;
+  --gold-soft: #F4D98B;
+  --cyan: var(--emerald);
+  --pink: var(--gold);
+  --violet: var(--gold);
+  --line: rgba(120, 230, 190, .16);
+}
+.page-nexo::before {
+  background:
+    radial-gradient(60vmax 40vmax at 8% -10%, rgba(91, 232, 168, .13), transparent 60%),
+    radial-gradient(55vmax 45vmax at 100% 110%, rgba(231, 182, 90, .11), transparent 60%),
+    var(--bg);
+}
+.page-nexo::after {
+  background-image:
+    linear-gradient(rgba(120, 230, 190, .04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 230, 190, .04) 1px, transparent 1px);
+}
+.page-nexo h2 { text-shadow: 0 0 28px rgba(91, 232, 168, .22); }
+
+/* Paneles, menú y botones con los colores del juego */
+.page-nexo .holo {
+  --edge: var(--emerald);
+  --edge2: var(--gold);
+  background:
+    radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%), rgba(91, 232, 168, .1), transparent 60%),
+    linear-gradient(160deg, rgba(11, 36, 36, .78), rgba(3, 12, 17, .92));
+}
+.page-nexo .holo-sheen::before { background: linear-gradient(115deg, transparent 40%, rgba(91, 232, 168, .1) 47%, rgba(231, 182, 90, .1) 53%, transparent 60%); }
+.page-nexo .topbar.scrolled { background: rgba(3, 9, 15, .82); }
+.page-nexo .nav-page { background: rgba(3, 9, 15, .74); }
+.page-nexo .nav-games-menu { background: rgba(4, 14, 20, .97); }
+.page-nexo .nav .nav-games-menu a:hover, .page-nexo .nav .nav-games-menu a[aria-current="page"] { background: rgba(91, 232, 168, .1); }
+.page-nexo .nav .nav-page a[aria-current="page"] { color: #fff; }
+/* El botón de la demo es de otro juego: aquí queda discreto. */
+.page-nexo .nav .nav-demo { color: var(--text); background: none; border: 1px solid var(--line); box-shadow: none; }
+.page-nexo .nav .nav-demo:hover { color: #fff; border-color: var(--emerald); box-shadow: none; }
+.page-nexo .btn-ghost:hover { box-shadow: 0 0 24px rgba(91, 232, 168, .28); }
+.btn-gold { color: var(--bg); background: linear-gradient(90deg, var(--gold), var(--gold-soft)); box-shadow: 0 0 22px rgba(231, 182, 90, .35); }
+.btn-gold:hover { color: var(--bg); box-shadow: 0 0 34px rgba(231, 182, 90, .55); transform: translateY(-1px); }
+
+/* ---------- Portada ---------- */
+.nexo-hero { position: relative; isolation: isolate; min-height: 100vh; min-height: 100svh; display: grid; align-items: end; padding: 140px 0 clamp(36px, 6vh, 64px); overflow: hidden; }
+.nexo-hero-art { position: absolute; inset: 0; z-index: -1; display: block; }
+.nexo-hero-art img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; }
+.nexo-hero-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(3, 9, 15, .4) 0, transparent 20%, transparent 52%, rgba(3, 9, 15, .75) 82%, var(--bg) 100%),
+    linear-gradient(90deg, rgba(3, 9, 15, .92) 0, rgba(3, 9, 15, .7) 38%, transparent 66%);
+}
+.nexo-hero-chip { position: absolute; right: var(--gutter); bottom: 22px; }
+.nexo-hero-inner { max-width: var(--wrap); }
+.nexo-by { margin: 0 0 16px; }
+.nexo-by a { color: #C4D6D4; text-decoration: none; font: 600 12px/1 var(--display); letter-spacing: .22em; text-transform: uppercase; }
+.nexo-by a:hover { color: var(--emerald); }
+.nexo-title-row { display: flex; align-items: center; gap: clamp(14px, 2vw, 24px); margin-bottom: 18px; }
+.nexo-icon { flex: none; width: clamp(72px, 8.4vw, 118px); height: auto; border-radius: 22.5%; box-shadow: 0 0 0 1px rgba(244, 217, 139, .4), 0 12px 34px rgba(0, 0, 0, .55); }
+.nexo-wordmark { margin: 0; font: 700 clamp(44px, 6.4vw, 92px)/.94 var(--display); letter-spacing: .05em; text-transform: uppercase; color: #fff; text-shadow: 0 0 40px rgba(91, 232, 168, .45); }
+.nexo-wordmark span { color: var(--gold); text-shadow: 0 0 40px rgba(231, 182, 90, .45); }
+.nexo-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+.nexo-soon { color: var(--gold-soft); border-color: rgba(231, 182, 90, .6); }
+.nexo-soon::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); margin-right: 8px; }
+.nexo-headline { max-width: 19em; margin: 0 0 10px; font: 700 clamp(24px, 3vw, 38px)/1.16 var(--display); color: #fff; text-wrap: balance; }
+.nexo-sub { max-width: 31em; margin: 0 0 24px; font-size: clamp(17px, 1.6vw, 19px); color: #D5E3E1; }
+.nexo-cta { display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* ---------- Cómo se juega ---------- */
+.nexo-how { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; margin-top: clamp(24px, 3vw, 36px); }
+.nexo-board { position: relative; margin: 0; }
+.nexo-board svg { display: block; width: 100%; height: auto; overflow: visible; filter: drop-shadow(0 24px 40px rgba(0, 0, 0, .6)); }
+.nexo-board .chip { position: absolute; left: 0; bottom: 0; }
+.nexo-flow { stroke-dasharray: 3 19; animation: nexo-flow 1.5s linear infinite; }
+@keyframes nexo-flow { to { stroke-dashoffset: -22; } }
+.nexo-pulse { transform-box: fill-box; transform-origin: center; animation: nexo-pulse 2.6s ease-in-out infinite; }
+@keyframes nexo-pulse { 50% { opacity: .55; transform: scale(1.14); } }
+.nexo-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: clamp(16px, 2vw, 22px); }
+.nexo-steps li { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 16px; align-items: start; color: #C4D6D4; }
+.nexo-steps strong { display: block; margin-bottom: 4px; font: 700 20px/1.25 var(--display); letter-spacing: .03em; color: #fff; }
+.nexo-step-n { display: grid; place-items: center; width: 46px; height: 53px; font: 700 17px/1 var(--display); color: var(--bg); background: linear-gradient(160deg, var(--gold-soft), var(--gold)); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+
+/* ---------- Sectores ---------- */
+.nexo-lead { max-width: 38em; font-size: clamp(17px, 1.8vw, 19px); color: #C4D6D4; }
+.nexo-chapters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 30px) clamp(24px, 4vw, 48px); margin-top: clamp(26px, 4vw, 40px); }
+.nexo-chapter h3 { margin: 0 0 10px; font: 600 16px/1.3 var(--display); letter-spacing: .06em; color: #fff; }
+.nexo-chapter small { margin-left: 6px; font: 500 13px/1 var(--display); letter-spacing: .08em; color: var(--muted); }
+.nexo-sectors { display: flex; flex-wrap: wrap; gap: 4px 3px; }
+.nexo-sectors span { display: grid; place-items: center; width: 40px; height: 46px; font: 600 12px/1 var(--display); color: rgba(244, 217, 139, .82); background: rgba(231, 182, 90, .14); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+.nexo-sectors .is-free { color: var(--bg); background: var(--emerald); }
+.nexo-plans { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 2vw, 22px); margin-top: clamp(26px, 3vw, 36px); }
+.nexo-plans h3 { margin: 0 0 6px; font: 700 clamp(23px, 2.6vw, 30px)/1.15 var(--display); color: #fff; }
+.nexo-plans p { margin: 0; color: #C4D6D4; }
+.nexo-plan-tag { display: block; margin-bottom: 12px; font: 600 12px/1 var(--display); letter-spacing: .2em; text-transform: uppercase; color: var(--emerald); }
+.nexo-plan-paid .nexo-plan-tag { color: var(--gold); }
+.nexo-no { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 0; padding: 0; list-style: none; }
+
+/* ---------- Ayuda ---------- */
+.nexo-help { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 2vw, 22px); }
+.nexo-help a { display: block; height: 100%; color: inherit; text-decoration: none; }
+.nexo-help strong { display: block; margin-bottom: 6px; font: 700 21px/1.2 var(--display); color: #fff; }
+.nexo-help span { color: #C4D6D4; }
+.nexo-help a:hover strong { color: var(--emerald); }
+
+/* ---------- Soporte y privacidad ---------- */
+.nexo-doc { padding-top: clamp(140px, 14vw, 180px); }
+.nexo-doc .wrap { max-width: 860px; }
+.nexo-title { margin: 0 0 12px; font: 700 clamp(36px, 5vw, 58px)/1.05 var(--display); color: #fff; text-shadow: 0 0 36px rgba(91, 232, 168, .35); }
+.nexo-meta { margin: 0 0 26px; font-size: 16px; color: var(--muted); }
+.nexo-doc-body h2 { margin: 28px 0 8px; font-size: clamp(19px, 2vw, 22px); color: #fff; }
+.nexo-doc-body h2:first-child { margin-top: 0; }
+.nexo-doc-body p { margin: 0; color: #C4D6D4; }
+.nexo-doc-body a, .nexo-mail a { color: var(--emerald-soft); overflow-wrap: anywhere; }
+.nexo-doc-body strong { color: #fff; font-weight: 600; }
+.nexo-contact { margin-bottom: clamp(18px, 3vw, 26px); }
+.nexo-contact h2 { margin: 0 0 6px; font-size: clamp(19px, 2vw, 22px); color: #fff; }
+.nexo-contact p { margin: 0; color: #C4D6D4; }
+.nexo-mail { margin-top: 8px !important; font: 600 clamp(18px, 2.4vw, 24px)/1.3 var(--display); }
+.nexo-facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 8px 22px; margin: 0; }
+.nexo-facts dt { font: 600 14px/1.65 var(--display); letter-spacing: .06em; color: var(--gold-soft); }
+.nexo-facts dd { margin: 0; color: #C4D6D4; overflow-wrap: anywhere; }
+
+@media (max-width: 1000px) {
+  .nexo-how { grid-template-columns: 1fr; }
+  .nexo-chapters { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .nexo-hero { padding-top: 96px; padding-bottom: 54px; }
+  /* El arte vertical ocupa solo la parte alta, para que el octaedro quede arriba del texto. */
+  .nexo-hero-art { bottom: auto; height: 84%; }
+  .nexo-hero-art img { object-position: 50% 0; }
+  .nexo-hero-art::after { background: linear-gradient(180deg, rgba(3, 9, 15, .35) 0, transparent 16%, transparent 40%, rgba(3, 9, 15, .86) 66%, var(--bg) 100%); }
+  .nexo-hero-chip { right: auto; left: var(--gutter); bottom: 14px; }
+  .nexo-plans, .nexo-help { grid-template-columns: 1fr; }
+  .nexo-sectors span { width: 34px; height: 39px; font-size: 11px; }
+  .nexo-facts { grid-template-columns: 1fr; gap: 0; }
+  .nexo-facts dd + dt { margin-top: 12px; }
+  .nexo-doc { padding-top: 104px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nexo-flow, .nexo-pulse { animation: none; }
+}
