@@ -73,14 +73,11 @@
 .nexo-cta { display: flex; flex-wrap: wrap; gap: 14px; }
 
 /* ---------- Cómo se juega ---------- */
-.nexo-how { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; margin-top: clamp(24px, 3vw, 36px); }
-.nexo-board { position: relative; margin: 0; }
-.nexo-board svg { display: block; width: 100%; height: auto; overflow: visible; filter: drop-shadow(0 24px 40px rgba(0, 0, 0, .6)); }
-.nexo-board .chip { position: absolute; left: 0; bottom: 0; }
-.nexo-flow { stroke-dasharray: 3 19; animation: nexo-flow 1.5s linear infinite; }
-@keyframes nexo-flow { to { stroke-dashoffset: -22; } }
-.nexo-pulse { transform-box: fill-box; transform-origin: center; animation: nexo-pulse 2.6s ease-in-out infinite; }
-@keyframes nexo-pulse { 50% { opacity: .55; transform: scale(1.14); } }
+.nexo-how { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; margin-top: clamp(24px, 3vw, 36px); }
+.nexo-shot { margin: 0; }
+.nexo-shot img { display: block; width: 100%; height: auto; border: 1px solid rgba(91, 232, 168, .28); border-radius: 10px; box-shadow: 0 24px 48px rgba(0, 0, 0, .6), 0 0 44px rgba(91, 232, 168, .10); }
+/* La etiqueta va debajo para no tapar los marcadores del juego. */
+.nexo-shot .chip { margin-top: 12px; }
 .nexo-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: clamp(16px, 2vw, 22px); }
 .nexo-steps li { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 16px; align-items: start; color: #C4D6D4; }
 .nexo-steps strong { display: block; margin-bottom: 4px; font: 700 20px/1.25 var(--display); letter-spacing: .03em; color: #fff; }
@@ -142,7 +139,4 @@
   .nexo-facts { grid-template-columns: 1fr; gap: 0; }
   .nexo-facts dd + dt { margin-top: 12px; }
   .nexo-doc { padding-top: 104px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .nexo-flow, .nexo-pulse { animation: none; }
 }

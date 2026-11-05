@@ -41,10 +41,10 @@
 .hero-spot-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
 
 /* Franja con los tres juegos */
-.hero-games { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.hero-games { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 .hero-game { display: flex; align-items: center; gap: 14px; min-height: 76px; padding: 10px; color: #fff; text-decoration: none; background: rgba(8, 10, 20, .62); border: 1px solid rgba(255, 255, 255, .12); border-left: 3px solid var(--c); border-radius: 12px; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); transition: border-color .2s, box-shadow .2s, transform .2s; }
 .hero-game:hover { color: #fff; border-color: var(--c); box-shadow: 0 0 24px color-mix(in srgb, var(--c) 40%, transparent); transform: translateY(-2px); }
-.hero-game img { flex: none; width: 84px; height: 56px; object-fit: cover; border-radius: 8px; }
+.hero-game img { flex: none; width: 66px; height: 56px; object-fit: cover; border-radius: 8px; }
 .hero-game strong { display: block; font: 700 16px/1.1 var(--display); letter-spacing: .06em; text-transform: uppercase; }
 .hero-game small { display: block; margin-top: 4px; font-size: 13px; color: var(--muted); }
 
@@ -73,6 +73,13 @@
 .card-game .game-art img { aspect-ratio: 16 / 10; }
 .card-game .game-body { justify-content: flex-start; }
 .card-game .legal-links { margin-top: auto; }
+.holo-nexo { --edge: #5BE8A8; --edge2: var(--gold); }
+.holo-nexo .game-art img { object-position: 50% 45%; }
+.holo-nexo .chip-status { color: #F4D98B; border-color: rgba(231, 182, 90, .6); }
+.holo-nexo .chip-status::before { background: var(--gold); box-shadow: 0 0 8px var(--gold); }
+.holo-nexo .legal-links { margin-top: 18px; }
+.btn-nexo { color: #03090F; background: linear-gradient(90deg, var(--gold), #F4D98B); box-shadow: 0 0 22px rgba(231, 182, 90, .35); }
+.btn-nexo:hover { color: #03090F; box-shadow: 0 0 34px rgba(231, 182, 90, .55); transform: translateY(-1px); }
 
 /* ---------- Bandas sonoras ---------- */
 .ost-lead { max-width: 40em; color: #C9D1E3; font-size: clamp(16px, 1.7vw, 18px); }
@@ -159,7 +166,7 @@
 
 @media (max-width: 1000px) {
   .hero-split-inner { grid-template-columns: 1fr; grid-template-areas: "brand" "spot" "follow"; gap: 18px; }
-  .hero-games { grid-template-columns: 1fr; }
+  .hero-games { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .game-feature { grid-template-columns: 1fr; }
   .ost-grid { grid-template-columns: 1fr; }
   .ost-band { grid-template-columns: 1fr; }
@@ -173,8 +180,11 @@
   .hero-split .logo-rings i:nth-child(3) { width: min(300px, 80vw); }
   .hero-split .hero-tagline { margin-bottom: 4px; font-size: 15px; }
   .hero-spot-cta .btn { flex: 1 1 auto; }
+  .hero-games { grid-template-columns: 1fr; }
   .hero-game { min-height: 64px; }
   .hero-game img { width: 72px; height: 48px; }
+  .holo-nexo .game-art .chip-art { top: auto; right: 12px; bottom: 12px; }
+  .holo-nexo .game-art .chip-status { left: 12px; top: 12px; }
   .logo-holo .hud-label { display: none; }
   .game-cta .btn { flex: 1 1 auto; }
 }
