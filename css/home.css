@@ -41,7 +41,7 @@
 .hero-spot-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
 
 /* Franja con los tres juegos */
-.hero-games { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.hero-games { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
 .hero-game { display: flex; align-items: center; gap: 14px; min-height: 76px; padding: 10px; color: #fff; text-decoration: none; background: rgba(8, 10, 20, .62); border: 1px solid rgba(255, 255, 255, .12); border-left: 3px solid var(--c); border-radius: 12px; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); transition: border-color .2s, box-shadow .2s, transform .2s; }
 .hero-game:hover { color: #fff; border-color: var(--c); box-shadow: 0 0 24px color-mix(in srgb, var(--c) 40%, transparent); transform: translateY(-2px); }
 .hero-game img { flex: none; width: 66px; height: 56px; object-fit: cover; border-radius: 8px; }
@@ -183,8 +183,8 @@
   .hero-games { grid-template-columns: 1fr; }
   .hero-game { min-height: 64px; }
   .hero-game img { width: 72px; height: 48px; }
-  .holo-nexo .game-art .chip-art { top: auto; right: 12px; bottom: 12px; }
-  .holo-nexo .game-art .chip-status { left: 12px; top: 12px; }
+  .holo-nexo .game-art .chip-art, #equilibria .game-art .chip-art { top: auto; right: 12px; bottom: 12px; }
+  .holo-nexo .game-art .chip-status, #equilibria .game-art .chip-status { left: 12px; top: 12px; }
   .logo-holo .hud-label { display: none; }
   .game-cta .btn { flex: 1 1 auto; }
 }
