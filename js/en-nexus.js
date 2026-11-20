@@ -10,6 +10,7 @@ window.BARKARUM_EN = {
     'gnav.nx': 'Sci-fi FPS',
     'gnav.sor': '3D puzzle for iPhone and iPad',
     'gnav.nexo': '2.5D puzzle for iPhone and iPad',
+    'gnav.eq': '3D puzzle for iPhone and iPad',
     'gnav.ost': 'Soundtracks',
     'gnav.contact': 'Contact',
     'gnav.demo': 'Barkarum Project demo',
