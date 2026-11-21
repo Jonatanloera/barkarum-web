@@ -29,6 +29,7 @@
 <script src="../js/i18n.js" defer></script>
 <script src="../js/holo.js" defer></script>
 <script src="../js/yt-video.js" defer></script>
+<script src="../js/bp-shorts.js" defer></script>
 </head>
 <body class="page-bp">
 <canvas id="energy" aria-hidden="true" data-colors="240,0,192|0,216,240|139,92,246"></canvas>
@@ -63,6 +64,7 @@
       <a href="#mision-01" data-i18n="bp.nav.film">Misión 01</a>
       <a href="#mision-02" data-i18n="bp.nav.battle">Misión 02</a>
       <a href="#coloso" data-i18n="bp.nav.colossus">Coloso</a>
+      <a href="#las-cuatro" data-i18n="bp.nav.shorts">Las cuatro</a>
       <a href="#jugabilidad" data-i18n="bp.nav.play">Cómo se juega</a>
       <a href="#akira">Akira</a>
       <a href="#arsenal" data-i18n="bp.nav.arsenal">Arsenal</a>
@@ -193,10 +195,52 @@
     </div>
   </section>
 
+  <!-- Las cuatro en vertical: los Shorts de arte nuevo de Akira, Rei, Kaede y Yumi (kit-youtube-03-animatica-m01) -->
+  <section class="section" id="las-cuatro">
+    <div class="wrap">
+      <p class="eyebrow reveal"><span>05</span> <span data-i18n="bp.shorts.eyebrow">Las cuatro · En vertical</span></p>
+      <h2 class="reveal" data-i18n="bp.shorts.title">Cada una, a su manera.</h2>
+      <p class="bp-film-lead reveal" data-i18n="bp.shorts.lead">Akira, Rei, Kaede y Yumi, cada una con su armadura y su arma de energía, en cinco videos cortos hechos para verse en el teléfono, con la música de la Misión 01.</p>
+      <div class="bp-shorts reveal" role="region" tabindex="0" aria-label="Videos verticales de Akira, Rei, Kaede y Yumi" data-i18n-aria="bp.shorts.aria">
+          <figure class="bp-short">
+            <video controls preload="none" playsinline width="720" height="1280" poster="../img/bp-short-akira.webp" aria-label="Video vertical: Akira abre los ojos en la oscuridad, sella los datos con un candado de código, se cierra su armadura y dispara su rifle de energía." data-i18n-aria="bp.shorts.a1">
+              <source src="../media/barkarum-project/short-akira.mp4" type="video/mp4">
+            </video>
+            <figcaption><strong>Akira</strong> <span data-i18n="bp.shorts.c1">Candado de código</span></figcaption>
+          </figure>
+          <figure class="bp-short">
+            <video controls preload="none" playsinline width="720" height="1280" poster="../img/bp-short-rei.webp" aria-label="Video vertical: Rei alinea la mira, encajan sus hombreras, dispara sin fallar y sonríe detrás del visor." data-i18n-aria="bp.shorts.a2">
+              <source src="../media/barkarum-project/short-rei.mp4" type="video/mp4">
+            </video>
+            <figcaption><strong>Rei</strong> <span data-i18n="bp.shorts.c2">En la mira</span></figcaption>
+          </figure>
+          <figure class="bp-short">
+            <video controls preload="none" playsinline width="720" height="1280" poster="../img/bp-short-kaede.webp" aria-label="Video vertical: Kaede suelda una placa entre chispas doradas, se pone el guantelete y dispara su cañón pesado." data-i18n-aria="bp.shorts.a3">
+              <source src="../media/barkarum-project/short-kaede.mp4" type="video/mp4">
+            </video>
+            <figcaption><strong>Kaede</strong> <span data-i18n="bp.shorts.c3">Hecho a mano</span></figcaption>
+          </figure>
+          <figure class="bp-short">
+            <video controls preload="none" playsinline width="720" height="1280" poster="../img/bp-short-yumi.webp" aria-label="Video vertical: El dron de Yumi se eleva y escanea, se cierran sus botas y dispara sus dos subfusiles verdes." data-i18n-aria="bp.shorts.a4">
+              <source src="../media/barkarum-project/short-yumi.mp4" type="video/mp4">
+            </video>
+            <figcaption><strong>Yumi</strong> <span data-i18n="bp.shorts.c4">El dron cubre el flanco</span></figcaption>
+          </figure>
+          <figure class="bp-short">
+            <video controls preload="none" playsinline loop width="720" height="1280" poster="../img/bp-short-las-cuatro.webp" aria-label="Video vertical: Akira, Rei, Kaede y Yumi en la compuerta del hangar, bajo la lluvia, listas para salir." data-i18n-aria="bp.shorts.a5">
+              <source src="../media/barkarum-project/short-las-cuatro.mp4" type="video/mp4">
+            </video>
+            <figcaption><strong data-i18n="bp.shorts.n5">Las cuatro</strong> <span data-i18n="bp.shorts.c5">En bucle</span></figcaption>
+          </figure>
+      </div>
+      <p class="bp-shorts-note"><span class="chip chip-art" data-i18n="common.cine">Arte de cinemática</span> <span data-i18n="bp.shorts.note">No son capturas del juego: es arte de cinemática.</span> <span class="bp-shorts-hint" data-i18n="bp.shorts.hint">Desliza para ver los cinco.</span></p>
+    </div>
+  </section>
+
   <!-- Cómo se juega -->
   <section class="section" id="jugabilidad">
     <div class="wrap">
-      <p class="eyebrow reveal"><span>05</span> <span data-i18n="bp.play_title">Cómo se juega</span></p>
+      <p class="eyebrow reveal"><span>06</span> <span data-i18n="bp.play_title">Cómo se juega</span></p>
       <h2 class="reveal" data-i18n="bp.play_h">Corre, apunta y esquiva en un mundo monumental.</h2>
       <ul class="bp-features" role="list">
         <li class="holo holo-pad holo-magenta reveal" data-tilt><strong data-i18n="bp.f1_t">Ataques que se leen</strong><span data-i18n="bp.f1_d">Cada ataque avisa antes de golpear y llega alto o bajo: te agachas o saltas.</span><div class="holo-sheen"></div></li>
@@ -227,7 +271,7 @@
   <!-- Akira en 3D -->
   <section class="section" id="akira">
     <div class="wrap">
-      <p class="eyebrow reveal"><span>06</span> <span data-i18n="bp.akira_eyebrow">La protagonista</span></p>
+      <p class="eyebrow reveal"><span>07</span> <span data-i18n="bp.akira_eyebrow">La protagonista</span></p>
       <h2 class="reveal" data-i18n="bp.akira_h">Akira, en 3D.</h2>
       <p class="bp-lead reveal" data-i18n="bp.akira_lead">Gira el modelo con el dedo o el mouse.</p>
       <div class="bp-solo">
@@ -251,7 +295,7 @@
   <!-- Arsenal en 3D -->
   <section class="section" id="arsenal">
     <div class="wrap">
-      <p class="eyebrow reveal"><span>07</span> <span data-i18n="bp.nav.arsenal">Arsenal</span></p>
+      <p class="eyebrow reveal"><span>08</span> <span data-i18n="bp.nav.arsenal">Arsenal</span></p>
       <h2 class="reveal" data-i18n="bp.arsenal_h">Un arsenal que crece.</h2>
       <div class="weapons">
         <article class="holo holo-magenta weapon reveal" data-tilt>
@@ -283,7 +327,7 @@
   <section class="reel" id="galeria" aria-labelledby="bp-gal-title">
     <div class="reel-sticky">
       <div class="wrap">
-        <p class="eyebrow"><span>08</span> <span data-i18n="bp.nav.gallery">Galería</span></p>
+        <p class="eyebrow"><span>09</span> <span data-i18n="bp.nav.gallery">Galería</span></p>
         <h2 id="bp-gal-title" data-i18n="bp.gal_h">Un futuro monumental.</h2>
       </div>
       <div class="reel-scene">
@@ -311,7 +355,7 @@
   <!-- Datos -->
   <section class="section" id="datos">
     <div class="wrap">
-      <p class="eyebrow reveal"><span>09</span> <span data-i18n="bp.facts_eyebrow">Ficha</span></p>
+      <p class="eyebrow reveal"><span>10</span> <span data-i18n="bp.facts_eyebrow">Ficha</span></p>
       <div class="holo holo-pad holo-magenta reveal" data-tilt>
         <dl class="facts">
           <div><dt data-i18n="bp.k_status">Estado</dt><dd data-i18n="common.dev">En desarrollo</dd></div>
